@@ -15,4 +15,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/a','APIcontroller@tempat');
+Route::get('/a','APIcontroller@cuaca');
