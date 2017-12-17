@@ -12,7 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('cuaca');
 });
 
-Route::get('/a','APIcontroller@cuaca');
+Route::get('/cuaca','APIcontroller@cuaca');
+Route::get('/visualisasi', 'APIcontroller@Visualisasitempat');
+Route::get('/geo', 'APIcontroller@Geolokasi');
+
+Route::get('/detail/{lokasi}','APIcontroller@semua');

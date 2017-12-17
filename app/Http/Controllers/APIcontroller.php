@@ -14,13 +14,13 @@ class APIcontroller extends Controller
     	$owm = new LaravelOWM();
     	$kunci = 'sukabumi';
     	$data = $owm->getCurrentWeather($kunci, $lang = 'id', $units = 'metric', $cache = false);
-
+    	dd($data);
     	$idKota = $data->city->id;
     	$namaKota = $data->city->name;
     	return view('cuaca',compact('data'));
     }
 
-    public function tempat()
+    public function Visualisasitempat()
     {
   		Mapper::map(-6.9419491, 106.9327932);
 		
@@ -38,6 +38,25 @@ class APIcontroller extends Controller
     	$alamat = $items->first()->getFormattedAddress();
     	$lat = $items->first()->getCoordinates()->getLatitude();
     	$long = $items->first()->getCoordinates()->getLongitude();
+    	dd($items);
     	return view('cuaca',compact('items'));
     }	
+
+    public function semua($lokasi)
+    {
+    	$lok = explode(',', $lokasi);
+    	$lat = $lok[0];
+    	$long = $lok[1];
+
+    	$geo = app('geocoder')->geocode('sukabumi,jawa barat,ID')->get();
+    	$namaKota = $geo->first()->getLocality();
+
+    	$owm = new LaravelOWM();
+    	$cuaca = $owm->getCurrentWeather($namaKota, $lang = 'id', $units = 'metric', $cache = false);
+
+    	Mapper::map($lat, $long,['zoom' => '18','markers' => ['title' => 'Lokasi']]);
+
+    	return view('detail',compact('cuaca','geo','lokasi'));
+
+    }
 }
