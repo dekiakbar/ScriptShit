@@ -38,7 +38,7 @@
 			</div>
 		</div>
 
-		<div class="ui dropdown item ">
+		<div class="ui dropdown item">
 			<z class="displaynone">Dashboard</z>
 			<i class="icon demo-icon heart icon-heart"></i>
 			<div class="menu">
@@ -50,7 +50,7 @@
 			</div>
 		</div>
 
-		<div class="ui dropdown item ">
+		<div class="ui dropdown item">
 			<z class="displaynone">Layout</z>
 			<i class="icon demo-icon world icon-globe"></i>
 			<div class="menu">
@@ -65,7 +65,7 @@
 			</div>
 		</div>
 
-		<div class="ui dropdown item ">
+		<div class="ui dropdown item">
 			<z class="displaynone">Pages</z>
 			<i class="icon demo-icon  icon-params alarm"></i>
 			<div class="menu">
@@ -84,11 +84,11 @@
 	</div>
 
 	<div class="pusher">
-		<div class="ui menu asd borderless marginlefting" style="border-radius: 0!important; border: 0; margin-left: 260px; -webkit-transition-duration: 0.1s;">
+		<div id="right" class="ui menu asd borderless marginlefting">
 			<a class="item buka">
 				<i class="icon content"></i>
 			</a>
-			<a class="item">Messages</a>
+			<a class="item">Pemanfaatan lahan berbasis web</a>
 				<div class="right menu">
 					<div class="item">
 						<div class="ui primary button">Sign Up</div>
@@ -98,15 +98,13 @@
 	</div>
 
 	<div class="ui container segment">
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		@yield('isi')
 	</div>
+
 	<script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
 	<script type="text/javascript" src="{{ asset('js/semantic.min.js') }}"></script>
 	<script type="text/javascript" src="{{ asset('js/manual.js') }}"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWjO5SevIcwYGgnch9sRr9RYAU_704tUs&libraries=places&callback=initMap" async defer>
+    </script>
 </body>
 </html>

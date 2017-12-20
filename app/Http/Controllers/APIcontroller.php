@@ -47,12 +47,13 @@ class APIcontroller extends Controller
     	$lok = explode(',', $lokasi);
     	$lat = $lok[0];
     	$long = $lok[1];
+    	$geolokasi = array("lat" => $lok[0],"lon" => $lok[1]);
 
-    	$geo = app('geocoder')->geocode('sukabumi,jawa barat,ID')->get();
+    	$geo = app('geocoder')->reverse($lat,$long)->get();
     	$namaKota = $geo->first()->getLocality();
 
     	$owm = new LaravelOWM();
-    	$cuaca = $owm->getCurrentWeather($namaKota, $lang = 'id', $units = 'metric', $cache = false);
+    	$cuaca = $owm->getCurrentWeather($geolokasi, $lang = 'id', $units = 'metric', $cache = false);
 
     	Mapper::map($lat, $long,['zoom' => '18','markers' => ['title' => 'Lokasi']]);
 

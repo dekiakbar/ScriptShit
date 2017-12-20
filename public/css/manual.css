@@ -3,6 +3,13 @@
    overflow: visible !important;
 }
 
+#right {
+   border-radius: 0!important; 
+   border: 0; 
+   margin-left: 260px; 
+   -webkit-transition-duration: 0.1s;
+}
+
 .marginlefting {
    margin-left: 60px !important;
 }
