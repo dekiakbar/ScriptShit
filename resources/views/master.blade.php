@@ -7,11 +7,11 @@
 </head>
 <body>
 
-	<div id="sidebar" class="ui sidebar vertical left menu overlay visible">
+	<div id="sidebar" class="ui sidebar vertical left menu overlay visible very thin icon">
 		<div class="item logo">
 			<img src="img/logo.png" /><img src="img/thumblogo.png" style="display: none" />
 		</div>
-		<div class="ui accordion">
+		<div class="ui accordion displaynone">
 			<a class="title item">Dashboard  <i class="dropdown icon"></i></a>
 			<div class="content">
 				<a class="item" href="dashboard.html">Dashboard</a>
@@ -37,8 +37,9 @@
 				<a class="item" href="button.html">Button</a>
 			</div>
 		</div>
-		<div class="ui dropdown item displaynone">
-			<z>Dashboard</z>
+
+		<div class="ui dropdown item ">
+			<z class="displaynone">Dashboard</z>
 			<i class="icon demo-icon heart icon-heart"></i>
 			<div class="menu">
 				<div class="header">
@@ -48,8 +49,9 @@
 				<a class="item" href="dashboard.html">Dashboard</a>
 			</div>
 		</div>
-		<div class="ui dropdown item displaynone">
-			<z>Layout</z>
+
+		<div class="ui dropdown item ">
+			<z class="displaynone">Layout</z>
 			<i class="icon demo-icon world icon-globe"></i>
 			<div class="menu">
 				<div class="header">
@@ -62,8 +64,9 @@
 				<a class="item" href="contacts.html">Contacts</a>
 			</div>
 		</div>
-		<div class="ui dropdown item displaynone">
-			<z>Pages</z>
+
+		<div class="ui dropdown item ">
+			<z class="displaynone">Pages</z>
 			<i class="icon demo-icon  icon-params alarm"></i>
 			<div class="menu">
 				<div class="header">
@@ -77,23 +80,16 @@
 				<a class="item" href="cards.html">Cards</a>
 			</div>
 		</div>
+
 	</div>
+
 	<div class="pusher">
-		<div class="ui menu asd borderless" style="border-radius: 0!important; border: 0; margin-left: 260px; -webkit-transition-duration: 0.1s;">
-			<a class="item openbtn">
+		<div class="ui menu asd borderless marginlefting" style="border-radius: 0!important; border: 0; margin-left: 260px; -webkit-transition-duration: 0.1s;">
+			<a class="item buka">
 				<i class="icon content"></i>
 			</a>
 			<a class="item">Messages</a>
 				<div class="right menu">
-					<div class="ui dropdown item">
-						Language
-						<i class="dropdown icon"></i>
-						<div class="menu">
-							<a class="item">English</a>
-							<a class="item">Russian</a>
-							<a class="item">Spanish</a>
-						</div>
-					</div>
 					<div class="item">
 						<div class="ui primary button">Sign Up</div>
 					</div>
@@ -101,6 +97,14 @@
 		</div>
 	</div>
 
+	<div class="ui container segment">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</div>
 	<script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
 	<script type="text/javascript" src="{{ asset('js/semantic.min.js') }}"></script>
 	<script type="text/javascript" src="{{ asset('js/manual.js') }}"></script>
