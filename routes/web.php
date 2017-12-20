@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('cuaca');
+    return view('master');
 });
 
 Route::get('/cuaca','APIcontroller@cuaca');
