@@ -22,13 +22,13 @@ class APIcontroller extends Controller
 
     public function Visualisasitempat()
     {
-  		Mapper::map(-6.9419491, 106.9327932);
-		
-		Mapper::informationWindow(-6.9353775, 106.9329091, 'Content');
-		Mapper::informationWindow(-6.9353775, 106.9329091, 'Content', ['open' => true, 'maxWidth'=> 300, 'markers' => ['title' => 'Title']]);
+    	Mapper::map(-6.9419491, 106.9327932);
 
-		Mapper::streetview(-6.9419491, 106.9327932, 1, 1);
-		return view('cuaca');
+  		Mapper::informationWindow(-6.9353775, 106.9329091, 'Content');
+  		Mapper::informationWindow(-6.9353775, 106.9329091, 'Content', ['open' => true, 'maxWidth'=> 300, 'markers' => ['title' => 'Title']]);
+
+  		Mapper::streetview(-6.9419491, 106.9327932, 1, 1);
+  		return view('cuaca');
     }
 
     public function Geolokasi()
@@ -40,7 +40,7 @@ class APIcontroller extends Controller
     	$long = $items->first()->getCoordinates()->getLongitude();
     	dd($items);
     	return view('cuaca',compact('items'));
-    }	
+    }
 
     public function semua($lokasi)
     {

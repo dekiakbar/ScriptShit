@@ -100,9 +100,9 @@
 		</div>
 	</div>
 
-	<div class="ui container segment">
-		@yield('isi')
-	</div>
+	
+	@yield('isi')
+
 
 	<script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
 	<script type="text/javascript" src="{{ asset('js/semantic.min.js') }}"></script>
