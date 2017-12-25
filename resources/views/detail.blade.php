@@ -13,7 +13,7 @@
 					        <i class="large flag middle aligned icon blue"></i>
 					        <div class="content">
 					            <a class="header">Negara :</a>
-					            <div class="description">{{ $geo->first()->getPolitical() }}</div>
+					            <div class="description">{{ $lokasi->negara }}</div>
 					        </div>
 					    </div>
 					</div>
@@ -26,7 +26,7 @@
 					        <i class="large address card outline middle aligned icon blue"></i>
 					        <div class="content">
 					            <a class="header">Provinsi :</a>
-					            <div class="description">Indonesia</div>
+					            <div class="description">{{ $lokasi->provinsi }}</div>
 					        </div>
 					    </div>
 					</div>
@@ -39,7 +39,7 @@
 					        <i class="large address card outline middle aligned icon blue"></i>
 					        <div class="content">
 					            <a class="header">Kota :</a>
-					            <div class="description">Indonesia</div>
+					            <div class="description">{{ $lokasi->kota }}</div>
 					        </div>
 					    </div>
 					</div>
@@ -52,7 +52,7 @@
 					        <i class="large address card outline middle aligned icon blue"></i>
 					        <div class="content">
 					            <a class="header">Kecamatan :</a>
-					            <div class="description">Indonesia</div>
+					            <div class="description">{{ $lokasi->kecamatan }}</div>
 					        </div>
 					    </div>
 					</div>
@@ -65,7 +65,7 @@
 					        <i class="large address card outline middle aligned icon blue"></i>
 					        <div class="content">
 					            <a class="header">Kelurahan :</a>
-					            <div class="description">Indonesia</div>
+					            <div class="description">{{ $lokasi->kelurahan }}</div>
 					        </div>
 					    </div>
 					</div>
@@ -78,7 +78,7 @@
 					        <i class="large address card middle aligned icon blue"></i>
 					        <div class="content">
 					            <a class="header">Alamat :</a>
-					            <div class="description">{{ $geo->first()->getFormattedAddress() }}</div>
+					            <div class="description">{{ $lokasi->alamat }}</div>
 					        </div>
 					    </div>
 					</div>

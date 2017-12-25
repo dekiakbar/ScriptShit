@@ -42,22 +42,40 @@ class APIcontroller extends Controller
     	return view('cuaca',compact('items'));
     }
 
-    public function semua($lokasi)
+    public function semua($koordinat)
     {
-    	$lok = explode(',', $lokasi);
+    	$lok = explode(',', $koordinat);
     	$lat = $lok[0];
     	$long = $lok[1];
     	$geolokasi = array("lat" => $lok[0],"lon" => $lok[1]);
 
-    	$geo = app('geocoder')->reverse($lat,$long)->get();
-    	$namaKota = $geo->first()->getLocality();
+    	$lokjson = app('geocoder')->reverse($lat,$long)->get();
+
+    	$negara = $lokjson->first()->getPolitical();
+    	$provinsi = $lokjson->first()->getAdminLevels()->first()->getName();
+    	$kota = $lokjson->first()->getAdminLevels()->get(2)->getName();
+    	$kecamatan = $lokjson->first()->getAdminLevels()->get(3)->getName();
+    	$kelurahan = $lokjson->first()->getAdminLevels()->get(4)->getName();
+    	$alamat = $lokjson->first()->getFormattedAddress();
+    	$data = array(
+    		'negara'	=>	$negara,
+			'provinsi'	=>	$provinsi,
+			'kota'		=>	$kota,
+			'kecamatan' =>	$kecamatan,
+			'kelurahan' =>	$kelurahan,
+			'alamat' 	=>	$alamat
+    	);
+    	$lokasi = (object) $data;
 
     	$owm = new LaravelOWM();
     	$cuaca = $owm->getCurrentWeather($geolokasi, $lang = 'id', $units = 'metric', $cache = false);
+    	// $ramalan = $owm->getWeatherForecast($geolokasi, $lang = 'id', $units = 'metric', $days = 5, $cache = false, $time = 600);
 
     	Mapper::map($lat, $long,['zoom' => '18','markers' => ['title' => 'Lokasi']]);
 
-    	return view('detail',compact('cuaca','geo','lokasi'));
+    	return view('detail',compact('cuaca','lokasi'));
 
+    	// dd($ramalan);
+    	// return view('detail');
     }
 }
