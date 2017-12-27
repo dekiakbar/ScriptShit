@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "951af17585f33b9cd31e51d2ea31f1ad",
-    "content-hash": "20f29550cbe0b8e5f47293209d50dee1",
+    "hash": "1a207eae0f0a27a11feaa23321b52dda",
+    "content-hash": "885a9389f0d47af2c269152693776a65",
     "packages": [
         {
             "name": "clue/stream-filter",
@@ -1073,16 +1073,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.5.27",
+            "version": "v5.5.28",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "b4fb6eeb227b7327b4ca7f92263b693ec9ac9875"
+                "reference": "cfafae1f2043208390a7c984e3070696f4969605"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/b4fb6eeb227b7327b4ca7f92263b693ec9ac9875",
-                "reference": "b4fb6eeb227b7327b4ca7f92263b693ec9ac9875",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/cfafae1f2043208390a7c984e3070696f4969605",
+                "reference": "cfafae1f2043208390a7c984e3070696f4969605",
                 "shasum": ""
             },
             "require": {
@@ -1203,7 +1203,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2017-12-20 15:43:48"
+            "time": "2017-12-26 16:24:40"
         },
         {
             "name": "laravel/tinker",
@@ -1528,16 +1528,16 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v3.1.2",
+            "version": "v3.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "08131e7ff29de6bb9f12275c7d35df71f25f4d89"
+                "reference": "579f4ce846734a1cf55d6a531d00ca07a43e3cda"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/08131e7ff29de6bb9f12275c7d35df71f25f4d89",
-                "reference": "08131e7ff29de6bb9f12275c7d35df71f25f4d89",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/579f4ce846734a1cf55d6a531d00ca07a43e3cda",
+                "reference": "579f4ce846734a1cf55d6a531d00ca07a43e3cda",
                 "shasum": ""
             },
             "require": {
@@ -1575,7 +1575,7 @@
                 "parser",
                 "php"
             ],
-            "time": "2017-11-04 11:48:34"
+            "time": "2017-12-26 14:43:21"
         },
         {
             "name": "paragonie/random_compat",
@@ -2378,59 +2378,6 @@
                 "uuid"
             ],
             "time": "2017-09-22 20:46:04"
-        },
-        {
-            "name": "skagarwal/google-places-api",
-            "version": "1.1.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/SachinAgarwal1337/google-places-api.git",
-                "reference": "68c55a408fd706bb8f7576fa11af32aebf6706c2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/SachinAgarwal1337/google-places-api/zipball/68c55a408fd706bb8f7576fa11af32aebf6706c2",
-                "reference": "68c55a408fd706bb8f7576fa11af32aebf6706c2",
-                "shasum": ""
-            },
-            "require": {
-                "guzzlehttp/guzzle": "^6.1",
-                "illuminate/container": "~5.0",
-                "illuminate/support": "~5.0",
-                "php": ">=5.5.9"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4.0",
-                "skagarwal/reflection": "~1.0"
-            },
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "src/helpers.php"
-                ],
-                "psr-4": {
-                    "SKAgarwal\\GoogleApi\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Sachin Agarwal",
-                    "email": "sachinkumaragarwal05@gmail.com"
-                }
-            ],
-            "description": "Google Places Api",
-            "keywords": [
-                "Google Places Api",
-                "google",
-                "google api",
-                "google places",
-                "places"
-            ],
-            "time": "2016-02-05 00:00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -3350,16 +3297,16 @@
         },
         {
             "name": "toin0u/geocoder-laravel",
-            "version": "4.0.3",
+            "version": "4.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/geocoder-php/GeocoderLaravel.git",
-                "reference": "20b262968975a559d6f95f8cf42d61def478c7f6"
+                "reference": "2cebf12c554d470520a4fd74bd2ce96ce540fddb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/geocoder-php/GeocoderLaravel/zipball/20b262968975a559d6f95f8cf42d61def478c7f6",
-                "reference": "20b262968975a559d6f95f8cf42d61def478c7f6",
+                "url": "https://api.github.com/repos/geocoder-php/GeocoderLaravel/zipball/2cebf12c554d470520a4fd74bd2ce96ce540fddb",
+                "reference": "2cebf12c554d470520a4fd74bd2ce96ce540fddb",
                 "shasum": ""
             },
             "require": {
@@ -3367,21 +3314,22 @@
                 "geocoder-php/geo-plugin-provider": "^4.0",
                 "geocoder-php/google-maps-provider": "^4.0",
                 "guzzlehttp/psr7": "*",
-                "illuminate/cache": "5.*",
-                "illuminate/support": "5.*",
+                "illuminate/cache": "5.0 - 5.5",
+                "illuminate/support": "5.0 - 5.5",
                 "php": "^7.0",
                 "php-http/curl-client": "^1.7",
                 "willdurand/geocoder": "^4.0"
             },
             "require-dev": {
+                "codedungeon/phpunit-result-printer": "^0.4.4",
                 "doctrine/dbal": "^2.5",
                 "fzaninotto/faker": "~1.4",
                 "geocoder-php/bing-maps-provider": "^4.0",
                 "geocoder-php/maxmind-binary-provider": "^4.0",
                 "laravel/laravel": "5.5.*",
                 "mockery/mockery": "0.9.*",
+                "php-coveralls/php-coveralls": "^2.0",
                 "phpunit/phpunit": "~5.0",
-                "satooshi/php-coveralls": "dev-master@dev",
                 "sebastian/phpcpd": "*"
             },
             "type": "library",
@@ -3422,7 +3370,7 @@
                 "geocoding",
                 "laravel"
             ],
-            "time": "2017-10-27 21:27:28"
+            "time": "2017-12-27 21:00:33"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -3532,46 +3480,6 @@
                 "geoip"
             ],
             "time": "2017-09-16 13:21:54"
-        },
-        {
-            "name": "willdurand/nmap",
-            "version": "0.5.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/willdurand/nmap.git",
-                "reference": "3da65c2c6d8fff9928e8cc4a9673836dd405e897"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/willdurand/nmap/zipball/3da65c2c6d8fff9928e8cc4a9673836dd405e897",
-                "reference": "3da65c2c6d8fff9928e8cc4a9673836dd405e897",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0",
-                "symfony/process": "~2.0|~3.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~3.7"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Nmap": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "William Durand",
-                    "email": "william.durand1@gmail.com"
-                }
-            ],
-            "description": "nmap is a PHP wrapper for Nmap, a free security scanner for network exploration.",
-            "time": "2017-05-17 19:24:04"
         }
     ],
     "packages-dev": [

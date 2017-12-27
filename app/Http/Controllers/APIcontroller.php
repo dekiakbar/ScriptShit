@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Gmopx\LaravelOWM\LaravelOWM;
 use Mapper;
-use SKAgarwal\GoogleApi\PlacesApi;
 
 class APIcontroller extends Controller
 {
@@ -70,7 +69,7 @@ class APIcontroller extends Controller
     	$lokasi 	= (object) $data;
     	// ==============================
     	
-    	// pengolahan data API dari Open Weather Map
+    	// pengolahan data cuaca API dari Open Weather Map
     	$owm 		= new LaravelOWM();
     	$cuacaJson 	= $owm->getCurrentWeather($geolokasi, $lang = 'en', $units = 'metric', $cache = false);
     	$suhu		= $cuacaJson->temperature->now;
@@ -80,63 +79,28 @@ class APIcontroller extends Controller
     	$tekUdara	= $cuacaJson->pressure;
     	$cuaca 		= $cuacaJson->weather->description;
 
-    	$hasil 	= TarahAngin($arahAngin);
-    	// $arahAngin 	= explode(' ',$arahAngin);
-    	// if ($arahAngin[1] == 'N') {
-    	//  	$arahAngin[1] = 'Utara';
-    	// }elseif ($arahAngin[1] == 'NE') {
-    	// 	$arahAngin[1] = 'Timur Laut';
-    	// }elseif ($arahAngin[1] == 'E') {
-    	// 	$arahAngin[1] = 'Timur';
-    	// }elseif ($arahAngin[1] == 'SE') {
-    	// 	$arahAngin[1] = 'Tenggara';
-    	// }elseif ($arahAngin[1] == 'S') {
-    	// 	$arahAngin[1] = 'Selatan';
-    	// }elseif ($arahAngin[1] == 'SW') {
-    	// 	$arahAngin[1] = 'Barat Daya';
-    	// }elseif ($arahAngin[1] == 'W') {
-    	// 	$arahAngin[1] = 'Barat';
-    	// }elseif ($arahAngin[1] == 'NW') {
-    	// 	$arahAngin[1] = 'Barat Laut';
-    	// }elseif ($arahAngin[1] == 'WNW') {
-    	// 	$arahAngin[1] = 'Barat Barat Laut';
-    	// }elseif ($arahAngin[1] == 'NNE') {
-    	// 	$arahAngin[1] = 'Utara Timur Laut';
-    	// }elseif ($arahAngin[1] == 'ENE') {
-    	// 	$arahAngin[1] = 'Timur Timur Laut';
-    	// }elseif ($arahAngin[1] == 'ESE') {
-    	// 	$arahAngin[1] = 'Timur Tenggara';
-    	// }elseif ($arahAngin[1] == 'SSE') {
-    	// 	$arahAngin[1] = 'Selatan Tenggara';
-    	// }elseif ($arahAngin[1] == 'SSW') {
-    	// 	$arahAngin[1] = 'Selatan Barat Daya';
-    	// }elseif ($arahAngin[1] == 'WSW') {
-    	// 	$arahAngin[1] = 'Barat Barat Daya';
-    	// }elseif ($arahAngin[1] == 'NNW') {
-    	// 	$arahAngin[1] = 'Utara Barat Laut';
-    	// }
+    	$Harah 		= TarahAngin($arahAngin);
+    	$Hcuaca 	= Tcuaca($cuaca);
 
-    	// $arahAngin = $arahAngin[0].' '.$arahAngin[1];
-
-    	$kondisi = array(
+    	$kondisi 	= array(
     		'suhu' => $suhu,
     		'kelembaban' => $kelembaban,
-    		'arahAngin' => $hasil,
+    		'arahAngin' => $Harah,
     		'kecAngin' => $kecAngin,
     		'tekUdara' => $tekUdara,
-    		'cuaca' => $cuaca, 
+    		'cuaca' => $Hcuaca, 
     	);
-    	$kondisi = (object) $kondisi;
+    	$kondisi 	= (object) $kondisi;
+    	// ==============================
+
+    	// pengolahan data MAP dari Google map API
+    	Mapper::map($lat, $long,['zoom' => '18','markers' => ['title' => 'Lokasi']]);
     	// ==============================
     	
+		return view('detail',compact('kondisi','lokasi'));
 
-    	// $ramalan = $owm->getWeatherForecast($geolokasi, $lang = 'id', $units = 'metric', $days = 5, $cache = false, $time = 600);
-
-    	Mapper::map($lat, $long,['zoom' => '18','markers' => ['title' => 'Lokasi']]);
-
-    	return view('detail',compact('kondisi','lokasi'));
-
+    	
+    	// $ramalan 	= $owm->getWeatherForecast($geolokasi, $lang = 'en', $units = 'metric', $days = 5, $cache = false, $time = 600);
     	// dd($ramalan);
-    	// return view('detail');
     }
 }
