@@ -43,7 +43,7 @@
 
 		<div class="ui dropdown item">
 			<z class="displaynone">Dashboard</z>
-			<i class="icon demo-icon heart icon-heart"></i>
+			<i class="icon demo-icon server icon-heart"></i>
 			<div class="menu">
 				<div class="header">
 					Dashboard
