@@ -78,17 +78,16 @@ class APIcontroller extends Controller
     	$kecAngin	= $cuacaJson->wind->speed;
     	$tekUdara	= $cuacaJson->pressure;
     	$cuaca 		= $cuacaJson->weather->description;
-
     	$Harah 		= TarahAngin($arahAngin);
     	$Hcuaca 	= Tcuaca($cuaca);
 
     	$kondisi 	= array(
-    		'suhu' => $suhu,
-    		'kelembaban' => $kelembaban,
+    		'suhu'		=> $suhu,
+    		'kelembaban'=> $kelembaban,
     		'arahAngin' => $Harah,
-    		'kecAngin' => $kecAngin,
-    		'tekUdara' => $tekUdara,
-    		'cuaca' => $Hcuaca, 
+    		'kecAngin' 	=> $kecAngin,
+    		'tekUdara' 	=> $tekUdara,
+    		'cuaca' 	=> $Hcuaca, 
     	);
     	$kondisi 	= (object) $kondisi;
     	// ==============================
@@ -97,10 +96,22 @@ class APIcontroller extends Controller
     	Mapper::map($lat, $long,['zoom' => '18','markers' => ['title' => 'Lokasi']]);
     	// ==============================
     	
-		return view('detail',compact('kondisi','lokasi'));
-
+    	// Pengolahan data Elevasi dari google elvation API
+    	$elevasiApi = \GoogleMaps::load('elevation')->setParamByKey('locations', $lat.','.$long)->get();
+    	$arElevasi 	= json_decode($elevasiApi);
+    	$elevasi 	= round($arElevasi->results[0]->elevation, 2).' mdpl';
+    	$resolusi 	= round($arElevasi->results[0]->resolution, 2).' Meter';
+    	$kemiringan	= array(
+    		'elevasi'	=> $elevasi,
+    		'resolusi'	=> $resolusi
+    	);
+    	$kemiringan = (object) $kemiringan;
+    	// ==============================
     	
+		return view('detail',compact('kondisi','lokasi','kemiringan'));
     	// $ramalan 	= $owm->getWeatherForecast($geolokasi, $lang = 'en', $units = 'metric', $days = 5, $cache = false, $time = 600);
     	// dd($ramalan);
+    	
+    	
     }
 }

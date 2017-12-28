@@ -5,13 +5,14 @@
 <div class="ui container segment">
 	<div class="ui container">
 		<h2 class="ui center aligned header">Informasi</h2>
+		<div class="ui divider"></div>
 		<div class="ui three column doubling stackable grid">
 			<div class="column">
 				<h3 class="ui center aligned header">Informasi Lokasi</h3>
 				<div class ="ui segment">
 					<div class ="ui relaxed divided list">
 						<div class ="item">
-							<i class   ="large flag middle aligned icon blue"></i>
+							<i class   ="large checkered flag middle aligned icon blue"></i>
 							<div class ="content">
 								<a class   ="header">Negara :</a>
 								<div class ="description">{{ $lokasi->negara }}</div>
@@ -151,10 +152,10 @@
 			    <div class="ui segment">
 			    	<div class="ui relaxed divided list">
 					    <div class="item">
-					        <i class="large thermometer half middle aligned icon blue"></i>
+					        <i class="large resize vertical middle aligned icon blue"></i>
 					        <div class="content">
-					            <a class="header">Suhu :</a>
-					            <div class="description">{{ $kondisi->suhu }}</div>
+					            <a class="header">Ketingian :</a>
+					            <div class="description">{{ $kemiringan->elevasi }}</div>
 					        </div>
 					    </div>
 					</div>
@@ -162,10 +163,10 @@
 			    <div class="ui segment">
 			    	<div class="ui relaxed divided list">
 					    <div class="item">
-					        <i class="large percent middle aligned icon blue"></i>
+					        <i class="large globe middle aligned icon blue"></i>
 					        <div class="content">
-					            <a class="header">Kelembaban :</a>
-					            <div class="description">{{ $kondisi->kelembaban }}</div>
+					            <a class="header">Resolusi :</a>
+					            <div class="description">{{ $kemiringan->resolusi }}</div>
 					        </div>
 					    </div>
 					</div>
@@ -173,9 +174,9 @@
 			    <div class="ui segment">
 			    	<div class="ui relaxed divided list">
 					    <div class="item">
-					        <i class="large random middle aligned icon blue"></i>
+					        <i class="large lab middle aligned icon blue"></i>
 					        <div class="content">
-					            <a class="header">Arah Angin :</a>
+					            <a class="header">Ph Tanah :</a>
 					            <div class="description">{{ $kondisi->arahAngin }}</div>
 					        </div>
 					    </div>
@@ -184,9 +185,9 @@
 			    <div class="ui segment">
 			    	<div class="ui relaxed divided list">
 					    <div class="item">
-					        <i class="large soundcloud middle aligned icon blue"></i>
+					        <i class="large question middle aligned icon blue"></i>
 					        <div class="content">
-					            <a class="header">Kecepatan Angin :</a>
+					            <a class="header">Jenis Tanah :</a>
 					            <div class="description">{{ $kondisi->kecAngin }}</div>
 					        </div>
 					    </div>
