@@ -74,6 +74,19 @@
 
     // Methode AHP
     // 
+    // fungsi perbandingan , mengubah nilai jd matriks
+    function perbandinganKriteria($kriteria)
+	{
+		$hasil = array();
+		for ($i=0; $i < sizeof($kriteria) ; $i++) { 
+			for ($j=0; $j < sizeof($kriteria) ; $j++) { 
+				$hasil[$i][$j] = $kriteria[$i]/$kriteria[$j];
+			}
+		}
+		return $hasil;
+	}
+    // akhir fungsi perbandingan
+    // 
     //fungsi untuk mengkuadratkan matriks
     function kuadrat($matriks)
     {
@@ -102,12 +115,12 @@
 			}
 			$hasil[$i]=$tampung;
 		}
-
+		
 		$total=0;
 		for ($k=0; $k < sizeof($hasil) ; $k++) { 
 			$total += $hasil[$k];
 		}
-		$hasil[$k+1] = $total;
+		$hasil[$k] = $total;
 		return $hasil;
 	}
 	// akhir fungsi penjumlahan baris matriks
@@ -116,9 +129,9 @@
 	function normalisasi($matriks)
 	{
 		$hasil = array();
-		$pembagi = $matriks[sizeof($matriks)];
+		$pembagi = $matriks[sizeof($matriks)-1];
 		$tampung = 0;
-		for ($i=0; $i < sizeof($matriks)-1; $i++) { 
+		for ($i=0; $i < sizeof($matriks); $i++) { 
 			$hasil[$i] = $matriks[$i]/$pembagi; 
 		}
 		return $hasil;
