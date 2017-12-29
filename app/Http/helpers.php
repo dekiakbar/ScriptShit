@@ -1,5 +1,6 @@
 <?php 
 	
+	//fungsi untuk mentranslate arah mata angin
 	function TarahAngin($arahAngin)
     {
     	$arahAngin 	= explode(' ',$arahAngin);
@@ -43,7 +44,9 @@
 	   	}
     	return $arahAngin;	
     }
+    // akhir fungsi translate arah angin
 
+    // fungsi untuk mentranslate nama cuaca
     function Tcuaca($cuaca)
     {
     	if ($cuaca == 'clear sky') {
@@ -67,5 +70,62 @@
     	}
     	return $cuaca;
     }
+    // akhir fungsi translate nama cuaca
+
+    // Methode AHP
+    // 
+    //fungsi untuk mengkuadratkan matriks
+    function kuadrat($matriks)
+    {
+		$hasil = array();
+		for ($i=0; $i < sizeof($matriks) ; $i++) { 
+			for ($j=0; $j < sizeof($matriks) ; $j++) {
+				$simpan = 0; 
+				for ($k=0; $k < sizeof($matriks) ; $k++) { 
+					$simpan += $matriks[$i][$k] * $matriks[$k][$j];
+				}
+				$hasil[$i][$j] = $simpan;
+			}
+		}
+		return $hasil;
+	}
+	// akhir fungsi kuadrat
+	// 
+	// fungsi utk menjumlahkan baris matriks
+	function jumlahkan($matriks)
+	{
+		$hasil = array();
+		for ($i=0; $i < sizeof($matriks); $i++) { 
+			$tampung = 0;
+			for ($j=0; $j < sizeof($matriks); $j++) { 
+				$tampung += $matriks[$i][$j];
+			}
+			$hasil[$i]=$tampung;
+		}
+
+		$total=0;
+		for ($k=0; $k < sizeof($hasil) ; $k++) { 
+			$total += $hasil[$k];
+		}
+		$hasil[$k+1] = $total;
+		return $hasil;
+	}
+	// akhir fungsi penjumlahan baris matriks
+	// 
+	// fungsu utk normalisasi matriks
+	function normalisasi($matriks)
+	{
+		$hasil = array();
+		$pembagi = $matriks[sizeof($matriks)];
+		$tampung = 0;
+		for ($i=0; $i < sizeof($matriks)-1; $i++) { 
+			$hasil[$i] = $matriks[$i]/$pembagi; 
+		}
+		return $hasil;
+	}
+	// akhir fungsi normalisasi matriks
+	// 
+	// akhir methode AHP
+
 
  ?>
