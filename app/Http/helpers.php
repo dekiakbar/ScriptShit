@@ -115,7 +115,7 @@
 			}
 			$hasil[$i]=$tampung;
 		}
-		
+
 		$total=0;
 		for ($k=0; $k < sizeof($hasil) ; $k++) { 
 			$total += $hasil[$k];
@@ -125,7 +125,7 @@
 	}
 	// akhir fungsi penjumlahan baris matriks
 	// 
-	// fungsu utk normalisasi matriks
+	// fungsi utk normalisasi matriks
 	function normalisasi($matriks)
 	{
 		$hasil = array();
