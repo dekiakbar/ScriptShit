@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('admin.editPerbandingan');
 });
 
 Route::get('/cuaca','APIcontroller@cuaca');
@@ -20,3 +20,7 @@ Route::get('/visualisasi', 'APIcontroller@Visualisasitempat');
 Route::get('/geo', 'APIcontroller@Geolokasi');
 
 Route::get('/detail/{lokasi}','APIcontroller@semua');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

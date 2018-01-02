@@ -29,15 +29,13 @@
 				<a class="item" href="box.html">Box</a>
 			</div>
 			<a class="item">
-				<b>Components</b>
+				<b>Perbandingan Data</b>
 			</a>	
 			<div class="title item">
-				<i class="dropdown icon"></i> UI-Kit
+				<i class="dropdown icon"></i> Kriteria
 			</div>
 			<div class="content">
-				<a class="item" href="accordion.html">Accordion</a>
-				<a class="item" href="breadcrumb.html">Breadcrumb</a>
-				<a class="item" href="button.html">Button</a>
+				<a class="item" href="accordion.html">Lihat Data</a>
 			</div>
 		</div>
 
@@ -70,17 +68,13 @@
 
 		<div class="ui dropdown item">
 			<z class="displaynone">Pages</z>
-			<i class="icon demo-icon  icon-params alarm"></i>
+			<i class="icon demo-icon  icon-params setting"></i>
 			<div class="menu">
 				<div class="header">
-					Layouts
+					Perbandingan Data
 				</div>
 				<div class="ui divider"></div>
-				<a class="item" href="sidebar.html">Sidebar</a>
-				<a class="item" href="menu.html">Nav</a>
-				<a class="item" href="animatedicon.html">Animated Icon</a>
-				<a class="item" href="box.html">Box</a>
-				<a class="item" href="cards.html">Cards</a>
+				<a class="item" href="accordion.html">Lihat Data</a>
 			</div>
 		</div>
 

@@ -16,7 +16,7 @@ class APIcontroller extends Controller
     	dd($data);
     	$idKota = $data->city->id;
     	$namaKota = $data->city->name;
-    	return view('cuaca',compact('data'));
+    	return view('debug',compact('data'));
     }
 
     public function Visualisasitempat()
@@ -27,7 +27,7 @@ class APIcontroller extends Controller
   		Mapper::informationWindow(-6.9353775, 106.9329091, 'Content', ['open' => true, 'maxWidth'=> 300, 'markers' => ['title' => 'Title']]);
 
   		Mapper::streetview(-6.9419491, 106.9327932, 1, 1);
-  		return view('cuaca');
+  		return view('debug');
     }
 
     public function Geolokasi()
@@ -38,7 +38,7 @@ class APIcontroller extends Controller
     	$lat = $items->first()->getCoordinates()->getLatitude();
     	$long = $items->first()->getCoordinates()->getLongitude();
     	dd($items);
-    	return view('cuaca',compact('items'));
+    	return view('debug',compact('items'));
     }
 
     public function semua($koordinat)

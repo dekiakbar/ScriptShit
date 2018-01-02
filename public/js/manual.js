@@ -8,7 +8,7 @@ $(".buka").on("click", function() {
    $(".logo").find('img').toggle();
 });
 
-$(".ui.dropdown").dropdown({
+$(".ui.dropdown.item").dropdown({
    allowCategorySelection: true,
    transition: "fade up",
    context: 'sidebar',
@@ -19,6 +19,55 @@ $('.ui.accordion').accordion({
    selector: {
    }
 });
+
+//js editPerbandingan
+function Tsuhu(){
+   $('#suhu').progress('increment');
+}
+
+function Ksuhu(){
+   $('#suhu').progress('decrement');
+}
+
+function Tkelembaban(){
+   $('#kelembaban').progress('increment');
+}
+
+function Kkelembaban(){
+   $('#kelembaban').progress('decrement');
+}
+
+function Tph(){
+   $('#ph').progress('increment');
+}
+
+function Kph(){
+   $('#ph').progress('decrement');
+}
+
+function Tketinggian(){
+   $('#ketinggian').progress('increment');
+}
+
+function Kketinggian(){
+   $('#ketinggian').progress('decrement');
+}
+
+function Tketebalan(){
+   $('#ketebalan').progress('increment');
+}
+
+function Kketebalan(){
+   $('#ketebalan').progress('decrement');
+}
+
+function Tkedalaman(){
+   $('#kedalaman').progress('increment');
+}
+
+function Kkedalaman(){
+   $('#kedalaman').progress('decrement');
+}
 
 //konfigurasi google map
 function initMap() {
