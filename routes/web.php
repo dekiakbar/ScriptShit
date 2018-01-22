@@ -12,9 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('admin.editPerbandingan');
+    return view('index');
 });
 
+//debug
 Route::get('/cuaca','APIcontroller@cuaca');
 Route::get('/visualisasi', 'APIcontroller@Visualisasitempat');
 Route::get('/geo', 'APIcontroller@Geolokasi');

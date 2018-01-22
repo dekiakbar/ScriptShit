@@ -19,5 +19,7 @@
         "semantic-ui-css": "^2.2.12",
         "vue": "^2.5.7"
     },
-    "dependencies": {}
+    "dependencies": {
+        "sass-semantic-ui": "^2.2.12-3"
+    }
 }

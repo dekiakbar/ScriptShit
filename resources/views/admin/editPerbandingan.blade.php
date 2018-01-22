@@ -3,6 +3,14 @@
 
 @section('isi')
 <div class="ui container segment">
+	<h2 class="ui icon header center aligned">
+	  <i class="settings icon"></i>
+	  <div class="content">
+	    Pengaturan Perbandingan
+	    <div class="sub header">Pengaturan perbandingan ini digunakan untuk mengatur nilai dari masing-masing kriteria yang akan di proses oleh sistem</div>
+	  </div>
+	</h2>
+	<div class="ui divider"></div>
 	<div class="ui two column stackable grid container">
 	  	<div class="column">
 	    	<div class="ui segment">

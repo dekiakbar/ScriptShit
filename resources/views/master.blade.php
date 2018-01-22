@@ -2,10 +2,11 @@
 <html>
 <head>
 	<meta charset="utf-8" />
+	<meta name="csrf-token" content="{{ csrf_token() }}">
  	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 	<title>@yield('judul')</title>
-	<link rel="stylesheet" type="text/css" href="{{ asset('css/semantic.min.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/manual.css') }}">
 </head>
 <body>
@@ -35,7 +36,7 @@
 				<i class="dropdown icon"></i> Kriteria
 			</div>
 			<div class="content">
-				<a class="item" href="accordion.html">Lihat Data</a>
+				<a class="item" href="accordion.html">Pengaturan Data</a>
 			</div>
 		</div>
 
@@ -71,7 +72,7 @@
 			<i class="icon demo-icon  icon-params setting"></i>
 			<div class="menu">
 				<div class="header">
-					Perbandingan Data
+					Pengaturan
 				</div>
 				<div class="ui divider"></div>
 				<a class="item" href="accordion.html">Lihat Data</a>
@@ -99,7 +100,6 @@
 
 
 	<script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
-	<script type="text/javascript" src="{{ asset('js/semantic.min.js') }}"></script>
 	<script type="text/javascript" src="{{ asset('js/manual.js') }}"></script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWjO5SevIcwYGgnch9sRr9RYAU_704tUs&libraries=places&callback=initMap" async defer>
     </script>
