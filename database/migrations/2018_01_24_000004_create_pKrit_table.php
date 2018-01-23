@@ -4,16 +4,25 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class PKrit extends Migration
+class CreatePkritTable extends Migration
 {
     /**
+     * Schema table name to migrate
+     * @var string
+     */
+    public $set_schema_table = 'pKrit';
+
+    /**
      * Run the migrations.
+     * @table pKrit
      *
      * @return void
      */
     public function up()
     {
-        Schema::create('pKrit', function (Blueprint $table) {
+        if (Schema::hasTable($this->set_schema_table)) return;
+        Schema::create($this->set_schema_table, function (Blueprint $table) {
+            $table->engine = 'InnoDB';
             $table->increments('id');
             $table->integer('suhu');
             $table->integer('kelembaban');
@@ -21,7 +30,7 @@ class PKrit extends Migration
             $table->integer('ketinggian');
             $table->integer('kedalaman');
             $table->integer('ketebalan');
-            $table->timestamps();
+            $table->nullableTimestamps();
         });
     }
 
@@ -30,8 +39,8 @@ class PKrit extends Migration
      *
      * @return void
      */
-    public function down()
-    {
-        Schema::dropIfExists('pKrit');
-    }
+     public function down()
+     {
+       Schema::dropIfExists($this->set_schema_table);
+     }
 }

@@ -12,13 +12,14 @@
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('admin.master');
 });
 
 //debug
 Route::get('/cuaca','APIcontroller@cuaca');
 Route::get('/visualisasi', 'APIcontroller@Visualisasitempat');
 Route::get('/geo', 'APIcontroller@Geolokasi');
+//
 
 Route::get('/detail/{lokasi}','APIcontroller@semua');
 
