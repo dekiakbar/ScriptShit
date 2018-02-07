@@ -13,6 +13,7 @@
 	<div class="column">
 		<div class="ui blue secondary pointing menu">
 			<a class="active item" href="#"><i class="dashboard icon"></i>Dashboard</a>
+		  	
 		  	<div class="ui dropdown item">
 		    	Data
 			    <i class="dropdown icon"></i>
@@ -52,6 +53,7 @@
 				    </div>
 				</div>
 		  	</div>
+
 		</div>
 	</div>
 </div>

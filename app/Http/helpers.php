@@ -62,7 +62,7 @@
     	}elseif ($cuaca == 'rain') {
     		$cuaca = 'Hujan';
     	}elseif ($cuaca == 'thunderstorm') {
-    		$cuaca = '';
+    		$cuaca = 'Badai';
     	}elseif ($cuaca == 'snow') {
     		$cuaca = 'Bersalju';
     	}elseif ($cuaca == 'mist') {
@@ -72,7 +72,7 @@
     }
     // akhir fungsi translate nama cuaca
 
-    // Methode AHP
+//========================== Methode AHP ========================== 
     // 
     // fungsi perbandingan , mengubah nilai jd matriks
     function perbandinganKriteria($kriteria)
@@ -138,7 +138,21 @@
 	}
 	// akhir fungsi normalisasi matriks
 	// 
-	// akhir methode AHP
+	// fungsi eigen vektor pilihan x eigen vektor kriteria
+	function EVPxEVK($a,$b){
+	$hasil = array();
+	for ($i=0; $i < sizeof($a) ; $i++) { 
+		for ($j=0; $j < sizeof($b) ; $j++) {
+			$simpan = 0; 
+			for ($k=0; $k < sizeof($a) ; $k++) { 
+				$simpan += $a[$i][$k] * $b[$k][0];
+			}
+			$hasil[$i][0] = $simpan;
+		}
+	}
+	return $hasil;
+}
+// //==========================  akhir methode AHP ========================== 
 
 
  ?>

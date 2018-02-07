@@ -8,6 +8,7 @@ use Mapper;
 
 class APIcontroller extends Controller
 {
+//======================= debug =======================
     public function cuaca()
     {
     	$owm = new LaravelOWM();
@@ -40,7 +41,8 @@ class APIcontroller extends Controller
     	dd($items);
     	return view('debug',compact('items'));
     }
-
+//===================== akhir debug =====================
+//
     public function semua($koordinat)
     {	
     	// pengolahan data Geolokasi dari pencarian JS
