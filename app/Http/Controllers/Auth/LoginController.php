@@ -20,6 +20,19 @@ class LoginController extends Controller
 
     use AuthenticatesUsers;
 
+    /*
+    |--------------------------------------------------------------------------
+    | Tapil Login admin 
+    |--------------------------------------------------------------------------
+    |
+    | Override login page admin bawaan laravel
+    |
+    */
+    public function showLoginForm()
+    {
+        return view('admin.login');
+    }
+
     /**
      * Where to redirect users after login.
      *
