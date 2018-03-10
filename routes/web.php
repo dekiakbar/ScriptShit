@@ -12,21 +12,36 @@
 */
 
 Route::get('/', function () {
-    return view('admin.login');
+    return view('admin.master');
 });
 
-//debug
+/*
+|--------------------------------------------------------------------------
+| Routing untuk debug aplikasi
+|--------------------------------------------------------------------------
+*/
 Route::get('/cuaca','APIcontroller@cuaca');
 Route::get('/visualisasi', 'APIcontroller@Visualisasitempat');
 Route::get('/geo', 'APIcontroller@Geolokasi');
-//
 
 Route::get('/detail/{lokasi}','APIcontroller@semua');
 
-Auth::routes();
+/*
+|--------------------------------------------------------------------------
+| Override Routing Auth admin
+|--------------------------------------------------------------------------
+*/
+Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
+Route::post('login', 'Auth\LoginController@login');
+Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
+Route::post('register', 'Auth\RegisterController@register');
 
-Auth::routes();
+Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
+Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
+Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
+Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Auth::routes();
+// Route::get('/home', 'HomeController@index')->name('home');
