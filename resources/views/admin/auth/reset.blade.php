@@ -29,7 +29,7 @@
 	    	<div class="ui segment teal">
 	    		<h2 class="ui image header">
 			      	<div class="content">
-			        	Login Admin
+			        	Ubah Kata Sandi
 			      	</div>
 			    </h2>
 
