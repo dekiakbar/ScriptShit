@@ -28,7 +28,7 @@ Route::get('/detail/{lokasi}','APIcontroller@semua');
 
 /*
 |--------------------------------------------------------------------------
-| Override Routing Auth admin
+| Override Routing admin
 |--------------------------------------------------------------------------
 */
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
@@ -44,4 +44,4 @@ Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm
 Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 
 // Auth::routes();
-// Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home');

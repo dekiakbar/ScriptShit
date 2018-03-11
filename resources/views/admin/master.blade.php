@@ -9,54 +9,106 @@
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
 </head>
 <body>
-<div class="ui computer only grid">
-	<div class="column">
-		<div class="ui blue secondary pointing menu">
-			<a class="active item" href="#"><i class="dashboard icon"></i>Dashboard</a>
-		  	
-		  	<div class="ui dropdown item">
-		    	Data
-			    <i class="dropdown icon"></i>
-			    <div class="menu">
-			    	<div class="item">
-				      <i class="leaf icon"></i>
-				      Tanaman
-				    </div>
-			      	<div class="item">
-				      	<i class="dropdown icon"></i>
-				      	Tanah
-				      	<div class="menu">
-				        	<a class="item"><i class="plus icon blue"></i> Data</a>
-				        	<a class="item"><i class="list icon blue"></i> Data</a>
-				        	<a class="item"><i class="checkmark box icon blue"></i> Data</a>				      
-				    	</div>
-				    </div>
-			        <div class="item">
-				      	<i class="dropdown icon"></i>
-				      	Tanaman
-				      	<div class="menu">
-				        	<a class="item"><i class="plus icon blue"></i> Data</a>
-				        	<a class="item"><i class="list icon blue"></i> Data</a>				      
-				    	</div>
-				    </div>
-			    </div>
-		  	</div>
-
-		  	<div class="right menu">
-		  		<div class="ui inline dropdown item">
-				    <div class="text">
-				      <img class="ui avatar image" src="https://semantic-ui.com/images/avatar/small/jenny.jpg">
-				    </div>
-				    <div class="menu">
-				        <a class="item"><i class="setting icon"></i>Setting</a>
-				        <a class="item"><i class="sign out icon"></i>Logout</a>
-				    </div>
+	<div class="ui secondary pointing menu blue">
+		<div class="header item active">
+			SPK Penentuan Lahan
+		</div>
+		<div class="right menu">
+		  <a class="ui item">
+		    <div class="ui animated fade button blue" tabindex="0">
+				<div class="visible content">Logout</div>
+				<div class="hidden content">
+					<i class="sign out icon"></i>
 				</div>
-		  	</div>
-
+			</div>
+		  </a>
 		</div>
 	</div>
-</div>
+
+	<div class="ui stackable two column grid">
+		<div class="three wide column">
+			<div class="ui vertical menu">
+				<div class="header item">
+					Sub Menu
+				</div>
+				<div class="ui dropdown item">
+				  	Data Tanaman
+				  	<i class="leaf icon blue"></i>
+				  	<div class="menu">
+				  		<a class="item"><i class="plus icon"></i> Tambah Data</a>
+				    	<a class="item"><i class="list icon"></i> Daftar Data</a>
+				  	</div>
+				</div>
+				<div class="ui dropdown item">
+				  	Data PH
+				  	<i class="thermometer icon blue"></i>
+				  	<div class="menu">
+				  		<a class="item"><i class="plus icon"></i> Tambah Data</a>
+				    	<a class="item"><i class="list icon"></i> Daftar Data</a>
+				  	</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="twelve wide column">
+			<div class="ui segment raised">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</div>
+		</div>
+	</div>
+
+	<footer style="margin-top: 10px;">
+		<div class="ui segment center aligned blue">
+			<p>&copy;{!! date('Y') !!} 
+				| Dibuat Dengan :
+				<a target="_blank" href="https://Laravel.com">Laravel</a>
+				<i class="large pink heartbeat icon"></i>
+				<a target="_blank" href="https://Semantic-ui.com">Semantic</a>
+			</p>
+		</div>
+	</footer>
+
 	<script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
     <script>
     $('.ui.dropdown')
