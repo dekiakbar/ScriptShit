@@ -21,6 +21,17 @@ class ForgotPasswordController extends Controller
     use SendsPasswordResetEmails;
 
     /**
+     * Override halaman lupa kata sandi.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function showLinkRequestForm()
+    {
+        return view('admin.auth.lupaSandi');
+    }
+
+
+    /**
      * Create a new controller instance.
      *
      * @return void

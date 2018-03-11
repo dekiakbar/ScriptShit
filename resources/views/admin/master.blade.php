@@ -14,7 +14,7 @@
 			SPK Penentuan Lahan
 		</div>
 		<div class="right menu">
-		  <a class="ui item">
+		  <a class="ui item" onclick="event.preventDefault();document.getElementById('logout').submit();">
 		    <div class="ui animated fade button blue" tabindex="0">
 				<div class="visible content">Logout</div>
 				<div class="hidden content">
@@ -24,6 +24,10 @@
 		  </a>
 		</div>
 	</div>
+
+	<form id="logout" action="{{ route('logout') }}" method="post">
+		{{ csrf_field() }}
+	</form>
 
 	<div class="ui stackable two column grid">
 		<div class="three wide column">
@@ -47,10 +51,15 @@
 				    	<a class="item"><i class="list icon"></i> Daftar Data</a>
 				  	</div>
 				</div>
-				<a class="item">
-					<i class="setting icon"></i>
-					Akun
-				</a>
+				<div class="ui dropdown item">
+				  	Data Akun
+				  	<i class="setting icon blue"></i>
+				  	<div class="menu">
+				  		<a class="item"><i class="plus icon"></i> Tambah Akun</a>
+				    	<a class="item"><i class="list icon"></i> Daftar Akun</a>
+				    	<a class="item"><i class="lock icon"></i> Ubah Kata Sandi</a>
+				  	</div>
+				</div>
 			</div>
 		</div>
 
@@ -72,8 +81,10 @@
 
 	<script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
     <script>
-    $('.ui.dropdown')
-     .dropdown();
+    $('.ui.dropdown').dropdown({
+    	on:'hover',
+    });
+
     </script>
 </body>
 </html>

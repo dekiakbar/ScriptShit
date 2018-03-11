@@ -22,7 +22,7 @@ class LoginController extends Controller
 
     /*
     |--------------------------------------------------------------------------
-    | Tapil Login admin 
+    | Tampil Login admin 
     |--------------------------------------------------------------------------
     |
     | Override login page admin bawaan laravel

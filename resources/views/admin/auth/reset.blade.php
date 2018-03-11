@@ -33,8 +33,9 @@
 			      	</div>
 			    </h2>
 
-			    <form method="POST" action="{{ route('login') }}" class="ui large form">
+			    <form method="POST" action="{{ route('password.request') }}" class="ui large form">
 			    	{{ csrf_field() }}
+			    	<input type="hidden" name="token" value="{{ $token }}">
 			      	<div class="ui stacked secondary  segment">
 			        
 			        	<div class="field">
@@ -48,6 +49,13 @@
 			        	  	<div class="ui left icon input">
 			        	  	  	<i class="lock icon"></i>
 			        	  	  	<input type="password" name="password" placeholder="Password">
+			        	  	</div>
+			        	</div>
+
+			        	<div class="field">
+			        	  	<div class="ui left icon input">
+			        	  	  	<i class="lock icon"></i>
+			        	  	  	<input type="password" name="password_confirmation" placeholder="Password">
 			        	  	</div>
 			        	</div>
 			        
