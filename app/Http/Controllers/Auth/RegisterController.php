@@ -22,6 +22,16 @@ class RegisterController extends Controller
 
     use RegistersUsers;
 
+     /**
+     * Override Tampil form daftar
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function showRegistrationForm()
+    {
+        return view('admin.auth.daftar');
+    }
+
     /**
      * Where to redirect users after registration.
      *
