@@ -15,7 +15,16 @@ class CurahHujanS extends Migration
     {
         Schema::create('curahHujanS', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('id_tanaman')->unsigned();
+            $table->string('curahS1');
+            $table->string('curahS2');
+            $table->string('curahS3');
+            $table->string('curahN');
             $table->timestamps();
+        });
+
+        Schema::table('curahHujanS', function(Blueprint $t){
+            $t->foreign('id_tanaman')->references('id')->on('tanaman')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 

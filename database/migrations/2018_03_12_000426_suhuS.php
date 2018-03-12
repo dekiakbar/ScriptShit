@@ -15,7 +15,16 @@ class SuhuS extends Migration
     {
         Schema::create('suhuS', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('id_tanaman')->unsigned();
+            $table->string('suhuS1');
+            $table->string('suhuS2');
+            $table->string('suhuS3');
+            $table->string('suhuN');
             $table->timestamps();
+        });
+
+        Schema::table('suhuS', function(Blueprint $t){
+            $t->foreign('id_tanaman')->references('id')->on('tanaman')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 

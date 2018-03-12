@@ -15,8 +15,8 @@ class adminSeeder extends Seeder
         	'name' => 'admin',
         	'email' => 'admin@admin.com',
         	'password' => bcrypt("admin123"),
-        	'created_at'=> date("h:i:s j-m-y"),
-        	'updated_at' => date("h:i:s j-m-y")
+        	'created_at'=> date("y-m-j h:i:s"),
+        	'updated_at' => date("y-m-j h:i:s")
         ]);
     }
 }
