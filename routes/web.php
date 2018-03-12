@@ -43,5 +43,18 @@ Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail'
 Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
 Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 
-// Auth::routes();
+/*
+|--------------------------------------------------------------------------
+| Route dashboard admin
+|--------------------------------------------------------------------------
+*/
 Route::get('/home', 'HomeController@index')->name('home');
+
+/*
+|--------------------------------------------------------------------------
+| Route tanaman
+|--------------------------------------------------------------------------
+*/
+Route::group(['prefix' => 'admin',  'middleware' => 'auth'], function(){
+	Route::get('tanaman/tambah','tanamanCon@tambah');
+});

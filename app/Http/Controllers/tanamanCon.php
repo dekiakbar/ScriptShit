@@ -25,7 +25,16 @@ class tanamanCon extends Controller
      * Function untuk menampilkan form tambah data tanaman
      *
      */
-    public function tampil()
+    public function tambah()
+    {
+    	return view('admin.tanaman.Ttanaman');
+    }
+
+    /**
+     * Function untuk menampilkan data tanaman
+     *
+     */
+    public function simpan()
     {
 
     }
