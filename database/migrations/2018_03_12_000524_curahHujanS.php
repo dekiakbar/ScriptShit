@@ -15,7 +15,7 @@ class CurahHujanS extends Migration
     {
         Schema::create('curahHujanS', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_tanaman')->unsigned();
+            $table->integer('tanaman_id')->unsigned();
             $table->string('curahS1');
             $table->string('curahS2');
             $table->string('curahS3');
@@ -24,7 +24,7 @@ class CurahHujanS extends Migration
         });
 
         Schema::table('curahHujanS', function(Blueprint $t){
-            $t->foreign('id_tanaman')->references('id')->on('tanaman')->onDelete('cascade')->onUpdate('cascade');
+            $t->foreign('tanaman_id')->references('id')->on('tanaman')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 

@@ -15,7 +15,7 @@ class PhS extends Migration
     {
         Schema::create('phS', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_tanaman')->unsigned();
+            $table->integer('tanaman_id')->unsigned();
             $table->string('phS1');
             $table->string('phS2');
             $table->string('phS3');
@@ -24,7 +24,7 @@ class PhS extends Migration
         });
 
         Schema::table('phS', function(Blueprint $t){
-            $t->foreign('id_tanaman')->references('id')->on('tanaman')->onUpdate('cascade')->onDelete('cascade');
+            $t->foreign('tanaman_id')->references('id')->on('tanaman')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 

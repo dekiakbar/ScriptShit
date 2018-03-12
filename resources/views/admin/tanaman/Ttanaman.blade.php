@@ -3,7 +3,8 @@
 
 @section('isi')
 	<div class="ui segment raised">
-		<form class="ui form" method="POST" action="">
+		<form class="ui form" method="POST" action="{{ route('tanaman.simpan') }}">
+			{{ csrf_field() }}
 		  	<h4 class="ui dividing header">Tambah Data Tanaman</h4>
 		  	<div class="field">
 		    	<label>Nama Tanaman</label>
@@ -97,7 +98,7 @@
 		  	<div class=" ui divider"></div>
 			
 			<div class="ui right aligned">
-				<button class="ui button animated inverted blue">
+				<button class="ui button animated blue">
 					<div class="visible content">
 						Simpan
 					</div>

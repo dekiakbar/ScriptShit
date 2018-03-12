@@ -15,7 +15,7 @@ class SuhuS extends Migration
     {
         Schema::create('suhuS', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_tanaman')->unsigned();
+            $table->integer('tanaman_id')->unsigned();
             $table->string('suhuS1');
             $table->string('suhuS2');
             $table->string('suhuS3');
@@ -24,7 +24,7 @@ class SuhuS extends Migration
         });
 
         Schema::table('suhuS', function(Blueprint $t){
-            $t->foreign('id_tanaman')->references('id')->on('tanaman')->onUpdate('cascade')->onDelete('cascade');
+            $t->foreign('tanaman_id')->references('id')->on('tanaman')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 

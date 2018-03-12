@@ -15,7 +15,7 @@ class LembabS extends Migration
     {
         Schema::create('lembabS', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_tanaman')->unsigned();
+            $table->integer('tanaman_id')->unsigned();
             $table->string('lembabS1');
             $table->string('lembabS2');
             $table->string('lembabS3');
@@ -24,7 +24,7 @@ class LembabS extends Migration
         });
 
         Schema::table('lembabS', function(Blueprint $t){
-            $t->foreign('id_tanaman')->references('id')->on('tanaman')->onUpdate('cascade')->onDelete('cascade');
+            $t->foreign('tanaman_id')->references('id')->on('tanaman')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 
