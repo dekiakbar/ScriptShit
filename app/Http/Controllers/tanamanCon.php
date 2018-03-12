@@ -16,9 +16,10 @@ class tanamanCon extends Controller
      * Function untuk menampilkan data tanaman
      *
      */
-    public function index()
+    public function tampil(Request $request)
     {
-
+    	$datas = Tanaman::with('suhu','ph','lembab','curahHujan')->paginate(10);
+    	return view('admin.tanaman.Itanaman',compact('datas'))->with('no',($request->input('page',1)-1)*10);
     }
 
     /**
