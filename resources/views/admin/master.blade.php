@@ -85,6 +85,9 @@
     	on:'hover',
     });
 
+    $('.ui.modal')
+      .modal('show');
+
     </script>
 </body>
 </html>

@@ -58,4 +58,56 @@
 	<div class="ui container center aligned">
 		{{ $datas->appends(\Request::except('page'))->links('admin/pagination.semantic-ui') }}
 	</div>
+
+	<div class="ui modal">
+	  	<i class="close icon"></i>
+	  	<div class="header">
+	    	Detail Data Tanaman
+	  	</div>
+	  	<div class="image content">
+	    	<div class="description">
+	      		<table class="ui definition table">
+		  			<thead>
+		    			<tr>
+		    				<th class="center aligned">Jagung</th>
+		    				<th class="center aligned">Sangat Sesuai</th>
+		    				<th class="center aligned">Sesuai</th>
+		    				<th class="center aligned">Kurang Sesuai</th>
+		    				<th class="center aligned">Tidak Sesuai</th>
+		  				</tr>
+					</thead>
+		  			<tbody>
+		    			<tr>
+		      				<td class="center aligned">Suhu (&#8451;)</td>
+		      				<td class="center aligned">1</td>
+		      				<td class="center aligned">1</td>
+		      				<td class="center aligned">1</td>
+		      				<td class="center aligned">1</td>
+		    			</tr>
+		    			<tr>
+		      				<td class="center aligned">Kelembaban (%)</td>
+		      				<td class="center aligned">1</td>
+		      				<td class="center aligned">1</td>
+		      				<td class="center aligned">1</td>
+		      				<td class="center aligned">1</td>
+		    			</tr>
+		    			<tr>
+		    				<td class="center aligned">PH</td>
+		    				<td class="center aligned">1</td>
+		    				<td class="center aligned">1</td>
+		    				<td class="center aligned">1</td>
+		    				<td class="center aligned">1</td>
+		    			</tr>
+		    			<tr>
+		    				<td class="center aligned">Curah Hujan (mm)</td>
+		    				<td class="center aligned">1</td>
+		    				<td class="center aligned">1</td>
+		    				<td class="center aligned">1</td>
+		    				<td class="center aligned">1</td>
+		    			</tr>
+					</tbody>
+				</table>
+	    	</div>
+	  	</div>
+	</div>
 @endsection
