@@ -85,8 +85,14 @@
     	on:'hover',
     });
 
-    $('.ui.modal')
-      .modal('show');
+    function lihat(data)
+    {
+    	var detail = data.getAttribute('data-detail');
+    	var id = '#'+detail;
+    	$(id).modal({
+    		blurring : true
+    	}).modal('show');
+    }
 
     </script>
 </body>

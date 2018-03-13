@@ -25,7 +25,7 @@
 		    			<td class="center aligned">{{ $data->ph->first()->phS1 }}</td>
 		    			<td class="center aligned">{{ $data->curahHujan->first()->curahS1 }}</td>
 		    			<td class="center aligned">
-		    				<a href="" class="ui mini button blue animated fade inverted">
+		    				<a onclick="lihat(this)" class="ui mini button blue animated fade inverted" data-detail="{{ md5($data->id) }}">
 		    					<div class="visible content">
 		    						Detail
 		    					</div>
@@ -55,59 +55,62 @@
 		  	</tbody>
 		</table>
 	</div>
+
 	<div class="ui container center aligned">
 		{{ $datas->appends(\Request::except('page'))->links('admin/pagination.semantic-ui') }}
 	</div>
 
-	<div class="ui modal">
-	  	<i class="close icon"></i>
-	  	<div class="header">
-	    	Detail Data Tanaman
-	  	</div>
-	  	<div class="image content">
-	    	<div class="description">
-	      		<table class="ui definition table">
-		  			<thead>
-		    			<tr>
-		    				<th class="center aligned">Jagung</th>
-		    				<th class="center aligned">Sangat Sesuai</th>
-		    				<th class="center aligned">Sesuai</th>
-		    				<th class="center aligned">Kurang Sesuai</th>
-		    				<th class="center aligned">Tidak Sesuai</th>
-		  				</tr>
-					</thead>
-		  			<tbody>
-		    			<tr>
-		      				<td class="center aligned">Suhu (&#8451;)</td>
-		      				<td class="center aligned">1</td>
-		      				<td class="center aligned">1</td>
-		      				<td class="center aligned">1</td>
-		      				<td class="center aligned">1</td>
-		    			</tr>
-		    			<tr>
-		      				<td class="center aligned">Kelembaban (%)</td>
-		      				<td class="center aligned">1</td>
-		      				<td class="center aligned">1</td>
-		      				<td class="center aligned">1</td>
-		      				<td class="center aligned">1</td>
-		    			</tr>
-		    			<tr>
-		    				<td class="center aligned">PH</td>
-		    				<td class="center aligned">1</td>
-		    				<td class="center aligned">1</td>
-		    				<td class="center aligned">1</td>
-		    				<td class="center aligned">1</td>
-		    			</tr>
-		    			<tr>
-		    				<td class="center aligned">Curah Hujan (mm)</td>
-		    				<td class="center aligned">1</td>
-		    				<td class="center aligned">1</td>
-		    				<td class="center aligned">1</td>
-		    				<td class="center aligned">1</td>
-		    			</tr>
-					</tbody>
-				</table>
-	    	</div>
-	  	</div>
-	</div>
+	@foreach($datas as $data)
+		<div class="ui modal" id="{{ md5($data->id) }}">
+		  	<i class="close icon"></i>
+		  	<div class="header">
+		    	Detail Data Tanaman
+		  	</div>
+		  	<div class="image content">
+		    	<div class="description">
+		      		<table class="ui definition table">
+			  			<thead>
+			    			<tr>
+			    				<th class="center aligned">Jagung</th>
+			    				<th class="center aligned">Sangat Sesuai</th>
+			    				<th class="center aligned">Sesuai</th>
+			    				<th class="center aligned">Kurang Sesuai</th>
+			    				<th class="center aligned">Tidak Sesuai</th>
+			  				</tr>
+						</thead>
+			  			<tbody>
+			    			<tr>
+			      				<td class="center aligned">Suhu (&#8451;)</td>
+			      				<td class="center aligned">{{ $data->suhu->first()->suhuS1 }}</td>
+			      				<td class="center aligned">{{ $data->suhu->first()->suhuS2 }}</td>
+			      				<td class="center aligned">{{ $data->suhu->first()->suhuS3 }}</td>
+			      				<td class="center aligned">{{ $data->suhu->first()->suhuN }}</td>
+			    			</tr>
+			    			<tr>
+			      				<td class="center aligned">Kelembaban (%)</td>
+			      				<td class="center aligned">{{ $data->lembab->first()->lembabS1 }}</td>
+			      				<td class="center aligned">{{ $data->lembab->first()->lembabS2 }}</td>
+			      				<td class="center aligned">{{ $data->lembab->first()->lembabS3 }}</td>
+			      				<td class="center aligned">{{ $data->lembab->first()->lembabN }}</td>
+			    			</tr>
+			    			<tr>
+			    				<td class="center aligned">PH</td>
+			    				<td class="center aligned">{{ $data->ph->first()->phS1 }}</td>
+			    				<td class="center aligned">{{ $data->ph->first()->phS2 }}</td>
+			    				<td class="center aligned">{{ $data->ph->first()->phS3 }}</td>
+			    				<td class="center aligned">{{ $data->ph->first()->phN }}</td>
+			    			</tr>
+			    			<tr>
+			    				<td class="center aligned">Curah Hujan (mm)</td>
+			    				<td class="center aligned">{{ $data->curahHujan->first()->curahS1 }}</td>
+			    				<td class="center aligned">{{ $data->curahHujan->first()->curahS2 }}</td>
+			    				<td class="center aligned">{{ $data->curahHujan->first()->curahS3 }}</td>
+			    				<td class="center aligned">{{ $data->curahHujan->first()->curahN }}</td>
+			    			</tr>
+						</tbody>
+					</table>
+		    	</div>
+		  	</div>
+		</div>
+	@endforeach
 @endsection
