@@ -41,7 +41,7 @@
 		    						<i class="edit icon"></i>
 		    					</div>
 		    				</a>
-		    				<a href="" class="ui mini button red animated fade inverted">
+		    				<a class="ui mini button red animated fade inverted">
 		    					<div class="visible content">
 		    						Hapus
 		    					</div>
