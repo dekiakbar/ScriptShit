@@ -28,7 +28,7 @@ class tanamanCon extends Controller
      */
     public function tambah()
     {
-    	return view('admin.tanaman.Ttanaman');
+    	return view('admin.tanaman.tanaman');
     }
 
     /**
@@ -42,31 +42,31 @@ class tanamanCon extends Controller
     	$tanam->save();
 
     	$suhu = new SuhuS();
-    	$suhu->suhuS1 = $request->suhuS1;
-    	$suhu->suhuS2 = $request->suhuS2;
-    	$suhu->suhuS3 = $request->suhuS3;
-    	$suhu->suhuN = $request->suhuN;
+    	$suhu->suhuS1 = $request->input('suhuS1min').'-'.$request->input('suhuS1max');
+    	$suhu->suhuS2 = $request->input('suhuS2min').'-'.$request->input('suhuS2max');
+    	$suhu->suhuS3 = $request->input('suhuS3min').'-'.$request->input('suhuS3max');
+    	$suhu->suhuN = $request->input('suhuNmin').'-'.$request->input('suhuNmax');
     	$tanam->suhu()->save($suhu);
 
     	$ph = new PhS();
-    	$ph->phS1 = $request->phS1;
-    	$ph->phS2 = $request->phS2;
-    	$ph->phS3 = $request->phS3;
-    	$ph->phN = $request->phN;
+    	$ph->phS1 = $request->input('phS1min').'-'.$request->input('phS1max');
+    	$ph->phS2 = $request->input('phS2min').'-'.$request->input('phS2max');
+    	$ph->phS3 = $request->input('phS3min').'-'.$request->input('phS3max');
+    	$ph->phN = $request->input('phNmin').'-'.$request->input('phNmax');
     	$tanam->ph()->save($ph);
 
     	$lembab = new LembabS();
-    	$lembab->lembabS1 = $request->lembabS1;
-    	$lembab->lembabS2 = $request->lembabS2;
-    	$lembab->lembabS3 = $request->lembabS3;
-    	$lembab->lembabN = $request->lembabN;
+    	$lembab->lembabS1 = $request->input('lembabS1min').'-'.$request->input('lembabS1max');
+    	$lembab->lembabS2 = $request->input('lembabS2min').'-'.$request->input('lembabS2max');
+    	$lembab->lembabS3 = $request->input('lembabS3min').'-'.$request->input('lembabS3max');
+    	$lembab->lembabN = $request->input('lembabNmin').'-'.$request->input('lembabNmax');
     	$tanam->lembab()->save($lembab);
 
     	$curah = new CurahHujanS();
-    	$curah->curahS1 = $request->curahS1;
-    	$curah->curahS2 = $request->curahS2;
-    	$curah->curahS3 = $request->curahS3;
-    	$curah->curahN = $request->curahN;
+    	$curah->curahS1 = $request->input('curahS1min').'-'.$request->input('curahS1max');
+    	$curah->curahS2 = $request->input('curahS2min').'-'.$request->input('curahS2max');
+    	$curah->curahS3 = $request->input('curahS3min').'-'.$request->input('curahS3max');
+    	$curah->curahN = $request->input('curahNmin').'-'.$request->input('curahNmax');
     	$tanam->curahHujan()->save($curah);
 
     	return redirect('admin/tanaman/tambah');
