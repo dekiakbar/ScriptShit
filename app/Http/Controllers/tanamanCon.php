@@ -28,7 +28,7 @@ class tanamanCon extends Controller
      */
     public function tambah()
     {
-    	return view('admin.tanaman.tanaman');
+    	return view('admin.tanaman.Ttanaman');
     }
 
     /**
@@ -70,5 +70,48 @@ class tanamanCon extends Controller
     	$tanam->curahHujan()->save($curah);
 
     	return redirect('admin/tanaman/tambah');
+    }
+
+    /**
+     * Function untuk merubah data tanaman
+     *
+     */
+    public function edit($id)
+    {
+    	$db = Tanaman::with('suhu','ph','lembab','curahHujan')
+    					->where('id',$id)
+    					->firstOrFail();
+
+    	$sS1	=	explode('-',$db->suhu->first()->suhuS1);
+    	$sS2	=	explode('-',$db->suhu->first()->suhuS2);
+    	$sS3	=	explode('-',$db->suhu->first()->suhuS3);
+    	$sSN	=	explode('-',$db->suhu->first()->suhuN);
+    	$pS1	=	explode('-',$db->ph->first()->phS1);
+    	$pS2	=	explode('-',$db->ph->first()->phS2);
+    	$pS3	=	explode('-',$db->ph->first()->phS3);
+    	$pSN	=	explode('-',$db->ph->first()->phN);
+    	$lS1	=	explode('-',$db->lembab->first()->lembabS1);
+    	$lS2	=	explode('-',$db->lembab->first()->lembabS2);
+    	$lS3	=	explode('-',$db->lembab->first()->lembabS3);
+    	$lSN	=	explode('-',$db->lembab->first()->lembabN);
+    	$cS1	=	explode('-',$db->curahHujan->first()->curahS1);
+    	$cS2	=	explode('-',$db->curahHujan->first()->curahS2);
+    	$cS3	=	explode('-',$db->curahHujan->first()->curahS3);
+    	$cSN	=	explode('-',$db->curahHujan->first()->curahN);
+
+    	$data =array(
+    		'suhuS1min'	=> $sS1[0],'suhuS1max'	=> $sS1[1],'suhuS2min'	=> $sS2[0],'suhuS2max'	=> $sS2[1],
+    		'suhuS3min'	=> $sS3[0],'suhuS3max'	=> $sS3[1],'suhuNmin' 	=> $sSN[0],'suhuNmax' 	=> $sSN[1],
+    		'phS1min' 	=> $pS1[0],'phS1max' 	=> $pS1[1],'phS2min' 	=> $pS2[0],'phS2max' 	=> $pS2[1],
+    		'phS3min' 	=> $pS3[0],'phS3max' 	=> $pS3[1],'phNmin' 	=> $pSN[0],'phNmax' 	=> $pSN[1],
+    		'lembabS1min' => $lS1[0],'lembabS1max' => $lS1[1],'lembabS2min' => $lS2[0],'lembabS2max' => $lS2[1],
+    		'lembabS3min' => $lS3[0],'lembabS3max' => $lS3[1],'lembabNmin' => $lSN[0],'lembabNmax' => $lSN[1],
+    		'curahS1min' => $cS1[0],'curahS1max' => $cS1[1],'curahS2min' => $cS2[0],'curahS2max' => $cS2[1],
+    		'curahS3min' => $cS3[0],'curahS3max' => $cS3[1],'curahNmin'  => $cSN[0],'curahNmax'  => $cSN[1],
+    	);
+
+    	$data = (object) $data;
+
+    	return view('admin.tanaman.Etanaman',compact('data'));
     }
 }

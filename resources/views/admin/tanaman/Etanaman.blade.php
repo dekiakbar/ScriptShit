@@ -5,6 +5,7 @@
 	<div class="ui segment raised tall stacked teal">
 		<form class="ui form" method="POST" action="{{ route('tanaman.simpan') }}">
 			{{ csrf_field() }}
+			<input type="hidden" name="_method" value="PATCH">
 			
 		  	<div class="ui secondary segment small form raised">
 			  	<h4 class="ui dividing header">Tambah Data Tanaman</h4>
@@ -25,10 +26,10 @@
 			      		<label>Sangat Sesuai</label>
 					    <div class="two fields">
 					        <div class="field">
-					        	<input name="suhuS1min" placeholder="18-23" type="text">
+					        	<input name="suhuS1min" value="{{ $data->suhuS1min }}" type="text">
 					        </div>
 					        <div class="field">
-					        	<input name="suhuS1max" placeholder="18-23" type="text">
+					        	<input name="suhuS1max" value="{{ $data->suhuS1max }}" type="text">
 					        </div>
 					    </div>
 				    </div>
@@ -36,10 +37,10 @@
 			      		<label>Sesuai</label>
 			      		<div class="two fields">
 					        <div class="field">
-					        	<input name="suhuS2min" placeholder="18-23" type="text">
+					        	<input name="suhuS2min" value="{{ $data->suhuS1min }}" type="text">
 					        </div>
 					        <div class="field">
-					        	<input name="suhuS2max" placeholder="18-23" type="text">
+					        	<input name="suhuS2max" value="{{ $data->suhuS2max }}" type="text">
 					        </div>
 					    </div>
 			    	</div>
@@ -47,10 +48,10 @@
 			      		<label>Cukup Sesuai</label>
 			      		<div class="two fields">
 					        <div class="field">
-					        	<input name="suhuS3min" placeholder="18-23" type="text">
+					        	<input name="suhuS3min" value="{{ $data->suhuS3min }}" type="text">
 					        </div>
 					        <div class="field">
-					        	<input name="suhuS3max" placeholder="18-23" type="text">
+					        	<input name="suhuS3max" value="{{ $data->suhuS3max }}" type="text">
 					        </div>
 					    </div>
 			    	</div>
@@ -58,10 +59,10 @@
 			      		<label>Tidak Sesuai</label>
 			      		<div class="two fields">
 					        <div class="field">
-					        	<input name="suhuNmin" placeholder="18-23" type="text">
+					        	<input name="suhuNmin" value="{{ $data->suhuNmin }}" type="text">
 					        </div>
 					        <div class="field">
-					        	<input name="suhuNmax" placeholder="18-23" type="text">
+					        	<input name="suhuNmax" value="{{ $data->suhuNmax }}" type="text">
 					        </div>
 					    </div>
 			    	</div>
@@ -75,10 +76,10 @@
 			      		<label>Sangat Sesuai</label>
 					    <div class="two fields">
 					        <div class="field">
-					        	<input name="lembabS1min" placeholder="18-23" type="text">
+					        	<input name="lembabS1min" value="{{ $data->lembabS1min }}" type="text">
 					        </div>
 					        <div class="field">
-					        	<input name="lembabS1max" placeholder="18-23" type="text">
+					        	<input name="lembabS1max" value="{{ $data->lembabS1max }}" type="text">
 					        </div>
 					    </div>
 				    </div>
@@ -86,10 +87,10 @@
 			      		<label>Sesuai</label>
 			      		<div class="two fields">
 					        <div class="field">
-					        	<input name="lembabS2min" placeholder="18-23" type="text">
+					        	<input name="lembabS2min" value="{{ $data->lembabS2min }}" type="text">
 					        </div>
 					        <div class="field">
-					        	<input name="lembabS2max" placeholder="18-23" type="text">
+					        	<input name="lembabS2max" value="{{ $data->lembabS2max }}" type="text">
 					        </div>
 					    </div>
 			    	</div>
@@ -97,10 +98,10 @@
 			      		<label>Cukup Sesuai</label>
 			      		<div class="two fields">
 					        <div class="field">
-					        	<input name="lembabS3min" placeholder="18-23" type="text">
+					        	<input name="lembabS3min" value="{{ $data->lembabS3min }}" type="text">
 					        </div>
 					        <div class="field">
-					        	<input name="lembabS3max" placeholder="18-23" type="text">
+					        	<input name="lembabS3max" value="{{ $data->lembabS3max }}" type="text">
 					        </div>
 					    </div>
 			    	</div>
@@ -108,10 +109,10 @@
 			      		<label>Tidak Sesuai</label>
 			      		<div class="two fields">
 					        <div class="field">
-					        	<input name="lembabNmin" placeholder="18-23" type="text">
+					        	<input name="lembabNmin" value="{{ $data->lembabNmin }}" type="text">
 					        </div>
 					        <div class="field">
-					        	<input name="lembabNmax" placeholder="18-23" type="text">
+					        	<input name="lembabNmax" value="{{ $data->lembabNmax }}" type="text">
 					        </div>
 					    </div>
 			    	</div>
@@ -125,10 +126,10 @@
 			      		<label>Sangat Sesuai</label>
 					    <div class="two fields">
 					        <div class="field">
-					        	<input name="phS1min" placeholder="18-23" type="text">
+					        	<input name="phS1min" value="{{ $data->phS1min }}" type="text">
 					        </div>
 					        <div class="field">
-					        	<input name="phS1max" placeholder="18-23" type="text">
+					        	<input name="phS1max" value="{{ $data->phS1max }}" type="text">
 					        </div>
 					    </div>
 				    </div>
@@ -136,10 +137,10 @@
 			      		<label>Sesuai</label>
 			      		<div class="two fields">
 					        <div class="field">
-					        	<input name="phS2min" placeholder="18-23" type="text">
+					        	<input name="phS2min" value="{{ $data->phS2min }}" type="text">
 					        </div>
 					        <div class="field">
-					        	<input name="phS2max" placeholder="18-23" type="text">
+					        	<input name="phS2max" value="{{ $data->phS2max }}" type="text">
 					        </div>
 					    </div>
 			    	</div>
@@ -147,10 +148,10 @@
 			      		<label>Cukup Sesuai</label>
 			      		<div class="two fields">
 					        <div class="field">
-					        	<input name="phS3min" placeholder="18-23" type="text">
+					        	<input name="phS3min" value="{{ $data->phS3min }}" type="text">
 					        </div>
 					        <div class="field">
-					        	<input name="phS3max" placeholder="18-23" type="text">
+					        	<input name="phS3max" value="{{ $data->phS3max }}" type="text">
 					        </div>
 					    </div>
 			    	</div>
@@ -158,10 +159,10 @@
 			      		<label>Tidak Sesuai</label>
 			      		<div class="two fields">
 					        <div class="field">
-					        	<input name="phNmin" placeholder="18-23" type="text">
+					        	<input name="phNmin" value="{{ $data->phNmin }}" type="text">
 					        </div>
 					        <div class="field">
-					        	<input name="phNmax" placeholder="18-23" type="text">
+					        	<input name="phNmax" value="{{ $data->phNmax }}" type="text">
 					        </div>
 					    </div>
 			    	</div>
@@ -175,10 +176,10 @@
 			      		<label>Sangat Sesuai</label>
 					    <div class="two fields">
 					        <div class="field">
-					        	<input name="curahS1min" placeholder="18-23" type="text">
+					        	<input name="curahS1min" value="{{ $data->curahS1min }}" type="text">
 					        </div>
 					        <div class="field">
-					        	<input name="curahS1max" placeholder="18-23" type="text">
+					        	<input name="curahS1max" value="{{ $data->curahS1max }}" type="text">
 					        </div>
 					    </div>
 				    </div>
@@ -186,10 +187,10 @@
 			      		<label>Sesuai</label>
 			      		<div class="two fields">
 					        <div class="field">
-					        	<input name="curahS2min" placeholder="18-23" type="text">
+					        	<input name="curahS2min" value="{{ $data->curahS2min }}" type="text">
 					        </div>
 					        <div class="field">
-					        	<input name="curahS2max" placeholder="18-23" type="text">
+					        	<input name="curahS2max" value="{{ $data->curahS2max }}" type="text">
 					        </div>
 					    </div>
 			    	</div>
@@ -197,10 +198,10 @@
 			      		<label>Cukup Sesuai</label>
 			      		<div class="two fields">
 					        <div class="field">
-					        	<input name="curahS3min" placeholder="18-23" type="text">
+					        	<input name="curahS3min" value="{{ $data->curahS3min }}" type="text">
 					        </div>
 					        <div class="field">
-					        	<input name="curahS3max" placeholder="18-23" type="text">
+					        	<input name="curahS3max" value="{{ $data->curahS3max }}" type="text">
 					        </div>
 					    </div>
 			    	</div>
@@ -208,10 +209,10 @@
 			      		<label>Tidak Sesuai</label>
 			      		<div class="two fields">
 					        <div class="field">
-					        	<input name="curahNmin" placeholder="18-23" type="text">
+					        	<input name="curahNmin" value="{{ $data->curahNmin }}" type="text">
 					        </div>
 					        <div class="field">
-					        	<input name="curahNmax" placeholder="18-23" type="text">
+					        	<input name="curahNmax" value="{{ $data->curahNmax }}" type="text">
 					        </div>
 					    </div>
 			    	</div>
