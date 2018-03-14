@@ -3,7 +3,7 @@
 
 @section('isi')
 	<div class="ui segment raised tall stacked teal">
-		<form class="ui form" method="POST" action="{{ route('tanaman.simpan') }}">
+		<form class="ui form" method="POST" action="{{ route('tanaman.perbaharui',encrypt($db->id)) }}">
 			{{ csrf_field() }}
 			<input type="hidden" name="_method" value="PATCH">
 			

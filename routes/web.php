@@ -56,8 +56,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 |--------------------------------------------------------------------------
 */
 Route::group(['prefix' => 'admin',  'middleware' => 'auth'], function(){
+	
 	Route::get('tanaman/tambah','tanamanCon@tambah');
 	Route::post('tanaman','tanamanCon@simpan')->name('tanaman.simpan');
 	Route::get('tanaman','tanamanCon@tampil');
-	Route::get('/tanaman/{id}/edit','tanamanCon@edit');
+	Route::get('/tanaman/{id}/edit','tanamanCon@edit')->name('tanaman.edit');
+	Route::patch('/tanaman/{id}','tanamanCon@perbaharui')->name('tanaman.perbaharui');
 });

@@ -33,7 +33,7 @@
 		    						<i class="zoom icon"></i>
 		    					</div>
 		    				</a>
-		    				<a href="" class="ui mini button purple animated fade inverted">
+		    				<a href="{{ route('tanaman.edit',encrypt($data->id)) }}" class="ui mini button purple animated fade inverted">
 		    					<div class="visible content">
 		    						Edit
 		    					</div>
