@@ -115,6 +115,10 @@ class tanamanCon extends Controller
     	return view('admin.tanaman.Etanaman',compact('data','db'));
     }
 
+    /**
+    * Function untuk memperbaharui data tanaman ke database
+    *
+    */
     public function perbaharui(Request $request,$id)
     {
     	$db = Tanaman::with('suhu','lembab','curahHujan','ph')->findOrFail(decrypt($id));
@@ -142,7 +146,6 @@ class tanamanCon extends Controller
     		'lembabS3' => $request->input('lembabS3min').'-'.$request->input('lembabS3max'),
     		'lembabN' => $request->input('lembabNmin').'-'.$request->input('lembabNmax'),
     	]);
-    	// $db->lembab()->save($lembab);
 
     	$curah = $db->curahHujan()->update([
     		'curahS1' => $request->input('curahS1min').'-'.$request->input('curahS1max'),
@@ -152,6 +155,12 @@ class tanamanCon extends Controller
     	]);
 
     	return redirect('admin/tanaman');
+    }
 
+    public function hapus($id)
+    {
+    	$hapus = Tanaman::with('suhu','lembab','curahHujan','ph')->findOrFail(decrypt($id));
+    	$hapus->delete();
+    	// return redirect('amin/tanaman');
     }
 }

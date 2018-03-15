@@ -41,7 +41,7 @@
 		    						<i class="edit icon"></i>
 		    					</div>
 		    				</a>
-		    				<a class="ui mini button red animated fade inverted">
+		    				<a onclick="hapus()" id="hapus" data-slug="{{ route('tanaman.hapus',encrypt($data->id)) }}" data-token="{{ csrf_token() }}" class="ui mini button red animated fade inverted">
 		    					<div class="visible content">
 		    						Hapus
 		    					</div>
@@ -60,6 +60,26 @@
 		{{ $datas->appends(\Request::except('page'))->links('admin/pagination.semantic-ui') }}
 	</div>
 
+	<div class="ui small modal">
+		<div class="ui icon header">
+			<i class="trash icon"></i>
+			Hapus Data Tanaman
+		</div>
+		<div class="content right floated">
+			<p>Data tanaman yang telah dihapus tidak bisa dikembalikan, Anda yakin ingin menghapus tanaman ini?</p>
+		</div>
+		<div class="actions">
+			<div class="ui red inverted cancel inverted button tidak">
+				<i class="remove icon"></i>
+				Tidak
+			</div>
+			<div class="ui green ok inverted button tidak ya">
+				<i class="checkmark icon"></i>
+				Iya
+			</div>
+		</div>
+	</div>
+	
 	@foreach($datas as $data)
 		<div class="ui modal" id="{{ md5($data->id) }}">
 		  	<i class="close icon"></i>

@@ -62,4 +62,6 @@ Route::group(['prefix' => 'admin',  'middleware' => 'auth'], function(){
 	Route::get('tanaman','tanamanCon@tampil');
 	Route::get('/tanaman/{id}/edit','tanamanCon@edit')->name('tanaman.edit');
 	Route::patch('/tanaman/{id}','tanamanCon@perbaharui')->name('tanaman.perbaharui');
+	Route::delete('/tanaman/{id}','tanamanCon@hapus')->name('tanaman.hapus');
+	
 });

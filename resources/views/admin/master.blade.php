@@ -94,6 +94,34 @@
     	}).modal('show');
     }
 
+    function hapus()
+    {
+	  	var token = $('#hapus').data('token');
+	  	var urlhapus = $('#hapus').data('slug'); 
+	  	$('.ui.small.modal')
+	  		.modal({
+	    		onApprove: function (e) {
+	    		  	if (e.hasClass('ya')) {
+		    		    $.ajax({
+		    		        url: urlhapus,
+		    		        type: 'post',
+		    		        data: {_method: 'delete', _token :token, },
+		    		        success:function(msg){
+		    		          	setTimeout(
+		    		            	function() 
+		    		              	{
+		    		             		location.reload();
+		    		              	}, 0001
+		    		            );  
+		    		        }
+	    		      	})
+	    		  	}
+	    		},
+		    	blurring: true,
+		    	transition: 'fade in'
+	  		})
+	  	.modal('show');
+	}
     </script>
 </body>
 </html>
