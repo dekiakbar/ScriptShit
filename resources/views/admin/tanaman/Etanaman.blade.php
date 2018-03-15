@@ -13,7 +13,7 @@
 			    	<label>Nama Tanaman</label>
 			    	<div class="one fields">
 			      		<div class="sixteen wide field">
-			        		<input name="nama_tanaman" placeholder="Nama Tanaman" type="text">
+			        		<input name="nama_tanaman" placeholder="Nama Tanaman" value="{{ $db->nama_tanaman }}" type="text">
 			      		</div>
 			    	</div>
 			  	</div>

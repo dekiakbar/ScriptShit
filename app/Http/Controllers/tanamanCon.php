@@ -119,15 +119,39 @@ class tanamanCon extends Controller
     {
     	$db = Tanaman::with('suhu','lembab','curahHujan','ph')->findOrFail(decrypt($id));
 
-    	$db->
-    	$db->
-    	$db->
-    	$db->
-    	$db->
-    	$db->
-    	$db->
-    	$db->
-    	$db->
-    	$db->
+    	$db->nama_tanaman = $request->nama_tanaman;
+    	$db->save();
+
+    	$suhu = $db->suhu()->update([
+    		'suhuS1' => $request->input('suhuS1min').'-'.$request->input('suhuS1max'),
+			'suhuS2' => $request->input('suhuS2min').'-'.$request->input('suhuS2max'),
+			'suhuS3' => $request->input('suhuS3min').'-'.$request->input('suhuS3max'),
+			'suhuN' => $request->input('suhuNmin').'-'.$request->input('suhuNmax'),
+    	]);
+
+    	$ph = $db->ph()->update([
+    		'phS1' => $request->input('phS1min').'-'.$request->input('phS1max'),
+			'phS2' => $request->input('phS2min').'-'.$request->input('phS2max'),
+			'phS3' => $request->input('phS3min').'-'.$request->input('phS3max'),
+			'phN' =>  $request->input('phNmin').'-'.$request->input('phNmax'),
+    	]);
+
+    	$lembab = $db->lembab()->update([
+    		'lembabS1' => $request->input('lembabS1min').'-'.$request->input('lembabS1max'),
+    		'lembabS2' => $request->input('lembabS2min').'-'.$request->input('lembabS2max'),
+    		'lembabS3' => $request->input('lembabS3min').'-'.$request->input('lembabS3max'),
+    		'lembabN' => $request->input('lembabNmin').'-'.$request->input('lembabNmax'),
+    	]);
+    	// $db->lembab()->save($lembab);
+
+    	$curah = $db->curahHujan()->update([
+    		'curahS1' => $request->input('curahS1min').'-'.$request->input('curahS1max'),
+			'curahS2' => $request->input('curahS2min').'-'.$request->input('curahS2max'),
+			'curahS3' => $request->input('curahS3min').'-'.$request->input('curahS3max'),
+			'curahN' => $request->input('curahNmin').'-'.$request->input('curahNmax'),
+    	]);
+
+    	return redirect('admin/tanaman');
+
     }
 }
