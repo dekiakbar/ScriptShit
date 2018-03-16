@@ -33,35 +33,62 @@
 					    </div>
 				    </div>
 			    	<div class="four wide field">
-			      		<label>Sesuai</label>
+			      		<label>Sesuai Batas Minimal</label>
 			      		<div class="two fields">
 					        <div class="field">
-					        	<input name="suhuS2min" placeholder="18-23" type="text">
+					        	<input name="suhuS2min1" placeholder="18-23" type="text">
 					        </div>
 					        <div class="field">
-					        	<input name="suhuS2max" placeholder="18-23" type="text">
+					        	<input name="suhuS2min2" placeholder="18-23" type="text">
+					        </div>
+					    </div>
+					    <label>Sesuai Batas Maksimal</label>
+					    <div class="two fields">
+					        <div class="field">
+					        	<input name="suhuS2max1" placeholder="18-23" type="text">
+					        </div>
+					        <div class="field">
+					        	<input name="suhuS2max2" placeholder="18-23" type="text">
 					        </div>
 					    </div>
 			    	</div>
 			    	<div class="four wide field">
-			      		<label>Cukup Sesuai</label>
+			      		<label>Cukup Sesuai Batas Minimal</label>
 			      		<div class="two fields">
 					        <div class="field">
-					        	<input name="suhuS3min" placeholder="18-23" type="text">
+					        	<input name="suhuS3min1" placeholder="18-23" type="text">
 					        </div>
 					        <div class="field">
-					        	<input name="suhuS3max" placeholder="18-23" type="text">
+					        	<input name="suhuS3min2" placeholder="18-23" type="text">
+					        </div>
+					    </div>
+					    <label>Cukup Sesuai Batas Maksimal</label>
+			      		<div class="two fields">
+					        <div class="field">
+					        	<input name="suhuS3max1" placeholder="18-23" type="text">
+					        </div>
+					        <div class="field">
+					        	<input name="suhuS3max2" placeholder="18-23" type="text">
 					        </div>
 					    </div>
 			    	</div>
 			    	<div class="four wide field">
-			      		<label>Tidak Sesuai</label>
+			      		<label>Tidak Sesuai Batas Minimal</label>
 			      		<div class="two fields">
 					        <div class="field">
-					        	<input name="suhuNmin" placeholder="18-23" type="text">
+					        	<input name="suhuNmin1" placeholder="18-23" type="text">
 					        </div>
 					        <div class="field">
-					        	<input name="suhuNmax" placeholder="18-23" type="text">
+					        	<input name="suhuNmin2" placeholder="18-23" type="text">
+					        </div>
+					    </div>
+					    <label>Tidak Sesuai Batas Maksimal</label>
+			      		<div class="two fields">
+					        <div class="field">
+					        	<input name="suhuNmax1" placeholder="18-23" type="text">
+					        </div>
+					        <div class="field">
+					        	<input name="suhuNmax2" placeholder="18-23" type="text">
 					        </div>
 					    </div>
 			    	</div>
@@ -83,35 +110,62 @@
 					    </div>
 				    </div>
 			    	<div class="four wide field">
-			      		<label>Sesuai</label>
+			      		<label>Sesuai Batas Minimal</label>
 			      		<div class="two fields">
 					        <div class="field">
-					        	<input name="lembabS2min" placeholder="18-23" type="text">
+					        	<input name="lembabS2min1" placeholder="18-23" type="text">
 					        </div>
 					        <div class="field">
-					        	<input name="lembabS2max" placeholder="18-23" type="text">
+					        	<input name="lembabS2min2" placeholder="18-23" type="text">
+					        </div>
+					    </div>
+					    <label>Sesuai Batas Maksimal</label>
+			      		<div class="two fields">
+					        <div class="field">
+					        	<input name="lembabS2max1" placeholder="18-23" type="text">
+					        </div>
+					        <div class="field">
+					        	<input name="lembabS2max2" placeholder="18-23" type="text">
 					        </div>
 					    </div>
 			    	</div>
 			    	<div class="four wide field">
-			      		<label>Cukup Sesuai</label>
+			      		<label>Cukup Sesuai Batas Minimal</label>
 			      		<div class="two fields">
 					        <div class="field">
-					        	<input name="lembabS3min" placeholder="18-23" type="text">
+					        	<input name="lembabS3min1" placeholder="18-23" type="text">
 					        </div>
 					        <div class="field">
-					        	<input name="lembabS3max" placeholder="18-23" type="text">
+					        	<input name="lembabS3min2" placeholder="18-23" type="text">
+					        </div>
+					    </div>
+					    <label>Cukup Sesuai Batas Maksimal</label>
+			      		<div class="two fields">
+					        <div class="field">
+					        	<input name="lembabS3max1" placeholder="18-23" type="text">
+					        </div>
+					        <div class="field">
+					        	<input name="lembabS3max2" placeholder="18-23" type="text">
 					        </div>
 					    </div>
 			    	</div>
 			    	<div class="four wide field">
-			      		<label>Tidak Sesuai</label>
+			      		<label>Tidak Sesuai Batas Minimal</label>
 			      		<div class="two fields">
 					        <div class="field">
-					        	<input name="lembabNmin" placeholder="18-23" type="text">
+					        	<input name="lembabNmin1" placeholder="18-23" type="text">
 					        </div>
 					        <div class="field">
-					        	<input name="lembabNmax" placeholder="18-23" type="text">
+					        	<input name="lembabNmin2" placeholder="18-23" type="text">
+					        </div>
+					    </div>
+					    <label>Tidak Sesuai Batas Maksimal</label>
+			      		<div class="two fields">
+					        <div class="field">
+					        	<input name="lembabNmax1" placeholder="18-23" type="text">
+					        </div>
+					        <div class="field">
+					        	<input name="lembabNmax2" placeholder="18-23" type="text">
 					        </div>
 					    </div>
 			    	</div>
@@ -133,35 +187,62 @@
 					    </div>
 				    </div>
 			    	<div class="four wide field">
-			      		<label>Sesuai</label>
+			      		<label>Sesuai Batas Minimal</label>
 			      		<div class="two fields">
 					        <div class="field">
-					        	<input name="phS2min" placeholder="18-23" type="text">
+					        	<input name="phS2min1" placeholder="18-23" type="text">
 					        </div>
 					        <div class="field">
-					        	<input name="phS2max" placeholder="18-23" type="text">
+					        	<input name="phS2min2" placeholder="18-23" type="text">
+					        </div>
+					    </div>
+					    <label>Sesuai Batas Maksimal</label>
+			      		<div class="two fields">
+					        <div class="field">
+					        	<input name="phS2max1" placeholder="18-23" type="text">
+					        </div>
+					        <div class="field">
+					        	<input name="phS2max2" placeholder="18-23" type="text">
 					        </div>
 					    </div>
 			    	</div>
 			    	<div class="four wide field">
-			      		<label>Cukup Sesuai</label>
+			      		<label>Cukup Sesuai Batas Minimal</label>
 			      		<div class="two fields">
 					        <div class="field">
-					        	<input name="phS3min" placeholder="18-23" type="text">
+					        	<input name="phS3min1" placeholder="18-23" type="text">
 					        </div>
 					        <div class="field">
-					        	<input name="phS3max" placeholder="18-23" type="text">
+					        	<input name="phS3min2" placeholder="18-23" type="text">
+					        </div>
+					    </div>
+					    <label>Cukup Sesuai Batas Maksimal</label>
+			      		<div class="two fields">
+					        <div class="field">
+					        	<input name="phS3max1" placeholder="18-23" type="text">
+					        </div>
+					        <div class="field">
+					        	<input name="phS3max2" placeholder="18-23" type="text">
 					        </div>
 					    </div>
 			    	</div>
 			    	<div class="four wide field">
-			      		<label>Tidak Sesuai</label>
+			      		<label>Tidak Sesuai Batas Minimal</label>
 			      		<div class="two fields">
 					        <div class="field">
-					        	<input name="phNmin" placeholder="18-23" type="text">
+					        	<input name="phNmin1" placeholder="18-23" type="text">
 					        </div>
 					        <div class="field">
-					        	<input name="phNmax" placeholder="18-23" type="text">
+					        	<input name="phNmin2" placeholder="18-23" type="text">
+					        </div>
+					    </div>
+					    <label>Tidak Sesuai Batas Maksimal</label>
+			      		<div class="two fields">
+					        <div class="field">
+					        	<input name="phNmax1" placeholder="18-23" type="text">
+					        </div>
+					        <div class="field">
+					        	<input name="phNmax2" placeholder="18-23" type="text">
 					        </div>
 					    </div>
 			    	</div>
@@ -183,35 +264,62 @@
 					    </div>
 				    </div>
 			    	<div class="four wide field">
-			      		<label>Sesuai</label>
+			      		<label>Sesuai Batas Minimal</label>
 			      		<div class="two fields">
 					        <div class="field">
-					        	<input name="curahS2min" placeholder="18-23" type="text">
+					        	<input name="curahS2min1" placeholder="18-23" type="text">
 					        </div>
 					        <div class="field">
-					        	<input name="curahS2max" placeholder="18-23" type="text">
+					        	<input name="curahS2min2" placeholder="18-23" type="text">
+					        </div>
+					    </div>
+					    <label>Sesuai Batas Maksimal</label>
+			      		<div class="two fields">
+					        <div class="field">
+					        	<input name="curahS2max1" placeholder="18-23" type="text">
+					        </div>
+					        <div class="field">
+					        	<input name="curahS2max2" placeholder="18-23" type="text">
 					        </div>
 					    </div>
 			    	</div>
 			    	<div class="four wide field">
-			      		<label>Cukup Sesuai</label>
+			      		<label>Cukup Sesuai Batas Minimal</label>
 			      		<div class="two fields">
 					        <div class="field">
-					        	<input name="curahS3min" placeholder="18-23" type="text">
+					        	<input name="curahS3min1" placeholder="18-23" type="text">
 					        </div>
 					        <div class="field">
-					        	<input name="curahS3max" placeholder="18-23" type="text">
+					        	<input name="curahS3min2" placeholder="18-23" type="text">
+					        </div>
+					    </div>
+					    <label>Cukup Sesuai Batas Maksimal</label>
+			      		<div class="two fields">
+					        <div class="field">
+					        	<input name="curahS3max1" placeholder="18-23" type="text">
+					        </div>
+					        <div class="field">
+					        	<input name="curahS3max2" placeholder="18-23" type="text">
 					        </div>
 					    </div>
 			    	</div>
 			    	<div class="four wide field">
-			      		<label>Tidak Sesuai</label>
+			      		<label>Tidak Sesuai Batas Minimal</label>
 			      		<div class="two fields">
 					        <div class="field">
-					        	<input name="curahNmin" placeholder="18-23" type="text">
+					        	<input name="curahNmin1" placeholder="18-23" type="text">
 					        </div>
 					        <div class="field">
-					        	<input name="curahNmax" placeholder="18-23" type="text">
+					        	<input name="curahNmin2" placeholder="18-23" type="text">
+					        </div>
+					    </div>
+					    <label>Tidak Sesuai Batas Maksimal</label>
+			      		<div class="two fields">
+					        <div class="field">
+					        	<input name="curahNmax1" placeholder="18-23" type="text">
+					        </div>
+					        <div class="field">
+					        	<input name="curahNmax2" placeholder="18-23" type="text">
 					        </div>
 					    </div>
 			    	</div>

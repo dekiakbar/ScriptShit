@@ -35,38 +35,59 @@ class tanamanCon extends Controller
      * Function untuk menampilkan data tanaman
      *
      */
-    public function simpan(Request $request)
+    public function simpan(Request $in)
     {
+    	$suhuS1	  = $in->suhuS1min.'-'.$in->suhuS1max;
+    	$suhuS2	  = cekInput($in->suhuS2min1, $in->suhuS2min2, $in->suhuS2max1, $in->suhuS2max2);
+    	$suhuS3	  = cekInput($in->suhuS3min1, $in->suhuS3min2, $in->suhuS3max1, $in->suhuS3max2);
+    	$suhuN    = cekInput($in->suhuNmin1, $in->suhuNmin2, $in->suhuNmax1, $in->suhuNmax2);
+
+    	$phS1     = $in->phS1min.'-'.$in->phS1max;
+    	$phS2     = cekInput($in->phS2min1, $in->phS2min2, $in->phS2max1, $in->phS2max2);
+    	$phS3 	  = cekInput($in->phS3min1, $in->phS3min2, $in->phS3max1, $in->phS3max2);
+    	$phN 	  = cekInput($in->phNmin1, $in->phNmin2, $in->phNmax1, $in->phNmax2);
+    	
+    	$lembabS1 = $in->lembabS1min.'-'.$in->lembabS1max;
+    	$lembabS2 = cekInput($in->lembabS2min1, $in->lembabS2min2, $in->lembabS2max1, $in->lembabS2max2);
+    	$lembabS3 = cekInput($in->lembabS3min1, $in->lembabS3min2, $in->lembabS3max1, $in->lembabS3max2);
+    	$lembabN  = cekInput($in->lembabNmin1, $in->lembabNmin2, $in->lembabNmax1, $in->lembabNmax2);
+    	
+    	$curahS1  = $in->curahS1min.'-'.$in->curahS1max;
+    	$curahS2  = cekInput($in->curahS2min1, $in->curahS2min1, $in->curahS2max1, $in->curahS2max2);
+    	$curahS3  = cekInput($in->curahS3min1, $in->curahS3min2, $in->curahS3max1, $in->curahS3max2);
+    	$curahN   = cekInput($in->curahNmin1, $in->curahNmin2, $in->curahNmax1, $in->curahNmax2);
+
+    	//seksi simpan ke database
     	$tanam = new Tanaman();
-    	$tanam->nama_tanaman = $request->nama_tanaman;
+    	$tanam->nama_tanaman = $in->nama_tanaman;
     	$tanam->save();
 
     	$suhu = new SuhuS();
-    	$suhu->suhuS1 = $request->input('suhuS1min').'-'.$request->input('suhuS1max');
-    	$suhu->suhuS2 = $request->input('suhuS2min').'-'.$request->input('suhuS2max');
-    	$suhu->suhuS3 = $request->input('suhuS3min').'-'.$request->input('suhuS3max');
-    	$suhu->suhuN  = $request->input('suhuNmin').'-'.$request->input('suhuNmax');
+    	$suhu->suhuS1 = $suhuS1;
+    	$suhu->suhuS2 = $suhuS2;
+    	$suhu->suhuS3 = $suhuS3;
+    	$suhu->suhuN  = $suhuN;
     	$tanam->suhu()->save($suhu);
 
     	$ph = new PhS();
-    	$ph->phS1 = $request->input('phS1min').'-'.$request->input('phS1max');
-    	$ph->phS2 = $request->input('phS2min').'-'.$request->input('phS2max');
-    	$ph->phS3 = $request->input('phS3min').'-'.$request->input('phS3max');
-    	$ph->phN  = $request->input('phNmin').'-'.$request->input('phNmax');
+    	$ph->phS1 = $phS1;
+    	$ph->phS2 = $phS2;
+    	$ph->phS3 = $phS3;
+    	$ph->phN  = $phN;
     	$tanam->ph()->save($ph);
 
     	$lembab = new LembabS();
-    	$lembab->lembabS1 = $request->input('lembabS1min').'-'.$request->input('lembabS1max');
-    	$lembab->lembabS2 = $request->input('lembabS2min').'-'.$request->input('lembabS2max');
-    	$lembab->lembabS3 = $request->input('lembabS3min').'-'.$request->input('lembabS3max');
-    	$lembab->lembabN  = $request->input('lembabNmin').'-'.$request->input('lembabNmax');
+    	$lembab->lembabS1 = $lembabS1;
+    	$lembab->lembabS2 = $lembabS2;
+    	$lembab->lembabS3 = $lembabS3;
+    	$lembab->lembabN  = $lembabN;
     	$tanam->lembab()->save($lembab);
 
     	$curah = new CurahHujanS();
-    	$curah->curahS1 = $request->input('curahS1min').'-'.$request->input('curahS1max');
-    	$curah->curahS2 = $request->input('curahS2min').'-'.$request->input('curahS2max');
-    	$curah->curahS3 = $request->input('curahS3min').'-'.$request->input('curahS3max');
-    	$curah->curahN  = $request->input('curahNmin').'-'.$request->input('curahNmax');
+    	$curah->curahS1 = $curahS1;
+    	$curah->curahS2 = $curahS2;
+    	$curah->curahS3 = $curahS3;
+    	$curah->curahN  = $curahN;
     	$tanam->curahHujan()->save($curah);
 
     	return redirect('admin/tanaman/tambah');

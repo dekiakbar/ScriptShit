@@ -91,7 +91,7 @@
 		      		<table class="ui definition table">
 			  			<thead>
 			    			<tr>
-			    				<th class="center aligned">Jagung</th>
+			    				<th class="center aligned">{{ $data->nama_tanaman }}</th>
 			    				<th class="center aligned">Sangat Sesuai</th>
 			    				<th class="center aligned">Sesuai</th>
 			    				<th class="center aligned">Kurang Sesuai</th>
