@@ -126,4 +126,49 @@ function initMap() {
             document.getElementById("proses").href = "/detail/"+url.slice(1,-1).replace(/\s/g, '');
       });
    });
-}      
+} 
+
+//konfirmasi delete data
+function hapus()
+{
+   var token = $('#hapus').data('token');
+   var urlhapus = $('#hapus').data('slug'); 
+   $('.ui.small.modal')
+      .modal({
+         onApprove: function (e) {
+            if (e.hasClass('ya')) {
+                $.ajax({
+                    url: urlhapus,
+                    type: 'post',
+                    data: {_method: 'delete', _token :token, },
+                    success:function(msg){
+                        setTimeout(
+                           function() 
+                           {
+                              location.reload();
+                           }, 0001
+                        );  
+                    }
+                  })
+            }
+         },
+         blurring: true,
+         transition: 'fade in'
+      })
+   .modal('show');
+}  
+
+// js detail tanaman
+function lihat(data)
+{
+  var detail = data.getAttribute('data-detail');
+  var id = '#'+detail;
+  $(id).modal({
+     blurring : true
+  }).modal('show');
+}
+
+// js menu admin
+$('.ui.dropdown').dropdown({
+   on:'hover',
+});   

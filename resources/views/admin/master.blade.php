@@ -80,48 +80,6 @@
 	</footer>
 
 	<script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
-    <script>
-    $('.ui.dropdown').dropdown({
-    	on:'hover',
-    });
-
-    function lihat(data)
-    {
-    	var detail = data.getAttribute('data-detail');
-    	var id = '#'+detail;
-    	$(id).modal({
-    		blurring : true
-    	}).modal('show');
-    }
-
-    function hapus()
-    {
-	  	var token = $('#hapus').data('token');
-	  	var urlhapus = $('#hapus').data('slug'); 
-	  	$('.ui.small.modal')
-	  		.modal({
-	    		onApprove: function (e) {
-	    		  	if (e.hasClass('ya')) {
-		    		    $.ajax({
-		    		        url: urlhapus,
-		    		        type: 'post',
-		    		        data: {_method: 'delete', _token :token, },
-		    		        success:function(msg){
-		    		          	setTimeout(
-		    		            	function() 
-		    		              	{
-		    		             		location.reload();
-		    		              	}, 0001
-		    		            );  
-		    		        }
-	    		      	})
-	    		  	}
-	    		},
-		    	blurring: true,
-		    	transition: 'fade in'
-	  		})
-	  	.modal('show');
-	}
-    </script>
+	<script type="text/javascript" src="{{ asset('js/manual.js') }}"></script>
 </body>
 </html>
