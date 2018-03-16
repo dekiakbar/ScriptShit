@@ -182,6 +182,5 @@ class tanamanCon extends Controller
     {
     	$hapus = Tanaman::with('suhu','lembab','curahHujan','ph')->findOrFail(decrypt($id));
     	$hapus->delete();
-    	// return redirect('amin/tanaman');
     }
 }

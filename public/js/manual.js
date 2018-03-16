@@ -129,19 +129,20 @@ function initMap() {
 } 
 
 //konfirmasi delete data
-function hapus()
+function hapus(data)
 {
-   var token = $('#hapus').data('token');
-   var urlhapus = $('#hapus').data('slug'); 
+   var token = data.getAttribute('data-token');
+   var hapus = data.getAttribute('data-tanaman'); 
    $('.ui.small.modal')
       .modal({
          onApprove: function (e) {
             if (e.hasClass('ya')) {
                 $.ajax({
-                    url: urlhapus,
-                    type: 'post',
-                    data: {_method: 'delete', _token :token, },
+                    url: hapus,
+                    type: 'POST',
+                    data: {_method: 'DELETE', _token :token, },
                     success:function(msg){
+                        // console.log(hapus);
                         setTimeout(
                            function() 
                            {

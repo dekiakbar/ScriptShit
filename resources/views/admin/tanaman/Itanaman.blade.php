@@ -41,7 +41,7 @@
 		    						<i class="edit icon"></i>
 		    					</div>
 		    				</a>
-		    				<a onclick="hapus()" id="hapus" data-slug="{{ route('tanaman.hapus',encrypt($data->id)) }}" data-token="{{ csrf_token() }}" class="ui mini button red animated fade inverted">
+		    				<a onclick="hapus(this)" data-tanaman="{{ route('tanaman.hapus',encrypt($data->id)) }}" data-token="{{ csrf_token() }}" class="ui mini button red animated fade inverted">
 		    					<div class="visible content">
 		    						Hapus
 		    					</div>
@@ -73,7 +73,7 @@
 				<i class="remove icon"></i>
 				Tidak
 			</div>
-			<div class="ui green ok inverted button tidak ya">
+			<div class="ui green ok inverted button ya">
 				<i class="checkmark icon"></i>
 				Iya
 			</div>
