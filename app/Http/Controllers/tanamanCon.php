@@ -37,6 +37,7 @@ class tanamanCon extends Controller
      */
     public function simpan(Request $in)
     {
+    	//function untuk menggabungkan inout menjadi sebuah string
     	$suhuS1	  = $in->suhuS1min.'-'.$in->suhuS1max;
     	$suhuS2	  = cekInput($in->suhuS2min1, $in->suhuS2min2, $in->suhuS2max1, $in->suhuS2max2);
     	$suhuS3	  = cekInput($in->suhuS3min1, $in->suhuS3min2, $in->suhuS3max1, $in->suhuS3max2);
