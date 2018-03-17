@@ -168,9 +168,12 @@
 	function cekInput($data1,$data2,$data3,$data4)
 	{
 		$hasil="";
-		if ((!empty($data1) && !empty($data2)) && (!empty($data3) && !empty($data4))) {
+		if ((!empty($data1) && !empty($data2)) && (!empty($data3) && !empty($data4))) 
+		{
 			$hasil = $data1.'-'.$data2.','.$data3.'-'.$data4;
-		}else if ((!empty($data1) && !empty($data2)) || empty($data3) || empty($data4)) {
+		}
+		else if ((!empty($data1) && !empty($data2)) || empty($data3) || empty($data4)) 
+		{
 			$hasil = $data1.'-'.$data2;
 		}
 		return $hasil;
@@ -180,13 +183,19 @@
 	{
 		$hasil=array();
 
-		if (strpos($data, ',')) {
+		if (strpos($data, ',')) 
+		{
 			$range = explode(',', $data);
 			
-			if (strpos($range[0],'-') && strpos($range[1],'-')) {
+			if (strpos($range[0],'-') && strpos($range[1],'-')) 
+			{
 				$dataMin = explode('-', $range[0]);
 				$dataMax = explode('-', $range[1]);
 
+				$hasil = array(
+					'dataMin1' => $dataMin[0],'dataMin2' => $data[1],
+					'dataMax1' => $dataMax[0],'dataMax2' => $dataMax[1]
+				);
 			}
 		}
 	}
