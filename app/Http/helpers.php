@@ -1,4 +1,8 @@
 <?php 
+/**
+* Kelas helper yang berisi inti dari semua logic aplikasi ini
+* Here is the magic formula 
+*/
 	
 	//fungsi untuk mentranslate arah mata angin
 	function TarahAngin($arahAngin)
@@ -155,14 +159,14 @@
 //==========================  akhir methode AHP ========================== 
 
 //========================== Function input form =========================
-function cekInput($data1,$data2,$data3,$data4)
-{
-	$hasil="";
-	if ((!empty($data1) && !empty($data2)) && (!empty($data3) && !empty($data4))) {
-		$hasil = $data1.'-'.$data2.','.$data3.'-'.$data4;
-	}else if ((!empty($data1) && !empty($data2)) || empty($data3) || empty($data4)) {
-		$hasil = $data1.'-'.$data2;
+	function cekInput($data1,$data2,$data3,$data4)
+	{
+		$hasil="";
+		if ((!empty($data1) && !empty($data2)) && (!empty($data3) && !empty($data4))) {
+			$hasil = $data1.'-'.$data2.','.$data3.'-'.$data4;
+		}else if ((!empty($data1) && !empty($data2)) || empty($data3) || empty($data4)) {
+			$hasil = $data1.'-'.$data2;
+		}
+		return $hasil;
 	}
-	return $hasil;
-}
 ?>
