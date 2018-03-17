@@ -76,6 +76,9 @@
     }
     // akhir fungsi translate nama cuaca
 
+/**
+* Function Login untuk metode AHP
+*/
 //========================== Methode AHP ========================== 
     // 
     // fungsi perbandingan , mengubah nilai jd matriks
@@ -158,6 +161,9 @@
 }
 //==========================  akhir methode AHP ========================== 
 
+/**
+* Function untuk memproses data tanaman dari form input
+*/
 //========================== Function input form =========================
 	function cekInput($data1,$data2,$data3,$data4)
 	{
@@ -168,5 +174,20 @@
 			$hasil = $data1.'-'.$data2;
 		}
 		return $hasil;
+	}
+
+	function pecahData($data)
+	{
+		$hasil=array();
+
+		if (strpos($data, ',')) {
+			$range = explode(',', $data);
+			
+			if (strpos($range[0],'-') && strpos($range[1],'-')) {
+				$dataMin = explode('-', $range[0]);
+				$dataMax = explode('-', $range[1]);
+
+			}
+		}
 	}
 ?>
