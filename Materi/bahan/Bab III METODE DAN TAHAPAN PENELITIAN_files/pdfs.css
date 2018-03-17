@@ -1,0 +1,595 @@
+/* :asset_packager_compatibility, 'config/asset_packages.yml' @ 1515190736 */
+
+
+/* :files, 'public/stylesheets/shared', ... @ (none) */
+
+
+/* :files, 'app/views', ... @ 1515190735 */
+/* app/views/pdfs/shared.css @ 1515190735 */
+/* epub and audiobook banners*/ body.no_scrolling {display: -webkit-box;display: -ms-flexbox;display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; height: 100vh; overflow-y: hidden}
+body.no_scrolling.for_bots {overflow-y: auto}
+body.no_scrolling .header_spacer {display: none}
+body.no_scrolling #global_header {position: relative}
+body.no_scrolling .global_wrapper {height: 100%}
+body.pdf_mobile #flash_container {position: fixed; top: 111px; z-index: 25; width: 100%}
+body.pdf_mobile.pdf_fullscreen {top: 51px}
+body.pdf_fullscreen .header_spacer, body.pdf_fullscreen .global_header {display: none}
+body.pdf_fullscreen #flash_container {position: fixed; top: 51px; z-index: 25; width: 100%}
+.global_wrapper {overflow: visible; position: relative}
+
+
+/* app/views/pdfs/_seo_shared.css @ 1515190735 */
+/* epub and audiobook banners*/ .seo_perks {text-transform: uppercase; margin-bottom: 23px; font-size: 16px; color: #8c9d9d}
+.seo_perks .perk {margin-right: 20px}
+.seo_perks .perk .icon {margin-right: 7px}
+.seo_images {margin: 0 15px 0 32px; overflow: hidden; height: 75px; white-space: nowrap}
+.seo_images .thumb {width: 55px; height: 75px; margin-right: 24px; position: relative; border: 1px solid #E9EDF8; background-color: #F8F9FD; display: inline-block}
+.seo_images .thumb:hover .overlay, .seo_images .thumb.hover .overlay {opacity: 0.5}
+.seo_images .thumb:hover .overlay .sprite, .seo_images .thumb.hover .overlay .sprite {opacity: 0.5}
+.seo_images .thumb:hover .main_action, .seo_images .thumb.hover .main_action {opacity: 1}
+.seo_images .thumb .overlay, .seo_images .thumb .doc_link {position: absolute; top: 0; right: 0; bottom: 0; left: 0}
+.seo_images .thumb .overlay {transition: opacity 0.1s ease-in-out; -moz-transition: opacity 0.1s ease-in-out; -webkit-transition: opacity 0.1s ease-in-out; opacity: 0; background: rgba(87, 97, 122, 0.75)}
+.seo_images .thumb .overlay .sprite {position: absolute; opacity: 0; left: 50%; top: 50%; margin-left: -23px; margin-top: -18px}
+.seo_images .thumb.is_book {box-shadow: 0 0 8px rgba(0, 0, 0, 0.1)}
+.seo_images .thumb:last-child {margin-right: 0px}
+.seo_quotes {text-align: center; color: #57617A}
+.seo_quotes .quote {display: inline-block; vertical-align: top; width: 44px; height: 44px; background-image: url('https://s2-f.scribdassets.com/images/read2/quotemark.png?1515190857'); background-size: cover}
+.seo_quotes .quote.quote_right {background-image: url('https://s2-f.scribdassets.com/images/read2/quoteend.png?1515190857')}
+.seo_quotes .quote_body {display: inline-block; text-align: left; font-size: 18px; width: 50%; margin-left: 32px; margin-right: 24px; vertical-align: top; position: relative}
+.seo_quotes .quote_body .single_quote {opacity: 0; position: absolute; top: 0; left: 0; right: 0}
+.seo_quotes .quote_body .single_quote.fade_out {opacity: 0; transition: opacity 1s ease-in-out; -moz-transition: opacity 1s ease-in-out; -webkit-transition: opacity 1s ease-in-out}
+.seo_quotes .quote_body .single_quote.fade_in {opacity: 1; transition: opacity 1.3s cubic-bezier(1, 0, 0.69, 0); -moz-transition: opacity 1.3s cubic-bezier(1, 0, 0.69, 0); -webkit-transition: opacity 1.3s cubic-bezier(1, 0, 0.69, 0)}
+.seo_quotes .quote_author {font-weight: bold}
+.seo_dialog {border-radius: 2px}
+.seo_dialog .close_button {margin-top: 10px; margin-right: 10px}
+.seo_dialog .wrapper {width: 550px; box-sizing: border-box; font-size: 17px; color: #333}
+.seo_dialog .title {font-size: 30px; border-bottom: 1px solid #e9e9e9; margin: 0; padding: 40px 40px 30px 40px}
+.seo_dialog .content {padding-top: 30px}
+.seo_dialog p {margin-top: 0; margin-bottom: 30px}
+.seo_dialog .flat_btn {margin-right: 12px; padding-left: 40px; padding-right: 40px}
+.seo_dialog .flat_btn.yes_btn {font-weight: bold}
+
+
+/* :class_inlines, 'app/views', ... @ 1515190736 */
+/* app/views/shared/filtered_document_page.css @ 1515190736 */
+/* epub and audiobook banners*/ .autogen_class_views_shared_filtered_document_page {text-align: left}
+.autogen_class_views_shared_filtered_document_page .page_header {min-height: 100px; padding: 0 45px; position: relative; zoom: 1}
+.autogen_class_views_shared_filtered_document_page .page_header:after {content: ""; display: table; clear: both}
+.autogen_class_views_shared_filtered_document_page .page_header .filter_buttons {margin-top: 20px; padding-bottom: 30px}
+.autogen_class_views_shared_filtered_document_page .page_header .filter_buttons .flat_btn {vertical-align: middle}
+.autogen_class_views_shared_filtered_document_page .page_header h1 .split {display: inline-block; vertical-align: middle; margin: 0 15px; font-size: 20px; color: #20828D}
+.autogen_class_views_shared_filtered_document_page .page_header .header_right {text-align: right; position: absolute; right: 45px; top: 37px}
+.autogen_class_views_shared_filtered_document_page .page_header .search_form .search_input {width: 300px; background: url('https://s2-f.scribdassets.com/images/profiles/blue-mag.png?1515190857') 96% 50% no-repeat}
+.autogen_class_views_shared_filtered_document_page .page_header .page_label {color: #57617A}
+.autogen_class_views_shared_filtered_document_page .page_header .page_label:before {content: "("}
+.autogen_class_views_shared_filtered_document_page .page_header .page_label:after {content: ")"}
+.autogen_class_views_shared_filtered_document_page .filter_picker {display: none; border-top: 1px solid #E9EDF8; border-bottom: 1px solid #E9EDF8; padding-top: 30px; background: white}
+.autogen_class_views_shared_filtered_document_page .filter_picker.open {display: block}
+.autogen_class_views_shared_filtered_document_page .filter_picker .filter_picker_inner {padding: 0 45px 0 45px}
+.autogen_class_views_shared_filtered_document_page .filter_picker .filter_group {display: inline-block; vertical-align: top; margin-right: 55px; margin-bottom: 30px}
+.autogen_class_views_shared_filtered_document_page .filter_picker .filter_label {margin: 0; margin-bottom: 10px; font-weight: bold}
+.autogen_class_views_shared_filtered_document_page .filter_picker .picker_item {display: block; line-height: 1.5; color: #57617A}
+.autogen_class_views_shared_filtered_document_page .filter_picker .picker_item.selected {font-weight: bold}
+.autogen_class_views_shared_filtered_document_page .document_drop {margin-top: 40px}
+.autogen_class_views_shared_filtered_document_page .empty_message {margin: 40px 45px; color: #57617A; font-size: 28px}
+.autogen_class_views_shared_filtered_document_page .shared_pmp_promo_banner {margin: 30px 45px 0 45px}
+
+
+/* app/views/shared/ad_code.css @ 1515190736 */
+.ads_disabled .hidden_on_ads_disabled {display: none}
+
+
+/* app/views/archive_flow/_doc_info.css @ 1515190734 */
+/* epub and audiobook banners*/ .lightbox .autogen_class_views_archive_flow_doc_info .doc_info {background-color: transparent}
+.autogen_class_views_archive_flow_doc_info .doc_info {overflow: auto; background-color: #ecf3f5}
+.autogen_class_views_archive_flow_doc_info .doc_info .thumbnail {width: 183px; height: 250px}
+.autogen_class_views_archive_flow_doc_info .doc_info .overlay {width: 183px; height: 250px}
+.autogen_class_views_archive_flow_doc_info .doc_info .info {font-family: 'Source Sans Pro', sans-serif; margin-top: 10px}
+.autogen_class_views_archive_flow_doc_info .doc_info .info h2 {font-weight: normal; line-height: 17px; word-break: break-word; max-width: 300px}
+.autogen_class_views_archive_flow_doc_info .doc_info .info h5 {color: #146c88; font-weight: normal}
+.autogen_class_views_archive_flow_doc_info .doc_info .info p {color: #57617A; line-height: 20px}
+.autogen_class_views_archive_flow_doc_info .doc_info .info .file_types {color: #b3b3b3}
+.autogen_class_views_archive_flow_doc_info .doc_info .info * {font-size: 13px; width: 360px; margin: 0; padding: 0 0 5px 0}
+
+
+/* app/views/mobile/shared/_view_in_store_promo.css @ 1515190735 */
+@charset "UTF-8"; /* epub and audiobook banners*/ /* epub and audiobook banners*/ .autogen_class_views_mobile_shared_view_in_store_promo {background-color: #f2f2f2; font-family: "Helvetica Neue", sans-serif; position: relative; height: 75px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center}
+.autogen_class_views_mobile_shared_view_in_store_promo.android {font-family: "Roboto", sans-serif}
+.autogen_class_views_mobile_shared_view_in_store_promo a {color: #137cfa; text-decoration: none; cursor: pointer}
+.autogen_class_views_mobile_shared_view_in_store_promo a:hover {color: #0D6069}
+.autogen_class_views_mobile_shared_view_in_store_promo .close {position: absolute; top: 0; left: 0; width: 30px; bottom: 0}
+.autogen_class_views_mobile_shared_view_in_store_promo .icon_close {width: 10px; height: 10px; display: block; box-sizing: border-box; position: relative; top: 22px; left: 7px}
+.autogen_class_views_mobile_shared_view_in_store_promo .icon_close:before, .autogen_class_views_mobile_shared_view_in_store_promo .icon_close:after {content: ""; position: absolute; width: 5px; height: 5px; background: transparent; top: 13px; left: -2px; border: 2px solid #737373; border-top: none; border-right: none; -webkit-transform: rotate(225deg); transform: rotate(225deg)}
+.autogen_class_views_mobile_shared_view_in_store_promo .icon_close:after {-webkit-transform: rotate(45deg);transform: rotate(45deg); left: 5px}
+.autogen_class_views_mobile_shared_view_in_store_promo .app_logo {display: block; width: 48px; height: 48px; background-size: 100%; background-image: url('https://s2-f.scribdassets.com/images/scribd_s_circle_logo.svg?1515190857'); background-repeat: no-repeat; margin-left: 26px; margin-top: 1px}
+.autogen_class_views_mobile_shared_view_in_store_promo .app_logo.android {background-image: url('https://s2-f.scribdassets.com/images/scribd_s_circle_logo.svg?1515190857')}
+.autogen_class_views_mobile_shared_view_in_store_promo .app_info {display: block; margin-left: 8px; color: #000514; font-size: 11px}
+.autogen_class_views_mobile_shared_view_in_store_promo .app_info.android p {margin-bottom: 5px}
+.autogen_class_views_mobile_shared_view_in_store_promo .app_info.android p.name {margin-bottom: 2px}
+.autogen_class_views_mobile_shared_view_in_store_promo .app_info.android .featured {display: inline-block; position: relative; top: 3px; width: 14px; height: 14px; background-image: url('https://s2-f.scribdassets.com/images/mobile/topdeveloper.png?1515190857'); background-size: 14px 14px; margin-left: 3px}
+.autogen_class_views_mobile_shared_view_in_store_promo .app_info p {margin-bottom: 3px; line-height: 1}
+.autogen_class_views_mobile_shared_view_in_store_promo .app_info .name {color: #333; font-size: 13px}
+.autogen_class_views_mobile_shared_view_in_store_promo .app_info .rating {width: 68px; height: 12px; background-image: url('https://s1-f.scribdassets.com/images/mobile/rating-android-1x.png?1515190857'); background-size: 100%}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {.autogen_class_views_mobile_shared_view_in_store_promo .app_info .rating {background-image: url('https://s1-f.scribdassets.com/images/mobile/rating-android-2x.png?1515190857')}
+}
+.autogen_class_views_mobile_shared_view_in_store_promo .app_info .ratings {line-height: 1; position: relative; top: -2px}
+.autogen_class_views_mobile_shared_view_in_store_promo .app_info .ratings .star {display: inline-block; width: 10px; height: 9px; font-size: 9px; color: #fc9427}
+.autogen_class_views_mobile_shared_view_in_store_promo .app_info .ratings .star:before {content: "☆"}
+.autogen_class_views_mobile_shared_view_in_store_promo .app_info .ratings .star.filled:before {content: "★"}
+.autogen_class_views_mobile_shared_view_in_store_promo .app_info .ratings .star.half:before {content: "½"}
+.autogen_class_views_mobile_shared_view_in_store_promo .app_info .ratings .num_ratings {position: relative; margin-left: 6px; top: -2px}
+@media (max-width: 321px) {.autogen_class_views_mobile_shared_view_in_store_promo .app_info {width: 170px}
+}
+.autogen_class_views_mobile_shared_view_in_store_promo .view_in_store_link {display: block; margin: 0 0 0 15px; font-size: 16px; background: none; height: auto; letter-spacing: 0; min-width: 0; color: #137cfa; border-radius: 0; padding: 0; line-height: inherit; font-family: "Helvetica Neue", sans-serif; text-transform: none}
+.autogen_class_views_mobile_shared_view_in_store_promo .view_in_store_link.android {font-family: "Roboto", sans-serif; font-weight: normal; width: 86px; height: 21px; line-height: 21px; font-size: 12px; background-color: #a4c639; color: white; text-align: center; text-transform: uppercase; position: absolute; right: 0; bottom: 10px}
+
+
+/* app/views/pdfs/_sidebar.css @ 1515190735 */
+/* epub and audiobook banners*/ .autogen_class_views_pdfs_sidebar .footer_rec_docs {display: none}
+.autogen_class_views_pdfs_sidebar h1 {font-size: 24px; color: #1C263D; margin: 0; word-wrap: break-word; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical}
+.autogen_class_views_pdfs_sidebar h3 {text-transform: uppercase; font-size: 14px; font-weight: bold; color: #1C263D; margin: 24px 0 12px 0}
+.autogen_class_views_pdfs_sidebar .download_app_promo_lightbox {display: inline-block; margin-top: 15px}
+.autogen_class_views_pdfs_sidebar .document_edit_row {font-size: 14px; margin-bottom: 10px}
+.autogen_class_views_pdfs_sidebar .document_edit_row .icon {font-size: 14px; margin-right: 5px; vertical-align: -1px}
+.autogen_class_views_pdfs_sidebar .publish_info {font-size: 14px; color: #57617A; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 5px; margin-bottom: 0}
+.autogen_class_views_pdfs_sidebar .publish_info .decorative {font-family: 'Source Sans Pro', sans-serif}
+.autogen_class_views_pdfs_sidebar .publish_info a {outline-offset: -1px}
+.autogen_class_views_pdfs_sidebar .document_stats {margin-top: 15px; margin-bottom: 0}
+.autogen_class_views_pdfs_sidebar .embed_cell {font-size: 14px; margin-left: 11px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center}
+.autogen_class_views_pdfs_sidebar .embed_cell .icon {vertical-align: -1px; margin-right: 3px; font-size: 14px}
+.autogen_class_views_pdfs_sidebar .sharing_buttons {display: -webkit-box;display: -ms-flexbox;display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center}
+.autogen_class_views_pdfs_sidebar .share_row, .autogen_class_views_pdfs_sidebar .ratings_row {border-top: 1px solid #E9EDF8; border-bottom: 1px solid #E9EDF8; padding: 12px 0; margin-top: 12px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: stretch; -ms-flex-align: stretch; align-items: stretch}
+.autogen_class_views_pdfs_sidebar .share_row > *, .autogen_class_views_pdfs_sidebar .ratings_row > * {border-left: 1px solid #E9EDF8; padding-left: 5px; margin-left: 10px}
+.autogen_class_views_pdfs_sidebar .share_row > *:first-child, .autogen_class_views_pdfs_sidebar .ratings_row > *:first-child {border-left: 0; padding-left: 0; margin-left: 0}
+.autogen_class_views_pdfs_sidebar .ratings_row {margin: 10px 0}
+@media (max-width: 480px) {.autogen_class_views_pdfs_sidebar .ratings_row .embed_cell {display: none}
+}
+@media (max-width: 400px) {.autogen_class_views_pdfs_sidebar .ratings_row .sharing_buttons {display: none}
+}
+.autogen_class_views_pdfs_sidebar .document_actions {margin: 20px 0; white-space: nowrap}
+.autogen_class_views_pdfs_sidebar .document_actions > * {display: block; width: 100%; margin: 0 0 10px 0}
+.autogen_class_views_pdfs_sidebar .document_actions > *:last-child {margin-bottom: 0}
+.autogen_class_views_pdfs_sidebar .document_actions .library_button {display: block; width: 100%}
+.autogen_class_views_pdfs_sidebar .availability {font-size: 14px; color: #57617A; margin: 15px 0}
+.autogen_class_views_pdfs_sidebar .collapse_data.show_more .on_less {display: none}
+.autogen_class_views_pdfs_sidebar .collapse_data.show_more span.on_more {display: inline}
+.autogen_class_views_pdfs_sidebar .collapse_data.show_more div.on_more {display: block}
+.autogen_class_views_pdfs_sidebar .collapse_data .on_more {display: none}
+.autogen_class_views_pdfs_sidebar .collapse_data .description_content {font-size: 16px; line-height: 1.4; color: #57617A; word-wrap: break-word}
+.autogen_class_views_pdfs_sidebar .collapse_data .more_toggle {margin-top: 10px; font-size: 14px}
+.autogen_class_views_pdfs_sidebar .collapse_data .document_metadata {font-size: 14px; margin-top: 16px}
+.autogen_class_views_pdfs_sidebar .collapse_data .data_row {color: #57617A; margin: 8px 0}
+.autogen_class_views_pdfs_sidebar .has_document_cells .doc_link {display: inline; width: auto}
+.autogen_class_views_pdfs_sidebar .sidebar_interests .interest_link {line-height: 1.5}
+.autogen_class_views_pdfs_sidebar .grouped_recommenders h3 {font-size: 18px; line-height: 1.3; max-height: 2.6; overflow: hidden; display: block; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; text-transform: none; font-weight: normal; color: inherit; margin-bottom: 0}
+.autogen_class_views_pdfs_sidebar .description {line-height: 1.4; font-size: 16px; color: #57617A; margin-top: 17px}
+.autogen_class_views_pdfs_sidebar .description .description_content {margin-bottom: 3px; word-wrap: break-word; text-overflow: ellipsis; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical}
+.autogen_class_views_pdfs_sidebar .title_link {outline-offset: -2px}
+
+
+/* app/views/pdfs/_document_details.css @ 1515190735 */
+/* epub and audiobook banners*/ .autogen_class_views_pdfs_document_details {margin: 0 auto; max-width: 540px}
+.autogen_class_views_pdfs_document_details.details_open .on_visible {display: initial}
+.autogen_class_views_pdfs_document_details.details_open .on_hidden {display: none}
+.autogen_class_views_pdfs_document_details.details_open .toggle_content {display: block}
+.autogen_class_views_pdfs_document_details h1, .autogen_class_views_pdfs_document_details .see_more_row {text-align: center}
+.autogen_class_views_pdfs_document_details .see_more_row {margin: 10px 0 0 0}
+.autogen_class_views_pdfs_document_details .on_visible {display: none}
+.autogen_class_views_pdfs_document_details .toggle_content {display: none}
+.autogen_class_views_pdfs_document_details .toggle_content .data_row {font-size: 14px; color: #57617A; margin-top: 5px}
+@media (min-width: 500px) {.autogen_class_views_pdfs_document_details .toggle_content .document_actions > *, .autogen_class_views_pdfs_document_details .toggle_content .document_actions > .library_button {vertical-align: top; display: inline-block; width: auto; margin-right: 10px}
+.autogen_class_views_pdfs_document_details .toggle_content .document_actions > *:last-child, .autogen_class_views_pdfs_document_details .toggle_content .document_actions > .library_button:last-child {margin-right: 0}
+}
+
+
+/* app/views/pdfs/errors/_base.css @ 1515190735 */
+/* epub and audiobook banners*/ .autogen_class_views_pdfs_errors_base .page_header h1 {margin: 30px 0}
+.autogen_class_views_pdfs_errors_base #leaderboard_ad_gam {width: 728px; margin: 45px auto}
+
+
+/* app/views/pdfs/errors/deleted.css @ 1515190735 */
+/* epub and audiobook banners*/ .autogen_class_views_pdfs_errors_deleted h2 {margin: 40px 45px}
+
+
+/* app/views/pdfs/lightboxes/_description_lightbox.css @ 1515190735 */
+/* epub and audiobook banners*/ .autogen_class_views_pdfs_lightboxes_description_lightbox .wrapper > .content {padding: 0}
+.autogen_class_views_pdfs_lightboxes_description_lightbox .wrapper > .content .title {margin: 20px 28px}
+.autogen_class_views_pdfs_lightboxes_description_lightbox .wrapper > .content .content_inner {border-top: 1px solid #E9EDF8; padding: 20px 28px; padding-top: 8px}
+.autogen_class_views_pdfs_lightboxes_description_lightbox .description_text {margin-bottom: 12px; line-height: 25px}
+.autogen_class_views_pdfs_lightboxes_description_lightbox .data_row {margin-bottom: 8px}
+.autogen_class_views_pdfs_lightboxes_description_lightbox .data_row:last-child {margin-top: 20px; margin-bottom: 0}
+.autogen_class_views_pdfs_lightboxes_description_lightbox .flag_document_btn {font-weight: bold}
+
+
+/* app/views/pdfs/lightboxes/_download_lightbox.css @ 1515190735 */
+/* epub and audiobook banners*/ .autogen_class_views_pdfs_lightboxes_download_lightbox {min-width: 400px}
+@media (max-width: 400px) {.autogen_class_views_pdfs_lightboxes_download_lightbox {min-width: 300px}
+}
+.autogen_class_views_pdfs_lightboxes_download_lightbox.download_started {max-width: 600px}
+.autogen_class_views_pdfs_lightboxes_download_lightbox.download_started .wrapper > .content .title {font-size: 32px; font-weight: bold}
+@media (max-width: 550px) {.responsive .autogen_class_views_pdfs_lightboxes_download_lightbox.download_started .wrapper > .content .title {font-size: 24px}
+}
+.autogen_class_views_pdfs_lightboxes_download_lightbox .document_data {line-height: 1.5}
+.autogen_class_views_pdfs_lightboxes_download_lightbox .document_data .file_name {font-weight: bold}
+.autogen_class_views_pdfs_lightboxes_download_lightbox .input_group {margin-top: 20px}
+.autogen_class_views_pdfs_lightboxes_download_lightbox .buttons .button_sub_action {margin-right: 5px}
+.autogen_class_views_pdfs_lightboxes_download_lightbox .secondary_message {margin-top: -10px}
+.autogen_class_views_pdfs_lightboxes_download_lightbox .rec_wrapper {margin-top: -10px}
+.autogen_class_views_pdfs_lightboxes_download_lightbox .rec_wrapper h3 {font-size: 22px; font-weight: bold}
+@media (max-width: 550px) {.responsive .autogen_class_views_pdfs_lightboxes_download_lightbox .rec_wrapper h3 {font-size: 20px}
+}
+.autogen_class_views_pdfs_lightboxes_download_lightbox .rec_wrapper .document_grid {padding-left: 0; text-align: center}
+.autogen_class_views_pdfs_lightboxes_download_lightbox .rec_wrapper .document_grid .object_cell.document_cell {width: 144px; margin: 10px 15px 0}
+@media (max-width: 700px) {.autogen_class_views_pdfs_lightboxes_download_lightbox .rec_wrapper .document_grid .object_cell.document_cell {width: 108px}
+}
+@media (max-width: 600px) {.autogen_class_views_pdfs_lightboxes_download_lightbox .rec_wrapper .document_grid .object_cell.document_cell {margin: 10px 10px 0}
+}
+.autogen_class_views_pdfs_lightboxes_download_lightbox .rec_wrapper .document_grid .object_cell.document_cell .thumb {margin: 0}
+.autogen_class_views_pdfs_lightboxes_download_lightbox .rec_wrapper .document_grid .object_cell.document_cell .under_title {text-align: center}
+
+
+/* app/views/pdfs/lightboxes/embed_lightbox.css @ 1515190735 */
+/* epub and audiobook banners*/ .autogen_class_views_pdfs_lightboxes_embed_lightbox {min-width: 0; max-width: none}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .embed_header, .autogen_class_views_pdfs_lightboxes_embed_lightbox .copy_link {border-bottom: 1px solid #E2E2E2}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .copy_link .input_row {display: block; margin: 20px 0 10px 0}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .copy_link .copy_link_label {display: inline-block; color: #57617A; font-size: 12px; width: 65px; margin-right: 10px; margin-bottom: 10px; margin-left: 32px}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .copy_link .link_options {margin: 10px 30px 20px 107px}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .copy_link .document_url_input {width: 500px}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .format_container label, .autogen_class_views_pdfs_lightboxes_embed_lightbox .link_options label {color: #57617A; font-size: 13px; margin-right: 20px}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .format_container label span, .autogen_class_views_pdfs_lightboxes_embed_lightbox .link_options label span {vertical-align: middle}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .format_container input, .autogen_class_views_pdfs_lightboxes_embed_lightbox .link_options input {vertical-align: middle; margin-right: 4px}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .left_col {min-height: 600px; width: 360px; float: left; border-right: 1px solid #E2E2E2}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .right_col {margin: 0 auto; margin-left: 360px; overflow: hidden}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .doc_preview {padding: 10px; min-width: 400px; overflow: hidden}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .control_container {position: relative; padding: 20px 10px 20px 32px; border-bottom: 1px solid #E2E2E2}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .control_container.top {padding-bottom: 30px}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .control_container.darker {background: #f2f2f2}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .control_container.bottom {border-bottom: 0}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .control_container .embed_control {margin-left: 80px}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .control_container .control_name {color: #57617A; font-size: 12px; float: left; text-align: left; width: 80px}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .note {position: absolute; bottom: 7px; right: 12px; color: #333; font-size: 9px}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .code_input {border: 1px solid #909ca4; border-radius: 2px 0 0 2px; box-shadow: inset 0 1px 2px -1px #aaa; font-size: 12px; padding: 5px; height: 140px; width: 300px; resize: none; color: gray; overflow-y: hidden}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .code_input_container {display: block}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .code_input_container .control_name {width: auto; margin-bottom: 15px}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .toggle_options {font-size: 11px; text-align: left; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .toggle_options label {color: #57617A}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .toggle_options .active {color: #57617A}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .toggle_options .inactive {color: #1FA3D6; cursor: pointer}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .toggle_options:hover {text-decoration: none}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .toggle_options.left {float: left}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .toggle_options.right {float: right}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .label {text-align: left; font-size: 11px; color: #57617A}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .size_picker {position: relative; padding: 0; margin: 0}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .size_picker label {display: inline-block; text-align: center; padding: 8px}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .size_picker label input {margin-left: 0}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .size_picker label.active {background: #F3F6FD}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .size_picker .thumb {background: #CBD1D7; border: 1px solid #B0B5BA; margin: 8px auto 0}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .custom_size {margin-top: 10px; margin-left: 16px}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .custom_size .inputs label {display: block}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .custom_size .inputs .label {display: inline-block; width: 40px; text-align: right; margin-right: 10px}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .custom_size .custom_width, .autogen_class_views_pdfs_lightboxes_embed_lightbox .custom_size .custom_height {width: 40px; margin-bottom: 5px; padding-top: 5px; padding-bottom: 5px}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .custom_size .unit {font-size: 12px; color: #57617A}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .misc_options {text-align: left}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .misc_options label {display: block; margin-bottom: 5px}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .misc_options input[type="checkbox"] {vertical-align: middle}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .misc_options .label, .autogen_class_views_pdfs_lightboxes_embed_lightbox .misc_options select {font-size: 13px}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .misc_options .label {margin-right: 4px}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .misc_options .label.right_label {margin-left: 4px; margin-right: 0}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .misc_options .starting_page {width: 30px; padding-top: 5px; padding-bottom: 5px}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .size_picker {list-style: none}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .sub {color: #57617A}
+
+
+/* app/views/pdfs/lightboxes/flag_doc_lightbox.css @ 1515190735 */
+/* epub and audiobook banners*/ .autogen_class_views_pdfs_lightboxes_flag_doc_lightbox.loading .loader {display: inline-block; margin-left: 10px}
+.autogen_class_views_pdfs_lightboxes_flag_doc_lightbox.loading .close_link {display: none}
+.autogen_class_views_pdfs_lightboxes_flag_doc_lightbox p {margin: 0 0 20px 0}
+.autogen_class_views_pdfs_lightboxes_flag_doc_lightbox .close_link {font-size: 13px; margin-left: 10px}
+
+
+/* app/views/pdfs/_page_blur_promo.css @ 1515190735 */
+/* epub and audiobook banners*/ .autogen_class_views_pdfs_page_blur_promo {width: 100%; height: 100%; display: none; position: absolute; top: 0}
+.autogen_class_views_pdfs_page_blur_promo .page_blur_promo_overlay {background-color: #fff; opacity: 0.96; position: absolute; top: 0; left: 0; right: 0; bottom: 0}
+.autogen_class_views_pdfs_page_blur_promo .page_blur_promo {border: 1px solid #d6ddf2; background: #F8F9FD; position: absolute; top: 50%; left: 50%; min-width: 270px; padding: 20px; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); box-shadow: 0 0 7px rgba(0, 0, 0, 0.1); text-align: center}
+@media (max-width: 350px) {.autogen_class_views_pdfs_page_blur_promo .page_blur_promo {padding-left: 5px; padding-right: 5px}
+}
+.autogen_class_views_pdfs_page_blur_promo .page_blur_promo h2 {font-size: 18px; margin: 0 0 15px 0}
+.autogen_class_views_pdfs_page_blur_promo .page_blur_promo p {font-size: 14px; margin: 0}
+.autogen_class_views_pdfs_page_blur_promo .page_blur_promo .flat_btn {margin-top: 15px}
+
+
+/* app/views/pdfs/promos/nyt_student_promo.css @ 1515190735 */
+/* epub and audiobook banners*/ .autogen_class_views_pdfs_promos_nyt_student_promo .nyt_student_promo {background-color: #87064b; width: 100%; position: fixed; bottom: 0; left: 0; text-align: left; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; color: white; padding: 16px; z-index: 3; box-sizing: border-box; display: none; /* to be removed on client side*/ }
+.autogen_class_views_pdfs_promos_nyt_student_promo .nyt_student_promo * {color: white}
+.autogen_class_views_pdfs_promos_nyt_student_promo .heading {font-size: 32px; font-weight: bold; margin: 0px; text-align: left}
+@media (max-width: 550px) {.responsive .autogen_class_views_pdfs_promos_nyt_student_promo .heading {font-size: 24px}
+}
+.autogen_class_views_pdfs_promos_nyt_student_promo .mobile {display: none}
+.autogen_class_views_pdfs_promos_nyt_student_promo .sub_heading {margin: 6px auto 16px; font-size: 16px; text-align: left}
+.autogen_class_views_pdfs_promos_nyt_student_promo .web .sign_up {width: 240px; height: 50px}
+.autogen_class_views_pdfs_promos_nyt_student_promo .web.button_and_close {display: -webkit-box;display: -ms-flexbox;display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -webkit-box-pack: end; -ms-flex-pack: end; justify-content: flex-end}
+.autogen_class_views_pdfs_promos_nyt_student_promo .close_btn {margin: auto 0px auto 20px}
+.autogen_class_views_pdfs_promos_nyt_student_promo .close_icon {color: white; z-index: 2; font-weight: bold; font-size: 14px; cursor: pointer}
+.autogen_class_views_pdfs_promos_nyt_student_promo .button_section {display: -webkit-box;display: -ms-flexbox;display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center}
+.autogen_class_views_pdfs_promos_nyt_student_promo .under_cta {font-size: 12px; font-weight: bold; text-align: center}
+@media (max-width: 800px) {.autogen_class_views_pdfs_promos_nyt_student_promo .nyt_student_promo {-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column; text-align: center}
+.autogen_class_views_pdfs_promos_nyt_student_promo .web, .autogen_class_views_pdfs_promos_nyt_student_promo .web.button_and_close {display: none}
+.autogen_class_views_pdfs_promos_nyt_student_promo .mobile {display: -webkit-box;display: -ms-flexbox;display: flex; text-align: center}
+.autogen_class_views_pdfs_promos_nyt_student_promo .mobile .close_btn {position: absolute; right: 0px; top: 10px; margin: 0; width: 40px; height: 40px}
+.autogen_class_views_pdfs_promos_nyt_student_promo .mobile.heading {width: 75%; text-align: center; margin: 0 auto}
+.autogen_class_views_pdfs_promos_nyt_student_promo .mobile.button_and_close {margin: 10px auto 0px; text-align: center; width: 100%}
+.autogen_class_views_pdfs_promos_nyt_student_promo .mobile.button_and_close .sign_up_mobile {margin: 0 auto}
+.autogen_class_views_pdfs_promos_nyt_student_promo .mobile .flat_btn_content {color: #509ba8; margin: 0px auto}
+}
+@media (max-width: 700px) {.autogen_class_views_pdfs_promos_nyt_student_promo .heading {font-size: 20px}
+.autogen_class_views_pdfs_promos_nyt_student_promo .sub_heading {font-size: 18px}
+}
+@media (max-width: 550px) {.autogen_class_views_pdfs_promos_nyt_student_promo .mobile.heading {font-size: 16px}
+}
+
+
+/* app/views/pdfs/_seo_book_links.css @ 1515190735 */
+/* epub and audiobook banners*/ .autogen_class_views_pdfs_seo_book_links {margin: 44px 30px}
+.autogen_class_views_pdfs_seo_book_links .title {font-size: 22px; font-weight: bold; margin-bottom: 30px}
+@media (max-width: 550px) {.responsive .autogen_class_views_pdfs_seo_book_links .title {font-size: 20px}
+}
+.autogen_class_views_pdfs_seo_book_links .links_list {line-height: inherit; list-style: none; padding: 0; margin: 0}
+.autogen_class_views_pdfs_seo_book_links .links_list li {line-height: inherit}
+.autogen_class_views_pdfs_seo_book_links .links_list li {width: 50%; display: inline-block; box-sizing: border-box}
+.autogen_class_views_pdfs_seo_book_links .links_list li:last-child {margin-bottom: 0}
+.autogen_class_views_pdfs_seo_book_links .links_list li:nth-child(2n) {padding-left: 15px}
+.autogen_class_views_pdfs_seo_book_links .links_list li:nth-child(2n + 1) {padding-right: 15px}
+@media (max-width: 950px) {.autogen_class_views_pdfs_seo_book_links .links_list li {width: 100%}
+.autogen_class_views_pdfs_seo_book_links .links_list li:nth-child(2n) {padding-left: 0}
+.autogen_class_views_pdfs_seo_book_links .links_list li:nth-child(2n + 1) {padding-right: 0}
+}
+.autogen_class_views_pdfs_seo_book_links .links_item {margin: 0 0 24px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center}
+.autogen_class_views_pdfs_seo_book_links .links_item h3 {font-size: 16px; color: #20828D; margin: 0; text-transform: none}
+.autogen_class_views_pdfs_seo_book_links .links_item h4 {font-size: 14px; font-weight: normal; margin: 0}
+.autogen_class_views_pdfs_seo_book_links .links_item .author {color: #57617A}
+.autogen_class_views_pdfs_seo_book_links .links_item .author a {color: #57617A}
+.autogen_class_views_pdfs_seo_book_links .links_item .wrapper {min-width: 0}
+.autogen_class_views_pdfs_seo_book_links .links_item .icon {font-size: 16px; min-width: 1em; min-height: 1em; margin-right: 14px; color: #57617A}
+.autogen_class_views_pdfs_seo_book_links .truncate {white-space: nowrap; overflow: hidden; text-overflow: ellipsis}
+.autogen_class_views_pdfs_seo_book_links.sidebar {margin: 24px 0}
+.autogen_class_views_pdfs_seo_book_links.sidebar .links_list li {width: 100%}
+.autogen_class_views_pdfs_seo_book_links.sidebar .links_list li:nth-child(2n) {padding-left: 0}
+.autogen_class_views_pdfs_seo_book_links.sidebar .links_list li:nth-child(2n + 1) {padding-right: 0}
+
+
+/* app/views/pdfs/_seo_lightbox.css @ 1515190735 */
+/* epub and audiobook banners*/ .autogen_class_views_pdfs_seo_lightbox {overflow: hidden; min-width: 945px}
+.autogen_class_views_pdfs_seo_lightbox > .wrapper > .content {padding: 0; text-align: center; background-size: cover; border-top: 0}
+.autogen_class_views_pdfs_seo_lightbox .header {padding-top: 10px; background-image: url('https://s2-f.scribdassets.com/images/landing/home2_landing/hero2.jpg?1515190857'); background-size: cover; background-position: 0 -60px}
+.autogen_class_views_pdfs_seo_lightbox .footer {background-color: #FAFBFD; padding-bottom: 15px}
+.autogen_class_views_pdfs_seo_lightbox h1, .autogen_class_views_pdfs_seo_lightbox h2 {-webkit-transform: translateY(0px);transform: translateY(0px); -webkit-transition: -webkit-transform 0.3s ease; transition: -webkit-transform 0.3s ease; transition: transform 0.3s ease; transition: transform 0.3s ease, -webkit-transform 0.3s ease; line-height: normal}
+.autogen_class_views_pdfs_seo_lightbox h1 {font-size: 32px; margin: 20px 0; color: white; font-weight: bold}
+.autogen_class_views_pdfs_seo_lightbox h2 {font-size: 28px; color: white; margin-bottom: 20px; margin-top: 10px; font-weight: normal}
+.autogen_class_views_pdfs_seo_lightbox .seo_perks {font-weight: bold; font-size: 14px; text-transform: uppercase; color: #57617A; padding-bottom: 23px; margin: 0}
+.autogen_class_views_pdfs_seo_lightbox .seo_images {margin: 20px 60px 0; height: 120px; padding: 10px}
+.autogen_class_views_pdfs_seo_lightbox .seo_images .thumb {width: 76px; height: 100px; box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.24), 0px 2px 7px rgba(0, 0, 0, 0.26); margin-right: 15px}
+.autogen_class_views_pdfs_seo_lightbox .seo_images .thumb:last-child {margin-right: 0}
+.autogen_class_views_pdfs_seo_lightbox .close_button {color: white !important; z-index: 1500}
+.autogen_class_views_pdfs_seo_lightbox .start_trial_btn {margin-bottom: 58px; padding: 0 60px; -webkit-transition: opacity 0.3s ease; transition: opacity 0.3s ease; opacity: 1}
+.autogen_class_views_pdfs_seo_lightbox .overlay {background: #fff}
+.autogen_class_views_pdfs_seo_lightbox .devices {background: url('https://s2-f.scribdassets.com/images/payments/icons.png?1515190857') center center no-repeat; width: 190px; height: 21px; margin: 0 auto}
+
+
+/* app/views/pdfs/show.css @ 1515190735 */
+/* epub and audiobook banners*/ .autogen_class_views_pdfs_show {background: white; position: absolute; bottom: 0; left: 0; right: 0; top: 0}
+body.header_control .autogen_class_views_pdfs_show {top: 100px}
+.autogen_class_views_pdfs_show.fullscreen {position: static}
+.autogen_class_views_pdfs_show.fullscreen .sidebar_column {display: none}
+.autogen_class_views_pdfs_show.fullscreen .document_column {position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 21}
+.autogen_class_views_pdfs_show.for_bots .bot_text_column {box-sizing: border-box; max-width: 1024px; padding: 0 40px; margin: 0 auto}
+.autogen_class_views_pdfs_show.for_bots .document_columns_wrapper {display: -webkit-box;display: -ms-flexbox;display: flex}
+.autogen_class_views_pdfs_show.for_bots .document_columns_wrapper > div {position: static}
+.autogen_class_views_pdfs_show.for_bots .document_columns_wrapper > .document_column {-webkit-box-flex: 1;-ms-flex: 1;flex: 1}
+.autogen_class_views_pdfs_show.for_bots .document_columns_wrapper .document_scroller {position: static}
+.autogen_class_views_pdfs_show.single_column {position: static}
+.autogen_class_views_pdfs_show.single_column .document_column {position: static; border-left: 0}
+.autogen_class_views_pdfs_show.single_column .document_column .document_scroller {position: static}
+.autogen_class_views_pdfs_show.single_column .document_container {margin-top: 0}
+.autogen_class_views_pdfs_show.single_column .toolbar_drop {height: 50px}
+.autogen_class_views_pdfs_show.single_column .toolbar_drop > * {position: fixed; top: 60px; left: 0; right: 0; z-index: 10}
+.autogen_class_views_pdfs_show.single_column .padded_sidebar {padding-bottom: 12px}
+.autogen_class_views_pdfs_show .document_column {background: white; overflow: hidden; position: absolute; top: 0; bottom: 0; right: 0; left: 346px; border-left: 1px solid #E9EDF8}
+@media (max-width: 550px) {.autogen_class_views_pdfs_show .document_column {left: 0}
+}
+@media (min-width: no_sidebar_width1px) and (max-width: 1000px) {.autogen_class_views_pdfs_show .document_column {left: 296px}
+}
+.autogen_class_views_pdfs_show .document_column .document_scroller {position: absolute; top: 50px; left: 0; right: 0; bottom: 0; overflow: auto}
+.autogen_class_views_pdfs_show .sidebar_column {box-sizing: border-box; position: absolute; top: 0; bottom: 0; width: 346px; background: white; overflow: hidden; overflow-y: auto}
+@media (max-width: 550px) {.autogen_class_views_pdfs_show .sidebar_column {display: none}
+}
+@media (min-width: no_sidebar_width1px) and (max-width: 1000px) {.autogen_class_views_pdfs_show .sidebar_column {width: 296px}
+}
+.autogen_class_views_pdfs_show .padded_sidebar {padding: 20px}
+.autogen_class_views_pdfs_show .document_footer {border-top: 1px solid #E9EDF8; padding-top: 20px; width: 100%; margin-bottom: 80px}
+.autogen_class_views_pdfs_show .document_footer .document_carousel {margin-left: 5px; margin-right: 10px}
+.autogen_class_views_pdfs_show .document_footer:not(.discover) .document_carousel h2 {font-size: 18px; color: #000514; font-weight: normal; margin-bottom: 10px}
+.autogen_class_views_pdfs_show .document_footer.discover {border-top: 0; padding: 0; margin-bottom: 0}
+.autogen_class_views_pdfs_show .document_footer.discover .document_carousel {padding-left: 5px; padding-right: 10px}
+.autogen_class_views_pdfs_show .document_footer .inner_footer {max-width: 1024px; margin: 0 auto}
+.autogen_class_views_pdfs_show .footer_rec_docs.discover .carousel_widget {text-align: center}
+.autogen_class_views_pdfs_show .footer_rec_docs.discover .module_row {margin: 40px auto}
+.autogen_class_views_pdfs_show .footer_rec_docs.discover .module_row .carousel_wrap {padding-bottom: 40px; position: relative}
+.autogen_class_views_pdfs_show .footer_rec_docs.discover .object_cell {margin-right: 19px}
+.autogen_class_views_pdfs_show .footer_rec_docs.discover .object_cell:last-child {margin-right: 0}
+@media (max-width: 550px) {.autogen_class_views_pdfs_show .footer_rec_docs.discover .carousel {height: 215px; margin: 0}
+.autogen_class_views_pdfs_show .footer_rec_docs.discover .carousel:before {left: 0}
+.autogen_class_views_pdfs_show .footer_rec_docs.discover .carousel:after {right: 0}
+.autogen_class_views_pdfs_show .footer_rec_docs.discover .carousel_wrap {padding-bottom: 0}
+.autogen_class_views_pdfs_show .footer_rec_docs.discover .document_cell {width: 108px}
+.autogen_class_views_pdfs_show .footer_rec_docs.discover .document_cell .thumb {width: 108px; height: 143px}
+}
+.autogen_class_views_pdfs_show .fullscreen_recommendations_drop .footer_rec_docs.discover, .autogen_class_views_pdfs_show .static_footer .footer_rec_docs.discover {margin: 0 auto; max-width: 1024px}
+.autogen_class_views_pdfs_show .fullscreen_recommendations_drop .footer_rec_docs.discover .document_cell, .autogen_class_views_pdfs_show .static_footer .footer_rec_docs.discover .document_cell {margin-right: 60px}
+@media (min-width: 1512px) {.autogen_class_views_pdfs_show .fullscreen_recommendations_drop .footer_rec_docs.discover, .autogen_class_views_pdfs_show .static_footer .footer_rec_docs.discover {max-width: 1512px}
+.autogen_class_views_pdfs_show .fullscreen_recommendations_drop .footer_rec_docs.discover .document_cell, .autogen_class_views_pdfs_show .static_footer .footer_rec_docs.discover .document_cell {margin-right: 73px}
+.autogen_class_views_pdfs_show .fullscreen_recommendations_drop .footer_rec_docs.discover .document_cell:last-child, .autogen_class_views_pdfs_show .static_footer .footer_rec_docs.discover .document_cell:last-child {margin-right: 15px}
+}
+.autogen_class_views_pdfs_show .static_footer {margin: 0 auto; overflow: hidden; max-width: 1618px}
+.autogen_class_views_pdfs_show .document_container {margin: 40px 0}
+.autogen_class_views_pdfs_show .document_container .outer_page {margin-left: auto; margin-right: auto; box-shadow: 0 0 0 2px #f4f6fc; overflow: hidden}
+.autogen_class_views_pdfs_show .fourgen_highlight {background: #ff5; box-shadow: 0 0 0 10px #ff5}
+.autogen_class_views_pdfs_show .fourgen_highlight.fourgen_highlight_selected {background: #fdd835; box-shadow: 0 0 0 10px #fdd835}
+.autogen_class_views_pdfs_show #Doc_Top_Leaderboard_ATF_728x90_container {margin: 0 auto; margin-top: 20px}
+.autogen_class_views_pdfs_show .between_page_ads {display: none}
+.autogen_class_views_pdfs_show .page_missing_explanation {padding: 40px}
+.autogen_class_views_pdfs_show .page_missing_explanation.outer_page {box-shadow: none}
+.autogen_class_views_pdfs_show .page_missing_explanation_inner {overflow: hidden; border: 1px solid #E9EDF8; background: #F8F9FD; padding: 10px; text-align: right; line-height: 1.5; max-width: 650px; margin: 0 auto}
+.autogen_class_views_pdfs_show .page_missing_explanation_inner .home_btn {min-width: 140px}
+@media (max-width: 1200px) {.autogen_class_views_pdfs_show .page_missing_explanation_inner .home_btn {padding: 0 15px}
+}
+.autogen_class_views_pdfs_show .page_missing_explanation_inner .page_missing_explanation_contents {color: #57617A; float: left; text-align: left}
+.autogen_class_views_pdfs_show .page_missing_explanation_inner .missing_page_number_title {color: #1C263D}
+.autogen_class_views_pdfs_show .page_missing_explanation_inner .missing_page_number_title.single_row {margin-top: 6px}
+.autogen_class_views_pdfs_show .page_missing_explanation_inner .missing_page_buy_button {margin-top: 2px}
+.autogen_class_views_pdfs_show .toolbar_notification {white-space: nowrap; overflow: hidden; text-overflow: ellipsis; height: 65px; line-height: 65px; padding: 0 0 0 35px}
+.autogen_class_views_pdfs_show .templates {display: none}
+.autogen_class_views_pdfs_show .paddles_container {width: 100%}
+.autogen_class_views_pdfs_show .paddles_container .page_left {left: 0px}
+.autogen_class_views_pdfs_show .paddles_container .page_right {right: 0px}
+@media (max-width: 1024px) {.autogen_class_views_pdfs_show .paddles_container .page_left {left: 18px}
+.autogen_class_views_pdfs_show .paddles_container .page_right {right: 18px}
+}
+.autogen_class_views_pdfs_show .title_wrap {padding-left: 22px}
+
+
+/* app/views/pdfs/show_mobile.css @ 1515190735 */
+.autogen_class_views_pdfs_show_mobile.store_promo_open .floating_fullscreen_btn {bottom: 95px}
+.autogen_class_views_pdfs_show_mobile.fullscreen .floating_fullscreen_btn .leave_fullscreen {display: initial}
+.autogen_class_views_pdfs_show_mobile.fullscreen .floating_fullscreen_btn .enter_fullscreen {display: none}
+.autogen_class_views_pdfs_show_mobile.fullscreen .toolbar_drop > * {top: 0px}
+.autogen_class_views_pdfs_show_mobile.fullscreen .view_in_store_promo {display: none}
+.autogen_class_views_pdfs_show_mobile.fullscreen .nyt_student_promo {display: none; /* nyt student bundle promo banner */ }
+.autogen_class_views_pdfs_show_mobile.fullscreen .floating_fullscreen_btn {bottom: 20px}
+.autogen_class_views_pdfs_show_mobile .view_in_store_promo {position: fixed; bottom: 0; left: 0; right: 0; z-index: 100}
+.autogen_class_views_pdfs_show_mobile .floating_fullscreen_btn {position: fixed; z-index: 10; bottom: 20px; right: 20px; width: 48px; height: 48px; padding: 0; border-radius: 48px; background: black; opacity: 0.6; color: white; font-size: 34px; border: 0; text-align: center; outline: none}
+.autogen_class_views_pdfs_show_mobile .floating_fullscreen_btn > span {display: inline-block; vertical-align: -3px; width: 34px; height: 34px}
+.autogen_class_views_pdfs_show_mobile .floating_fullscreen_btn .leave_fullscreen {display: none}
+.autogen_class_views_pdfs_show_mobile .nyt_student_promo {bottom: 75px; /*for nyt student bundle promo to add banner above download banner*/ z-index: 3}
+
+
+/* app/views/pdfs/sidebar/_admin_panel.css @ 1515190735 */
+/* epub and audiobook banners*/ .document_admin_panel {text-align: left; padding: 8px; margin-bottom: 8px; background: #F4EEF4; border: 1px solid #AF89AF; border-radius: 2px}
+.document_admin_panel h3 {margin: 0px; font-size: 18px}
+.document_admin_panel .visible_when_open {display: none}
+.document_admin_panel.open .visible_when_open {display: inline}
+.document_admin_panel.open .visible_when_closed {display: none}
+.document_admin_panel .toggle_admin_btn img {vertical-align: middle}
+.document_admin_panel a {display: inline-block; margin-right: 10px}
+.document_admin_panel a.disabled {color: black; cursor: default}
+
+
+/* app/views/pdfs/sidebar/_document_cells.css @ 1515190735 */
+/* epub and audiobook banners*/ .autogen_class_views_pdfs_sidebar_document_cells ul {padding: 0}
+.autogen_class_views_pdfs_sidebar_document_cells .document_cell {width: auto; margin: 15px 0 35px 0; list-style: none}
+.autogen_class_views_pdfs_sidebar_document_cells .document_cell > .doc_link {display: -webkit-box;display: -ms-flexbox;display: flex; -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start}
+.autogen_class_views_pdfs_sidebar_document_cells .document_cell > .doc_link:hover .related_data {opacity: 0.8}
+.autogen_class_views_pdfs_sidebar_document_cells .document_cell > .doc_link .related_data {-webkit-box-flex: 1;-ms-flex: 1;flex: 1; color: #1C263D}
+.autogen_class_views_pdfs_sidebar_document_cells .document_cell > .doc_link .thumb {-webkit-box-flex: 0;-ms-flex: none;flex: none; margin-bottom: 0; width: 108px; height: 144px}
+.autogen_class_views_pdfs_sidebar_document_cells .document_cell > .doc_link .related_data {margin-left: 15px}
+.autogen_class_views_pdfs_sidebar_document_cells .document_cell > .doc_link .related_title {font-family: 'Source Sans Pro', sans-serif; font-style: italic; font-size: 16px; line-height: 20px; word-wrap: break-word}
+.autogen_class_views_pdfs_sidebar_document_cells .document_cell > .doc_link .decorative {font-family: 'Source Sans Pro', sans-serif}
+.autogen_class_views_pdfs_sidebar_document_cells .document_cell > .doc_link .related_publisher {font-size: 14px; word-wrap: break-word}
+
+
+/* app/views/pdfs/_ssi_recommendations.css @ 1515190735 */
+/* epub and audiobook banners*/ .autogen_class_views_pdfs_ssi_recommendations .sidebar_rec_docs {margin-top: 30px; border-top: 1px solid #E9EDF8}
+.autogen_class_views_pdfs_ssi_recommendations .sidebar_rec_docs h3 {margin: 20px 0 0px 0}
+.autogen_class_views_pdfs_ssi_recommendations .sidebar_rec_docs .documents_page {display: none}
+.autogen_class_views_pdfs_ssi_recommendations .sidebar_rec_docs .documents_page.visible {display: block}
+.autogen_class_views_pdfs_ssi_recommendations .sidebar_rec_docs .related_pager {-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none; font-size: 14px; color: #57617A}
+.autogen_class_views_pdfs_ssi_recommendations .sidebar_rec_docs .related_pager .bar {display: inline-block; height: 12px; vertical-align: -1px; width: 1px; background: #CACED9; margin: 0 10px}
+.autogen_class_views_pdfs_ssi_recommendations .sidebar_rec_docs .related_pager .pager_navigate {float: right}
+.autogen_class_views_pdfs_ssi_recommendations .sidebar_rec_docs .related_pager .pager_navigate a {color: inherit; cursor: default; opacity: 0.5}
+.autogen_class_views_pdfs_ssi_recommendations .sidebar_rec_docs .related_pager .pager_navigate a.active {opacity: 1; color: #20828D; cursor: pointer}
+.autogen_class_views_pdfs_ssi_recommendations .sidebar_rec_docs .related_pager .pager_navigate a.active:hover {color: #0D6069}
+
+
+/* app/views/pdfs/_toolbar.css @ 1515190735 */
+/* epub and audiobook banners*/ .autogen_class_views_pdfs_toolbar {z-index: 2; background: white; height: 50px; line-height: 50px; box-shadow: 0 1px 0 #E9EDF8; text-align: center; position: relative}
+.autogen_class_views_pdfs_toolbar.centered_tools {display: -webkit-box;display: -ms-flexbox;display: flex}
+.autogen_class_views_pdfs_toolbar.centered_tools .center_tools {-webkit-box-flex: 1;-ms-flex: 1;flex: 1}
+.autogen_class_views_pdfs_toolbar.centered_tools .left_tools, .autogen_class_views_pdfs_toolbar.centered_tools .right_tools {position: static}
+.autogen_class_views_pdfs_toolbar.centered_tools .right_tools {margin-right: 31px}
+.autogen_class_views_pdfs_toolbar.centered_tools .left_tools {margin-left: 31px}
+.autogen_class_views_pdfs_toolbar.centered_tools.narrow_tools .right_tools {margin-right: 15px}
+.autogen_class_views_pdfs_toolbar.centered_tools.narrow_tools .left_tools {margin-left: 15px}
+@media (max-width: 700px) {.autogen_class_views_pdfs_toolbar.on_mobile .results_popup {width: calc(100vw - 50px)}
+}
+@media (max-height: 625px) {.autogen_class_views_pdfs_toolbar.on_mobile .results_popup {max-height: calc(100vh - 150px)}
+}
+.autogen_class_views_pdfs_toolbar .left_tools {position: absolute; left: 31px; top: 0}
+.autogen_class_views_pdfs_toolbar .left_tools .toolbar_scribd_logo {width: 96px; height: 21px; display: inline-block; vertical-align: top; background-image: url('https://s1-f.scribdassets.com/images/scribd_logo_horiz_small_slate.svg?1515190857'); background-size: cover; margin-top: 15px; margin-right: 25px}
+.autogen_class_views_pdfs_toolbar .right_tools {position: absolute; right: 31px; top: 0}
+.autogen_class_views_pdfs_toolbar .right_tools .toolbar_btn {margin-left: 15px}
+.autogen_class_views_pdfs_toolbar .right_tools .toolbar_btn:first-child {margin-left: 0}
+.autogen_class_views_pdfs_toolbar .right_tools .flat_btn {position: relative; top: 1px}
+.autogen_class_views_pdfs_toolbar .center_tools > * {margin-right: 15px}
+.autogen_class_views_pdfs_toolbar .center_tools > *:last-child {margin-right: 0}
+.autogen_class_views_pdfs_toolbar .toolbar_pager {display: inline-block; line-height: normal; vertical-align: top; font-size: 14px; color: #000514; margin-top: 11px}
+.autogen_class_views_pdfs_toolbar .toolbar_pager .total_pages {position: relative; top: 2px}
+.autogen_class_views_pdfs_toolbar .toolbar_pager .page_input {box-sizing: border-box; font-family: 'Source Sans Pro', sans-serif; border-radius: 3px; border: 1px solid #E9EDF8; font-size: 14px; width: 30px; text-align: center; height: 30px; margin-right: 10px; color: #57617A}
+.autogen_class_views_pdfs_toolbar .toolbar_pager .page_input::-webkit-inner-spin-button, .autogen_class_views_pdfs_toolbar .toolbar_pager .page_input::-webkit-outer-spin-button {-webkit-appearance: none; margin: 0}
+.autogen_class_views_pdfs_toolbar .toolbar_btn {-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none; transition: color 0.1s ease; -moz-transition: color 0.1s ease; -webkit-transition: color 0.1s ease; padding: 0; width: 30px; height: 30px; line-height: 30px; font-size: 26px; display: inline-block; vertical-align: top; margin-top: 11px; color: #000514; cursor: pointer; border: 0; background: transparent}
+.autogen_class_views_pdfs_toolbar .toolbar_btn.disabled {opacity: 0.5; cursor: default}
+.autogen_class_views_pdfs_toolbar .toolbar_btn.active, .autogen_class_views_pdfs_toolbar .toolbar_btn:hover {color: #0D6069}
+.autogen_class_views_pdfs_toolbar .toolbar_btn:active {color: #20828D}
+.autogen_class_views_pdfs_toolbar .results_popup {line-height: normal; text-align: left; width: 340px; max-height: 340px; background: white; position: absolute; top: 100%; left: 0; margin-top: 20px; border: 1px solid #E9EDF8; border-radius: 4px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); padding-top: 15px; overflow: hidden; overflow-y: auto}
+.autogen_class_views_pdfs_toolbar .results_popup .results_header {padding: 0 18px; margin-bottom: 10px; color: #57617A; font-size: 14px}
+.autogen_class_views_pdfs_toolbar .results_popup .results_row {font-size: 14px; color: #CACED9; padding: 8px 18px}
+.autogen_class_views_pdfs_toolbar .results_popup .results_row.available {color: #57617A}
+.autogen_class_views_pdfs_toolbar .results_popup .results_row.available:hover, .autogen_class_views_pdfs_toolbar .results_popup .results_row.available:active {background: #F8F9FD}
+.autogen_class_views_pdfs_toolbar .results_popup .results_row.available:hover a, .autogen_class_views_pdfs_toolbar .results_popup .results_row.available:active a {color: #0D6069}
+.autogen_class_views_pdfs_toolbar .results_popup .results_row.available:active a {color: #20828D}
+.autogen_class_views_pdfs_toolbar .results_popup .results_row.selected {background: #F8F9FD}
+.autogen_class_views_pdfs_toolbar .results_popup .results_row .result_page_number {float: right}
+.autogen_class_views_pdfs_toolbar .results_popup .results_row a {display: block; margin-right: 25px; color: #57617A}
+.autogen_class_views_pdfs_toolbar .toc_wrapper {display: inline-block; vertical-align: top; position: relative; margin-right: 11px}
+.autogen_class_views_pdfs_toolbar .toc_wrapper .toolbar_btn {display: block}
+.autogen_class_views_pdfs_toolbar .toc_wrapper .results_header {font-weight: bold; text-transform: uppercase}
+.autogen_class_views_pdfs_toolbar .toc_wrapper .table_of_contents .toc_row.current {font-weight: bold}
+.autogen_class_views_pdfs_toolbar .search_wrapper {display: inline-block; vertical-align: top; margin-top: 11px; position: relative; margin-left: 4px}
+.autogen_class_views_pdfs_toolbar .search_results.empty {padding: 15px 0}
+.autogen_class_views_pdfs_toolbar .search_results.empty .results_header {margin-bottom: 0}
+.autogen_class_views_pdfs_toolbar .doc_search {background: white; line-height: normal; border-radius: 3px; border: 1px solid #E9EDF8; height: 28px; width: 240px}
+@media (max-width: 1180px) {.autogen_class_views_pdfs_toolbar .doc_search {width: 180px}
+}
+.autogen_class_views_pdfs_toolbar .doc_search.has_text .search_input {padding-right: 25px}
+.autogen_class_views_pdfs_toolbar .doc_search .search_icon {color: #57617A; position: absolute; top: 6px; left: 7px}
+.autogen_class_views_pdfs_toolbar .doc_search.narrow_search {width: 120px}
+.autogen_class_views_pdfs_toolbar .doc_search .search_input {box-sizing: border-box; font-size: 14px; border: 0; background: transparent; display: block; width: 100%; vertical-align: top; font-family: 'Source Sans Pro', sans-serif; padding: 0 0 2px 27px; height: 28px; padding-bottom: 2px}
+@media (max-width: 500px) {.autogen_class_views_pdfs_toolbar .doc_search .search_input {font-size: 16px}
+}
+.autogen_class_views_pdfs_toolbar .doc_search .scribd_spinner {position: absolute; top: 5px; left: 5px}
+.autogen_class_views_pdfs_toolbar .doc_search .search_close_icon {width: 20px; height: 20px; line-height: 20px; text-align: center; color: #CACED9; -webkit-transition: color 0.15s; transition: color 0.15s; cursor: pointer; position: absolute; top: 5px; right: 5px; color: #CACED9; padding: 0; border: 0; background: transparent}
+.autogen_class_views_pdfs_toolbar .doc_search .search_close_icon:hover {color: #57617A}
+.autogen_class_views_pdfs_toolbar .doc_search .search_close_icon:active {color: #1C263D}
+
+
+/* app/views/pdfs/upvote.css @ 1515190735 */
+/* epub and audiobook banners*/ .autogen_class_views_pdfs_upvote {width: 240px; border-radius: 4px; box-shadow: 0 0 4px rgba(0, 0, 0, 0.1); border: 1px solid #E9EDF8; position: absolute; z-index: 1000; background: white; right: 20px; bottom: 20px; text-align: center; padding: 20px; display: none}
+@media (max-width: 500px) {.autogen_class_views_pdfs_upvote {display: none}
+}
+.autogen_class_views_pdfs_upvote .title {margin-bottom: 5px}
+.autogen_class_views_pdfs_upvote .close {font-size: 16px; position: absolute; top: 5px; right: 5px; color: #57617A; cursor: pointer}
+.autogen_class_views_pdfs_upvote .vote_label {margin-right: 10px; margin-left: 6px}
+.autogen_class_views_pdfs_upvote .upvotes {height: 40px; line-height: 40px}
+.autogen_class_views_pdfs_upvote .vote {margin: 0 5px; cursor: pointer}
+.autogen_class_views_pdfs_upvote .vote .icon {color: #02a793; display: inline_block; vertical-align: top; font-size: 20px; -webkit-transition: -webkit-transform 0.2s ease-in-out; transition: -webkit-transform 0.2s ease-in-out; transition: transform 0.2s ease-in-out; transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out; -webkit-transform: scale(1); transform: scale(1)}
+.autogen_class_views_pdfs_upvote .vote .icon.on_selected {display: none}
+.autogen_class_views_pdfs_upvote .vote:hover {cursor: pointer}
+.autogen_class_views_pdfs_upvote .vote:hover .icon {color: #02a793; display: none}
+.autogen_class_views_pdfs_upvote .vote:hover .icon.on_selected {display: inline-block}
+.autogen_class_views_pdfs_upvote .vote:active .icon {color: #02a793; -webkit-transform: scale(0.8); transform: scale(0.8); display: none}
+.autogen_class_views_pdfs_upvote .vote:active .icon.on_selected {display: inline-block}
+.autogen_class_views_pdfs_upvote .vote.selected .icon {color: #02a793; display: none}
+.autogen_class_views_pdfs_upvote .vote.selected .icon.on_selected {display: inline-block}
+.autogen_class_views_pdfs_upvote .vote .count {position: relative; top: -2px; margin-left: 4px; font-size: 16px; color: #57617A}
+
+
+/* app/views/shared/reading_progress/past_preview_lightbox.css @ 1515190736 */
+/* epub and audiobook banners*/ .autogen_class_views_shared_reading_progress_past_preview_lightbox .icon-ic_close {display: none}
