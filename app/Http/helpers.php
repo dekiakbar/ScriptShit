@@ -147,18 +147,18 @@
 	// 
 	// fungsi eigen vektor pilihan x eigen vektor kriteria
 	function EVPxEVK($a,$b){
-	$hasil = array();
-	for ($i=0; $i < sizeof($a) ; $i++) { 
-		for ($j=0; $j < sizeof($b) ; $j++) {
-			$simpan = 0; 
-			for ($k=0; $k < sizeof($a) ; $k++) { 
-				$simpan += $a[$i][$k] * $b[$k][0];
+		$hasil = array();
+		for ($i=0; $i < sizeof($a) ; $i++) { 
+			for ($j=0; $j < sizeof($b) ; $j++) {
+				$simpan = 0; 
+				for ($k=0; $k < sizeof($a) ; $k++) { 
+					$simpan += $a[$i][$k] * $b[$k][0];
+				}
+				$hasil[$i][0] = $simpan;
 			}
-			$hasil[$i][0] = $simpan;
 		}
+		return $hasil;
 	}
-	return $hasil;
-}
 //==========================  akhir methode AHP ========================== 
 
 /**
@@ -179,6 +179,7 @@
 		return $hasil;
 	}
 
+// Function untuk memecah data dari database untuk di edit pada form edit tanaman
 	function pecahData($data)
 	{
 		$hasil=array();
@@ -193,8 +194,14 @@
 				$dataMax = explode('-', $range[1]);
 
 				$hasil = array(
-					'dataMin1' => $dataMin[0],'dataMin2' => $dataMin[1],
-					'dataMax1' => $dataMax[0],'dataMax2' => $dataMax[1]
+					'status' => true,
+					'min1' => $dataMin[0],'min2' => $dataMin[1],
+					'max1' => $dataMax[0],'max2' => $dataMax[1]
+				);
+			}else
+			{
+				$hasil = array(
+					'min' => $range[0],'max' => $range[1]
 				);
 			}
 		}
@@ -203,7 +210,9 @@
 			$dataMin = explode('-', $data);
 
 			$hasil = array(
-				'dataMin1' => $dataMin[0],'dataMin2' => $dataMin[1]
+				'status' => false,
+				'min1' => $dataMin[0],'min2' => $dataMin[1],
+				'max1' => null, 'max2' => null
 			);
 		}
 

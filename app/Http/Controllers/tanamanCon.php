@@ -104,32 +104,86 @@ class tanamanCon extends Controller
     					->where('id',decrypt($id))
     					->firstOrFail();
 
-    	$sS1	=	explode('-',$db->suhu->first()->suhuS1);
-    	$sS2	=	explode('-',$db->suhu->first()->suhuS2);
-    	$sS3	=	explode('-',$db->suhu->first()->suhuS3);
-    	$sSN	=	explode('-',$db->suhu->first()->suhuN);
-    	$pS1	=	explode('-',$db->ph->first()->phS1);
-    	$pS2	=	explode('-',$db->ph->first()->phS2);
-    	$pS3	=	explode('-',$db->ph->first()->phS3);
-    	$pSN	=	explode('-',$db->ph->first()->phN);
-    	$lS1	=	explode('-',$db->lembab->first()->lembabS1);
-    	$lS2	=	explode('-',$db->lembab->first()->lembabS2);
-    	$lS3	=	explode('-',$db->lembab->first()->lembabS3);
-    	$lSN	=	explode('-',$db->lembab->first()->lembabN);
-    	$cS1	=	explode('-',$db->curahHujan->first()->curahS1);
-    	$cS2	=	explode('-',$db->curahHujan->first()->curahS2);
-    	$cS3	=	explode('-',$db->curahHujan->first()->curahS3);
-    	$cSN	=	explode('-',$db->curahHujan->first()->curahN);
+    	$sS1	=	pecahData($db->suhu->first()->suhuS1);
+    	$sS2	=	pecahData($db->suhu->first()->suhuS2);
+    	$sS3	=	pecahData($db->suhu->first()->suhuS3);
+    	$sSN	=	pecahData($db->suhu->first()->suhuN);
+
+    	$pS1	=	pecahData($db->ph->first()->phS1);
+    	$pS2	=	pecahData($db->ph->first()->phS2);
+    	$pS3	=	pecahData($db->ph->first()->phS3);
+    	$pSN	=	pecahData($db->ph->first()->phN);
+    	
+        $lS1	=	pecahData($db->lembab->first()->lembabS1);
+    	$lS2	=	pecahData($db->lembab->first()->lembabS2);
+    	$lS3	=	pecahData($db->lembab->first()->lembabS3);
+    	$lSN	=	pecahData($db->lembab->first()->lembabN);
+    	
+        $cS1	=	pecahData($db->curahHujan->first()->curahS1);
+    	$cS2	=	pecahData($db->curahHujan->first()->curahS2);
+    	$cS3	=	pecahData($db->curahHujan->first()->curahS3);
+    	$cSN	=	pecahData($db->curahHujan->first()->curahN);
 
     	$data =array(
-    		'suhuS1min'	=> $sS1[0],'suhuS1max'	=> $sS1[1],'suhuS2min'	=> $sS2[0],'suhuS2max'	=> $sS2[1],
-    		'suhuS3min'	=> $sS3[0],'suhuS3max'	=> $sS3[1],'suhuNmin' 	=> $sSN[0],'suhuNmax' 	=> $sSN[1],
-    		'phS1min' 	=> $pS1[0],'phS1max' 	=> $pS1[1],'phS2min' 	=> $pS2[0],'phS2max' 	=> $pS2[1],
-    		'phS3min' 	=> $pS3[0],'phS3max' 	=> $pS3[1],'phNmin' 	=> $pSN[0],'phNmax' 	=> $pSN[1],
-    		'lembabS1min' => $lS1[0],'lembabS1max' => $lS1[1],'lembabS2min' => $lS2[0],'lembabS2max' => $lS2[1],
-    		'lembabS3min' => $lS3[0],'lembabS3max' => $lS3[1],'lembabNmin' => $lSN[0],'lembabNmax' => $lSN[1],
-    		'curahS1min' => $cS1[0],'curahS1max' => $cS1[1],'curahS2min' => $cS2[0],'curahS2max' => $cS2[1],
-    		'curahS3min' => $cS3[0],'curahS3max' => $cS3[1],'curahNmin'  => $cSN[0],'curahNmax'  => $cSN[1],
+    		'suhuS1min'	 => $sS1->min1,
+            'suhuS1max'  => $sS1->min2,
+            'suhuS2min1' => $sS2->min1,
+            'suhuS2min2' => $sS2->min2,
+            'suhuS2max1' => $sS2->max1,
+            'suhuS2max2' => $sS2->max2,
+    		'suhuS3min1' => $sS3->min1,
+            'suhuS3min2' => $sS3->min2,
+            'suhuS3max1' => $sS3->max1,
+            'suhuS3max2' => $sS3->max2,
+            'suhuNmin1'  => $sSN->min1,
+            'suhuNmin2'  => $sSN->min2,
+            'suhuNmax1'  => $sSN->max1,
+            'suhuNmax2'  => $sSN->max2,
+
+    		'phS1min' 	 => $pS1->min1,
+            'phS1max'    => $pS1->min2,
+            'phS2min1' 	 => $pS2->min1,
+            'phS2min2'   => $pS2->min2,
+            'phS2max1' 	 => $pS2->max1,
+            'phS2max2'   => $pS2->max2,
+    		'phS3min1' 	 => $pS3->min1,
+            'phS3min2'   => $pS3->min2,
+            'phS3max1' 	 => $pS3->max1,
+            'phS3max2'   => $pS3->max2,
+            'phNmin1' 	 => $pSN->min1,
+            'phNmin2'    => $pSN->min2,
+            'phNmax1' 	 => $pSN->max1,
+            'phNmax2'    => $pSN->max2,
+
+    		'lembabS1min'  => $lS1->min1,
+            'lembabS1max'  => $lS1->min2,
+            'lembabS2min1' => $lS2->min1,
+            'lembabS2min2' => $lS2->min2,
+            'lembabS2max1' => $lS2->max1,
+            'lembabS2max2' => $lS2->max2,
+    		'lembabS3min1' => $lS3->min1,
+            'lembabS3min2' => $lS3->min2,
+            'lembabS3max1' => $lS3->max1,
+            'lembabS3max2' => $lS3->max2,
+            'lembabNmin1'  => $lSN->min1,
+            'lembabNmin2'  => $lSN->min2,
+            'lembabNmax1'  => $lSN->max1,
+            'lembabNmax2'  => $lSN->max2,
+
+    		'curahS1min'  => $cS1->min1,
+            'curahS1max'  => $cS1->min2,
+            'curahS2min1' => $cS2->min1,
+            'curahS2min2' => $cS2->min2,
+            'curahS2max1' => $cS2->max1,
+            'curahS2max2' => $cS2->max2,
+    		'curahS3min1' => $cS3->min1,
+            'curahS3min2' => $cS3->min2,
+            'curahS3max1' => $cS3->max1,
+            'curahS3max2' => $cS3->max2,
+            'curahNmin1'  => $cSN->min1,
+            'curahNmin2'  => $cSN->min2,
+            'curahNmax1'  => $cSN->max1,
+            'curahNmax2'  => $cSN->max2,
     	);
 
     	$data = (object) $data;
