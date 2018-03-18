@@ -194,26 +194,44 @@
 				$dataMax = explode('-', $range[1]);
 
 				$hasil = array(
-					'status' => true,
-					'min1' => $dataMin[0],'min2' => $dataMin[1],
-					'max1' => $dataMax[0],'max2' => $dataMax[1]
+					'koma' => true,
+					'strip' => true,
+					'min1' => $dataMin[0],
+					'min2' => $dataMin[1],
+					'max1' => $dataMax[0],
+					'max2' => $dataMax[1]
 				);
-			}else
+			}
+			else
 			{
 				$hasil = array(
-					'min' => $range[0],'max' => $range[1]
+					'koma' => true,
+					'strip' => false,
+					'min' => $range[0],
+					'max' => $range[1]
 				);
 			}
 		}
 		else
 		{
-			$dataMin = explode('-', $data);
+			if (strpos($data,'-')) {
+				$dataMin = explode('-', $data);
 
-			$hasil = array(
-				'status' => false,
-				'min1' => $dataMin[0],'min2' => $dataMin[1],
-				'max1' => null, 'max2' => null
-			);
+				$hasil = array(
+					'koma' => false,
+					'strip' => true,
+					'min1' => $dataMin[0],
+					'min2' => $dataMin[1]
+				);
+			}
+			else
+			{
+				$hasil = array(
+					'koma' => false,
+					'strip' => false,
+					'data' => $data
+				);
+			}
 		}
 
 		return (object) $hasil;
