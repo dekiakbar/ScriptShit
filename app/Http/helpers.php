@@ -193,10 +193,20 @@
 				$dataMax = explode('-', $range[1]);
 
 				$hasil = array(
-					'dataMin1' => $dataMin[0],'dataMin2' => $data[1],
+					'dataMin1' => $dataMin[0],'dataMin2' => $dataMin[1],
 					'dataMax1' => $dataMax[0],'dataMax2' => $dataMax[1]
 				);
 			}
 		}
+		else
+		{
+			$dataMin = explode('-', $data);
+
+			$hasil = array(
+				'dataMin1' => $dataMin[0],'dataMin2' => $dataMin[1]
+			);
+		}
+
+		return (object) $hasil;
 	}
 ?>
