@@ -220,8 +220,8 @@
 				$hasil = array(
 					'koma' => false,
 					'strip' => true,
-					'min1' => $dataMin[0],
-					'min2' => $dataMin[1]
+					'min' => $dataMin[0],
+					'max' => $dataMin[1]
 				);
 			}
 			else
