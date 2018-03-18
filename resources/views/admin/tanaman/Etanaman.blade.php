@@ -168,43 +168,93 @@
 						    </div>
 				    	</div>
 			    	@endif
+
 			  	</div>
 			</div>
 
 		  	<div class="ui secondary segment small form raised">
 			  	<h4 class="ui dividing header">Data Kelembaban</h4>
 			  	<div class="fields">
-			    	<div class="four wide field">
-			      		<label>Sangat Sesuai</label>
-					    <div class="two fields">
-					        <div class="field">
-					        	<input name="lembabS1min" placeholder="xxx" type="text" value="">
-					        </div>
-					        <div class="field">
-					        	<input name="lembabS1max" placeholder="xxx" type="text" value="">
-					        </div>
+
+			    	@if($data->lS1->strip == true && $data->lS1->koma == false)
+			    		<div class="four wide field">
+				      		<label>Sangat Sesuai</label>
+						    <div class="two fields">
+						        <div class="field">
+						        	<input name="lembabS1min" placeholder="xxx" type="text" value="{{$data->lS1->min}}">
+						        </div>
+						        <div class="field">
+						        	<input name="lembabS1max" placeholder="xxx" type="text" value="{{$data->lS1->max}}">
+						        </div>
+						    </div>
 					    </div>
-				    </div>
-			    	<div class="four wide field">
-			      		<label>Sesuai Batas Minimal</label>
-			      		<div class="two fields">
-					        <div class="field">
-					        	<input name="lembabS2min1" placeholder="xxx" type="text" value="">
-					        </div>
-					        <div class="field">
-					        	<input name="lembabS2min2" placeholder="xxx" type="text" value="">
-					        </div>
-					    </div>
-					    <label>Sesuai Batas Maksimal</label>
-			      		<div class="two fields">
-					        <div class="field">
-					        	<input name="lembabS2max1" placeholder="xxx" type="text" value="">
-					        </div>
-					        <div class="field">
-					        	<input name="lembabS2max2" placeholder="xxx" type="text" value="">
-					        </div>
-					    </div>
-			    	</div>
+			    	@endif
+
+			    	@if($data->lS2->strip == true && $data->lS2->koma == true)
+			    		<div class="four wide field">
+				      		<label>Sesuai Batas Minimal</label>
+				      		<div class="two fields">
+						        <div class="field">
+						        	<input name="lembabS2min1" placeholder="xxx" type="text" value="{{ $data->lS2->min1}}">
+						        </div>
+						        <div class="field">
+						        	<input name="lembabS2min2" placeholder="xxx" type="text" value="{{ $data->lS2->min2}}">
+						        </div>
+						    </div>
+						    <label>Sesuai Batas Maksimal</label>
+				      		<div class="two fields">
+						        <div class="field">
+						        	<input name="lembabS2max1" placeholder="xxx" type="text" value="{{ $data->lS2->max1}}">
+						        </div>
+						        <div class="field">
+						        	<input name="lembabS2max2" placeholder="xxx" type="text" value="{{ $data->lS2->max2}}">
+						        </div>
+						    </div>
+				    	</div>
+			    	@elseif($data->lS2->strip == false && $data->lS2->koma == true)
+			    		<div class="four wide field">
+				      		<label>Sesuai Batas Minimal</label>
+				      		<div class="two fields">
+						        <div class="field">
+						        	<input name="lembabS2min1" placeholder="xxx" type="text" value="{{ $data->lS2->min1}}">
+						        </div>
+						        <div class="field">
+						        	<input name="lembabS2min2" placeholder="xxx" type="text" value="{{ $data->lS2->min2}}">
+						        </div>
+						    </div>
+						    <label>Sesuai Batas Maksimal</label>
+				      		<div class="two fields">
+						        <div class="field">
+						        	<input name="lembabS2max1" placeholder="xxx" type="text" value="">
+						        </div>
+						        <div class="field">
+						        	<input name="lembabS2max2" placeholder="xxx" type="text" value="">
+						        </div>
+						    </div>
+				    	</div>
+				    @elseif($data->lS2->strip == true && $data->lS2->koma == false)
+				    	<div class="four wide field">
+				      		<label>Sesuai Batas Minimal</label>
+				      		<div class="two fields">
+						        <div class="field">
+						        	<input name="lembabS2min1" placeholder="xxx" type="text" value="{{ $data->lS2->min}}">
+						        </div>
+						        <div class="field">
+						        	<input name="lembabS2min2" placeholder="xxx" type="text" value="{{ $data->lS2->max}}">
+						        </div>
+						    </div>
+						    <label>Sesuai Batas Maksimal</label>
+				      		<div class="two fields">
+						        <div class="field">
+						        	<input name="lembabS2max1" placeholder="xxx" type="text" value="">
+						        </div>
+						        <div class="field">
+						        	<input name="lembabS2max2" placeholder="xxx" type="text" value="">
+						        </div>
+						    </div>
+				    	</div>
+			    	@endif
+
 			    	<div class="four wide field">
 			      		<label>Cukup Sesuai Batas Minimal</label>
 			      		<div class="two fields">
