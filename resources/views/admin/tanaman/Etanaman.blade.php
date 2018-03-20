@@ -63,10 +63,10 @@
 				      		<label>Sesuai Batas Minimal</label>
 				      		<div class="two fields">
 						        <div class="field">
-						        	<input name="suhuS2min1" placeholder="xxx" type="text" value="{{ $data->sS2->min1}}">
+						        	<input name="suhuS2min1" placeholder="xxx" type="text" value="{{ $data->sS2->min}}">
 						        </div>
 						        <div class="field">
-						        	<input name="suhuS2min2" placeholder="xxx" type="text" value="{{ $data->sS2->min2}}">
+						        	<input name="suhuS2min2" placeholder="xxx" type="text" value="{{ $data->sS2->min}}">
 						        </div>
 						    </div>
 						    <label>Sesuai Batas Maksimal</label>
@@ -167,6 +167,27 @@
 						        </div>
 						    </div>
 				    	</div>
+				    @elseif($data->sSN->koma == true && $data->sSN->strip == false)
+			    		<div class="four wide field">
+				      		<label>Tidak Sesuai Batas Minimal</label>
+				      		<div class="two fields">
+						        <div class="field">
+						        	<input name="suhuNmin1" placeholder="xxx" type="text" value="{{ $data->sSN->min}}">
+						        </div>
+						        <div class="field">
+						        	<input name="suhuNmin2" placeholder="xxx" type="text" value="">
+						        </div>
+						    </div>
+						    <label>Tidak Sesuai Batas Maksimal</label>
+				      		<div class="two fields">
+						        <div class="field">
+						        	<input name="suhuNmax1" placeholder="xxx" type="text" value="">
+						        </div>
+						        <div class="field">
+						        	<input name="suhuNmax2" placeholder="xxx" type="text" value="{{ $data->sSN->max}}">
+						        </div>
+						    </div>
+				    	</div>
 			    	@endif
 
 			  	</div>
@@ -185,6 +206,18 @@
 						        </div>
 						        <div class="field">
 						        	<input name="lembabS1max" placeholder="xxx" type="text" value="{{$data->lS1->max}}">
+						        </div>
+						    </div>
+					    </div>
+					@elseif($data->lS1->strip == false && $data->lS1->koma == false)
+			    		<div class="four wide field">
+				      		<label>Sangat Sesuai</label>
+						    <div class="two fields">
+						        <div class="field">
+						        	<input name="lembabS1min" placeholder="xxx" type="text" value="{{$data->lS1->data}}">
+						        </div>
+						        <div class="field">
+						        	<input name="lembabS1max" placeholder="xxx" type="text" value="">
 						        </div>
 						    </div>
 					    </div>
@@ -275,6 +308,7 @@
 					        </div>
 					    </div>
 			    	</div>
+			    	
 			    	<div class="four wide field">
 			      		<label>Tidak Sesuai Batas Minimal</label>
 			      		<div class="two fields">
