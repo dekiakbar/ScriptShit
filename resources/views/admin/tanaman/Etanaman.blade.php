@@ -330,6 +330,48 @@
 						        </div>
 						    </div>
 				    	</div>
+				    @elseif($data->lS3->strip == false && $data->lS2->koma == true)
+			    		<div class="four wide field">
+				      		<label>Cukup Sesuai Batas Minimal</label>
+				      		<div class="two fields">
+						        <div class="field">
+						        	<input name="lembabS3min1" placeholder="xxx" type="text" value="{{$data->lS3->data1}}">
+						        </div>
+						        <div class="field">
+						        	<input name="lembabS3min2" placeholder="xxx" type="text" value="">
+						        </div>
+						    </div>
+						    <label>Cukup Sesuai Batas Maksimal</label>
+				      		<div class="two fields">
+						        <div class="field">
+						        	<input name="lembabS3max1" placeholder="xxx" type="text" value="{{$data->lS3->data2}}">
+						        </div>
+						        <div class="field">
+						        	<input name="lembabS3max2" placeholder="xxx" type="text" value="">
+						        </div>
+						    </div>
+				    	</div>
+				    @elseif($data->lS3->strip == false && $data->lS2->koma == false)
+			    		<div class="four wide field">
+				      		<label>Cukup Sesuai Batas Minimal</label>
+				      		<div class="two fields">
+						        <div class="field">
+						        	<input name="lembabS3min1" placeholder="xxx" type="text" value="{{$data->lS3->data}}">
+						        </div>
+						        <div class="field">
+						        	<input name="lembabS3min2" placeholder="xxx" type="text" value="">
+						        </div>
+						    </div>
+						    <label>Cukup Sesuai Batas Maksimal</label>
+				      		<div class="two fields">
+						        <div class="field">
+						        	<input name="lembabS3max1" placeholder="xxx" type="text" value="">
+						        </div>
+						        <div class="field">
+						        	<input name="lembabS3max2" placeholder="xxx" type="text" value="">
+						        </div>
+						    </div>
+				    	</div>
 			    	@endif
 			    	
 			    	@if($data->lSN->strip == true && $data->lSN->koma == true)
@@ -849,15 +891,36 @@
 				    	</div>
 			    	@endif
 
-			    	@if()
+			    	@if($data->cSN->strip == true && $data->cSN->koma == true)
 			    		<div class="four wide field">
 				      		<label>Tidak Sesuai Batas Minimal</label>
 				      		<div class="two fields">
 						        <div class="field">
-						        	<input name="curahNmin1" placeholder="xxx" type="text" value="">
+						        	<input name="curahNmin1" placeholder="xxx" type="text" value="{{$data->cSN->data1}}">
 						        </div>
 						        <div class="field">
-						        	<input name="curahNmin2" placeholder="xxx" type="text" value="">
+						        	<input name="curahNmin2" placeholder="xxx" type="text" value="{{$data->cSN->data2}}">
+						        </div>
+						    </div>
+						    <label>Tidak Sesuai Batas Maksimal</label>
+				      		<div class="two fields">
+						        <div class="field">
+						        	<input name="curahNmax1" placeholder="xxx" type="text" value="{{$data->cSN->data3}}">
+						        </div>
+						        <div class="field">
+						        	<input name="curahNmax2" placeholder="xxx" type="text" value="{{$data->cSN->data4}}">
+						        </div>
+						    </div>
+				    	</div>
+			    	@elseif($data->cSN->strip == true && $data->cSN->koma == false)
+			    		<div class="four wide field">
+				      		<label>Tidak Sesuai Batas Minimal</label>
+				      		<div class="two fields">
+						        <div class="field">
+						        	<input name="curahNmin1" placeholder="xxx" type="text" value="{{$data->cSN->data1}}">
+						        </div>
+						        <div class="field">
+						        	<input name="curahNmin2" placeholder="xxx" type="text" value="{{$data->cSN->data2}}">
 						        </div>
 						    </div>
 						    <label>Tidak Sesuai Batas Maksimal</label>
@@ -870,12 +933,12 @@
 						        </div>
 						    </div>
 				    	</div>
-			    	@elseif()
+			    	@elseif($data->cSN->strip == false && $data->cSN->koma == true)
 			    		<div class="four wide field">
 				      		<label>Tidak Sesuai Batas Minimal</label>
 				      		<div class="two fields">
 						        <div class="field">
-						        	<input name="curahNmin1" placeholder="xxx" type="text" value="">
+						        	<input name="curahNmin1" placeholder="xxx" type="text" value="{{$data->cSN->data1}}">
 						        </div>
 						        <div class="field">
 						        	<input name="curahNmin2" placeholder="xxx" type="text" value="">
@@ -884,19 +947,19 @@
 						    <label>Tidak Sesuai Batas Maksimal</label>
 				      		<div class="two fields">
 						        <div class="field">
-						        	<input name="curahNmax1" placeholder="xxx" type="text" value="">
+						        	<input name="curahNmax1" placeholder="xxx" type="text" value="{{$data->cSN->data2}}">
 						        </div>
 						        <div class="field">
 						        	<input name="curahNmax2" placeholder="xxx" type="text" value="">
 						        </div>
 						    </div>
 				    	</div>
-			    	@elseif()
+				    @elseif($data->cSN->strip == false && $data->cSN->koma == false)
 			    		<div class="four wide field">
 				      		<label>Tidak Sesuai Batas Minimal</label>
 				      		<div class="two fields">
 						        <div class="field">
-						        	<input name="curahNmin1" placeholder="xxx" type="text" value="">
+						        	<input name="curahNmin1" placeholder="xxx" type="text" value="{{$data->cSN->data}}">
 						        </div>
 						        <div class="field">
 						        	<input name="curahNmin2" placeholder="xxx" type="text" value="">
