@@ -849,26 +849,71 @@
 				    	</div>
 			    	@endif
 
-			    	<div class="four wide field">
-			      		<label>Tidak Sesuai Batas Minimal</label>
-			      		<div class="two fields">
-					        <div class="field">
-					        	<input name="curahNmin1" placeholder="xxx" type="text" value="">
-					        </div>
-					        <div class="field">
-					        	<input name="curahNmin2" placeholder="xxx" type="text" value="">
-					        </div>
-					    </div>
-					    <label>Tidak Sesuai Batas Maksimal</label>
-			      		<div class="two fields">
-					        <div class="field">
-					        	<input name="curahNmax1" placeholder="xxx" type="text" value="">
-					        </div>
-					        <div class="field">
-					        	<input name="curahNmax2" placeholder="xxx" type="text" value="">
-					        </div>
-					    </div>
-			    	</div>
+			    	@if()
+			    		<div class="four wide field">
+				      		<label>Tidak Sesuai Batas Minimal</label>
+				      		<div class="two fields">
+						        <div class="field">
+						        	<input name="curahNmin1" placeholder="xxx" type="text" value="">
+						        </div>
+						        <div class="field">
+						        	<input name="curahNmin2" placeholder="xxx" type="text" value="">
+						        </div>
+						    </div>
+						    <label>Tidak Sesuai Batas Maksimal</label>
+				      		<div class="two fields">
+						        <div class="field">
+						        	<input name="curahNmax1" placeholder="xxx" type="text" value="">
+						        </div>
+						        <div class="field">
+						        	<input name="curahNmax2" placeholder="xxx" type="text" value="">
+						        </div>
+						    </div>
+				    	</div>
+			    	@elseif()
+			    		<div class="four wide field">
+				      		<label>Tidak Sesuai Batas Minimal</label>
+				      		<div class="two fields">
+						        <div class="field">
+						        	<input name="curahNmin1" placeholder="xxx" type="text" value="">
+						        </div>
+						        <div class="field">
+						        	<input name="curahNmin2" placeholder="xxx" type="text" value="">
+						        </div>
+						    </div>
+						    <label>Tidak Sesuai Batas Maksimal</label>
+				      		<div class="two fields">
+						        <div class="field">
+						        	<input name="curahNmax1" placeholder="xxx" type="text" value="">
+						        </div>
+						        <div class="field">
+						        	<input name="curahNmax2" placeholder="xxx" type="text" value="">
+						        </div>
+						    </div>
+				    	</div>
+			    	@elseif()
+			    		<div class="four wide field">
+				      		<label>Tidak Sesuai Batas Minimal</label>
+				      		<div class="two fields">
+						        <div class="field">
+						        	<input name="curahNmin1" placeholder="xxx" type="text" value="">
+						        </div>
+						        <div class="field">
+						        	<input name="curahNmin2" placeholder="xxx" type="text" value="">
+						        </div>
+						    </div>
+						    <label>Tidak Sesuai Batas Maksimal</label>
+				      		<div class="two fields">
+						        <div class="field">
+						        	<input name="curahNmax1" placeholder="xxx" type="text" value="">
+						        </div>
+						        <div class="field">
+						        	<input name="curahNmax2" placeholder="xxx" type="text" value="">
+						        </div>
+						    </div>
+				    	</div>
+			    	@endif
+
 			  	</div>
 			</div>
 
