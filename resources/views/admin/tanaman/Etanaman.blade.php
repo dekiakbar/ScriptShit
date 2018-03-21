@@ -693,20 +693,30 @@
 			  	<h4 class="ui dividing header">Data Curah Hujan</h4>
 			  	<div class="fields">
 			    	
-			    	@if()
+			    	@if($data->cS1->strip == true && $data->cS1->koma == false)
 			    		<div class="four wide field">
 				      		<label>Sangat Sesuai</label>
 						    <div class="two fields">
 						        <div class="field">
-						        	<input name="curahS1min" placeholder="xxx" type="text" value="">
+						        	<input name="curahS1min" placeholder="xxx" type="text" value="{{$data->cS1->data1}}">
+						        </div>
+						        <div class="field">
+						        	<input name="curahS1max" placeholder="xxx" type="text" value="{{$data->cS1->data2}}">
+						        </div>
+						    </div>
+					    </div>
+			    	@elseif($data->cS1->strip == false && $data->cS1->koma == false)
+			    		<div class="four wide field">
+				      		<label>Sangat Sesuai</label>
+						    <div class="two fields">
+						        <div class="field">
+						        	<input name="curahS1min" placeholder="xxx" type="text" value="{{$data->cS1->data}}">
 						        </div>
 						        <div class="field">
 						        	<input name="curahS1max" placeholder="xxx" type="text" value="">
 						        </div>
 						    </div>
 					    </div>
-			    	@elseif()
-			    	@elseif()
 			    	@endif
 
 			    	<div class="four wide field">
