@@ -196,10 +196,10 @@
 				$hasil = array(
 					'koma' => true,
 					'strip' => true,
-					'min1' => $dataMin[0],
-					'min2' => $dataMin[1],
-					'max1' => $dataMax[0],
-					'max2' => $dataMax[1]
+					'data1' => $dataMin[0],
+					'data2' => $dataMin[1],
+					'data3' => $dataMax[0],
+					'data4' => $dataMax[1]
 				);
 			}
 			else
@@ -207,8 +207,8 @@
 				$hasil = array(
 					'koma' => true,
 					'strip' => false,
-					'min' => $range[0],
-					'max' => $range[1]
+					'data1' => $range[0],
+					'data2' => $range[1]
 				);
 			}
 		}
@@ -220,8 +220,8 @@
 				$hasil = array(
 					'koma' => false,
 					'strip' => true,
-					'min' => $dataMin[0],
-					'max' => $dataMin[1]
+					'data1' => $dataMin[0],
+					'data2' => $dataMin[1]
 				);
 			}
 			else

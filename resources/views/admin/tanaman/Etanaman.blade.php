@@ -28,10 +28,10 @@
 				      		<label>Sangat Sesuai</label>
 						    <div class="two fields">
 						        <div class="field">
-						        	<input name="suhuS1min" placeholder="xxx" type="text" value="{{ $data->sS1->min}}">
+						        	<input name="suhuS1min" placeholder="xxx" type="text" value="{{ $data->sS1->data1}}">
 						        </div>
 						        <div class="field">
-						        	<input name="suhuS1max" placeholder="xxx" type="text" value="{{ $data->sS1->max}}">
+						        	<input name="suhuS1max" placeholder="xxx" type="text" value="{{ $data->sS1->data2}}">
 						        </div>
 						    </div>
 					    </div>
@@ -42,19 +42,19 @@
 				      		<label>Sesuai Batas Minimal</label>
 				      		<div class="two fields">
 						        <div class="field">
-						        	<input name="suhuS2min1" placeholder="xxx" type="text" value="{{ $data->sS2->min1}}">
+						        	<input name="suhuS2min1" placeholder="xxx" type="text" value="{{ $data->sS2->data1}}">
 						        </div>
 						        <div class="field">
-						        	<input name="suhuS2min2" placeholder="xxx" type="text" value="{{ $data->sS2->min2}}">
+						        	<input name="suhuS2min2" placeholder="xxx" type="text" value="{{ $data->sS2->data2}}">
 						        </div>
 						    </div>
 						    <label>Sesuai Batas Maksimal</label>
 						    <div class="two fields">
 						        <div class="field">
-						        	<input name="suhuS2max1" placeholder="xxx" type="text" value="{{ $data->sS2->max1}}">
+						        	<input name="suhuS2max1" placeholder="xxx" type="text" value="{{ $data->sS2->data3}}">
 						        </div>
 						        <div class="field">
-						        	<input name="suhuS2max2" placeholder="xxx" type="text" value="{{ $data->sS2->max2}}">
+						        	<input name="suhuS2max2" placeholder="xxx" type="text" value="{{ $data->sS2->data4}}">
 						        </div>
 						    </div>
 				    	</div>
@@ -63,10 +63,10 @@
 				      		<label>Sesuai Batas Minimal</label>
 				      		<div class="two fields">
 						        <div class="field">
-						        	<input name="suhuS2min1" placeholder="xxx" type="text" value="{{ $data->sS2->min}}">
+						        	<input name="suhuS2min1" placeholder="xxx" type="text" value="{{ $data->sS2->data1}}">
 						        </div>
 						        <div class="field">
-						        	<input name="suhuS2min2" placeholder="xxx" type="text" value="{{ $data->sS2->min}}">
+						        	<input name="suhuS2min2" placeholder="xxx" type="text" value="{{ $data->sS2->data2}}">
 						        </div>
 						    </div>
 						    <label>Sesuai Batas Maksimal</label>
@@ -86,19 +86,19 @@
 				      		<label>Cukup Sesuai Batas Minimal</label>
 				      		<div class="two fields">
 						        <div class="field">
-						        	<input name="suhuS3min1" placeholder="xxx" type="text" value="{{ $data->sS3->min1}}">
+						        	<input name="suhuS3min1" placeholder="xxx" type="text" value="{{ $data->sS3->data1}}">
 						        </div>
 						        <div class="field">
-						        	<input name="suhuS3min2" placeholder="xxx" type="text" value="{{ $data->sS3->min2}}">
+						        	<input name="suhuS3min2" placeholder="xxx" type="text" value="{{ $data->sS3->data2}}">
 						        </div>
 						    </div>
 						    <label>Cukup Sesuai Batas Maksimal</label>
 				      		<div class="two fields">
 						        <div class="field">
-						        	<input name="suhuS3max1" placeholder="xxx" type="text" value="{{ $data->sS3->max1}}">
+						        	<input name="suhuS3max1" placeholder="xxx" type="text" value="{{ $data->sS3->data3}}">
 						        </div>
 						        <div class="field">
-						        	<input name="suhuS3max2" placeholder="xxx" type="text" value="{{ $data->sS3->max2}}">
+						        	<input name="suhuS3max2" placeholder="xxx" type="text" value="{{ $data->sS3->data4}}">
 						        </div>
 						    </div>
 				    	</div>
@@ -107,10 +107,10 @@
 				      		<label>Cukup Sesuai Batas Minimal</label>
 				      		<div class="two fields">
 						        <div class="field">
-						        	<input name="suhuS3min1" placeholder="xxx" type="text" value="{{ $data->sS3->min1}}">
+						        	<input name="suhuS3min1" placeholder="xxx" type="text" value="{{ $data->sS3->data1}}">
 						        </div>
 						        <div class="field">
-						        	<input name="suhuS3min2" placeholder="xxx" type="text" value="{{ $data->sS3->min2}}">
+						        	<input name="suhuS3min2" placeholder="xxx" type="text" value="{{ $data->sS3->data2}}">
 						        </div>
 						    </div>
 						    <label>Cukup Sesuai Batas Maksimal</label>
@@ -130,19 +130,19 @@
 				      		<label>Tidak Sesuai Batas Minimal</label>
 				      		<div class="two fields">
 						        <div class="field">
-						        	<input name="suhuNmin1" placeholder="xxx" type="text" value="{{ $data->sSN->min1}}">
+						        	<input name="suhuNmin1" placeholder="xxx" type="text" value="{{ $data->sSN->data1}}">
 						        </div>
 						        <div class="field">
-						        	<input name="suhuNmin2" placeholder="xxx" type="text" value="{{ $data->sSN->min2}}">
+						        	<input name="suhuNmin2" placeholder="xxx" type="text" value="{{ $data->sSN->data2}}">
 						        </div>
 						    </div>
 						    <label>Tidak Sesuai Batas Maksimal</label>
 				      		<div class="two fields">
 						        <div class="field">
-						        	<input name="suhuNmax1" placeholder="xxx" type="text" value="{{ $data->sSN->max1}}">
+						        	<input name="suhuNmax1" placeholder="xxx" type="text" value="{{ $data->sSN->data3}}">
 						        </div>
 						        <div class="field">
-						        	<input name="suhuNmax2" placeholder="xxx" type="text" value="{{ $data->sSN->max2}}">
+						        	<input name="suhuNmax2" placeholder="xxx" type="text" value="{{ $data->sSN->data4}}">
 						        </div>
 						    </div>
 				    	</div>
@@ -151,10 +151,10 @@
 				      		<label>Tidak Sesuai Batas Minimal</label>
 				      		<div class="two fields">
 						        <div class="field">
-						        	<input name="suhuNmin1" placeholder="xxx" type="text" value="{{ $data->sSN->min1}}">
+						        	<input name="suhuNmin1" placeholder="xxx" type="text" value="{{ $data->sSN->data1}}">
 						        </div>
 						        <div class="field">
-						        	<input name="suhuNmin2" placeholder="xxx" type="text" value="{{ $data->sSN->min2}}">
+						        	<input name="suhuNmin2" placeholder="xxx" type="text" value="{{ $data->sSN->data2}}">
 						        </div>
 						    </div>
 						    <label>Tidak Sesuai Batas Maksimal</label>
@@ -172,7 +172,7 @@
 				      		<label>Tidak Sesuai Batas Minimal</label>
 				      		<div class="two fields">
 						        <div class="field">
-						        	<input name="suhuNmin1" placeholder="xxx" type="text" value="{{ $data->sSN->min}}">
+						        	<input name="suhuNmin1" placeholder="xxx" type="text" value="{{ $data->sSN->data1}}">
 						        </div>
 						        <div class="field">
 						        	<input name="suhuNmin2" placeholder="xxx" type="text" value="">
@@ -184,7 +184,7 @@
 						        	<input name="suhuNmax1" placeholder="xxx" type="text" value="">
 						        </div>
 						        <div class="field">
-						        	<input name="suhuNmax2" placeholder="xxx" type="text" value="{{ $data->sSN->max}}">
+						        	<input name="suhuNmax2" placeholder="xxx" type="text" value="{{ $data->sSN->data2}}">
 						        </div>
 						    </div>
 				    	</div>
@@ -202,10 +202,10 @@
 				      		<label>Sangat Sesuai</label>
 						    <div class="two fields">
 						        <div class="field">
-						        	<input name="lembabS1min" placeholder="xxx" type="text" value="{{$data->lS1->min}}">
+						        	<input name="lembabS1min" placeholder="xxx" type="text" value="{{$data->lS1->data1}}">
 						        </div>
 						        <div class="field">
-						        	<input name="lembabS1max" placeholder="xxx" type="text" value="{{$data->lS1->max}}">
+						        	<input name="lembabS1max" placeholder="xxx" type="text" value="{{$data->lS1->data2}}">
 						        </div>
 						    </div>
 					    </div>
@@ -228,19 +228,19 @@
 				      		<label>Sesuai Batas Minimal</label>
 				      		<div class="two fields">
 						        <div class="field">
-						        	<input name="lembabS2min1" placeholder="xxx" type="text" value="{{ $data->lS2->min1}}">
+						        	<input name="lembabS2min1" placeholder="xxx" type="text" value="{{ $data->lS2->data1}}">
 						        </div>
 						        <div class="field">
-						        	<input name="lembabS2min2" placeholder="xxx" type="text" value="{{ $data->lS2->min2}}">
+						        	<input name="lembabS2min2" placeholder="xxx" type="text" value="{{ $data->lS2->data2}}">
 						        </div>
 						    </div>
 						    <label>Sesuai Batas Maksimal</label>
 				      		<div class="two fields">
 						        <div class="field">
-						        	<input name="lembabS2max1" placeholder="xxx" type="text" value="{{ $data->lS2->max1}}">
+						        	<input name="lembabS2max1" placeholder="xxx" type="text" value="{{ $data->lS2->data3}}">
 						        </div>
 						        <div class="field">
-						        	<input name="lembabS2max2" placeholder="xxx" type="text" value="{{ $data->lS2->max2}}">
+						        	<input name="lembabS2max2" placeholder="xxx" type="text" value="{{ $data->lS2->data4}}">
 						        </div>
 						    </div>
 				    	</div>
@@ -249,10 +249,10 @@
 				      		<label>Sesuai Batas Minimal</label>
 				      		<div class="two fields">
 						        <div class="field">
-						        	<input name="lembabS2min1" placeholder="xxx" type="text" value="{{ $data->lS2->min1}}">
+						        	<input name="lembabS2min1" placeholder="xxx" type="text" value="{{ $data->lS2->data1}}">
 						        </div>
 						        <div class="field">
-						        	<input name="lembabS2min2" placeholder="xxx" type="text" value="{{ $data->lS2->min2}}">
+						        	<input name="lembabS2min2" placeholder="xxx" type="text" value="{{ $data->lS2->data2}}">
 						        </div>
 						    </div>
 						    <label>Sesuai Batas Maksimal</label>
@@ -270,10 +270,10 @@
 				      		<label>Sesuai Batas Minimal</label>
 				      		<div class="two fields">
 						        <div class="field">
-						        	<input name="lembabS2min1" placeholder="xxx" type="text" value="{{ $data->lS2->min}}">
+						        	<input name="lembabS2min1" placeholder="xxx" type="text" value="{{ $data->lS2->data1}}">
 						        </div>
 						        <div class="field">
-						        	<input name="lembabS2min2" placeholder="xxx" type="text" value="{{ $data->lS2->max}}">
+						        	<input name="lembabS2min2" placeholder="xxx" type="text" value="{{ $data->lS2->data2}}">
 						        </div>
 						    </div>
 						    <label>Sesuai Batas Maksimal</label>
@@ -288,47 +288,135 @@
 				    	</div>
 			    	@endif
 
-			    	<div class="four wide field">
-			      		<label>Cukup Sesuai Batas Minimal</label>
-			      		<div class="two fields">
-					        <div class="field">
-					        	<input name="lembabS3min1" placeholder="xxx" type="text" value="">
-					        </div>
-					        <div class="field">
-					        	<input name="lembabS3min2" placeholder="xxx" type="text" value="">
-					        </div>
-					    </div>
-					    <label>Cukup Sesuai Batas Maksimal</label>
-			      		<div class="two fields">
-					        <div class="field">
-					        	<input name="lembabS3max1" placeholder="xxx" type="text" value="">
-					        </div>
-					        <div class="field">
-					        	<input name="lembabS3max2" placeholder="xxx" type="text" value="">
-					        </div>
-					    </div>
-			    	</div>
+			    	@if($data->lS3->strip == true && $data->lS3->koma == true)
+			    		<div class="four wide field">
+				      		<label>Cukup Sesuai Batas Minimal</label>
+				      		<div class="two fields">
+						        <div class="field">
+						        	<input name="lembabS3min1" placeholder="xxx" type="text" value="{{$data->lS3->data1}}">
+						        </div>
+						        <div class="field">
+						        	<input name="lembabS3min2" placeholder="xxx" type="text" value="{{$data->lS3->data2}}">
+						        </div>
+						    </div>
+						    <label>Cukup Sesuai Batas Maksimal</label>
+				      		<div class="two fields">
+						        <div class="field">
+						        	<input name="lembabS3max1" placeholder="xxx" type="text" value="{{$data->lS3->data3}}">
+						        </div>
+						        <div class="field">
+						        	<input name="lembabS3max2" placeholder="xxx" type="text" value="{{$data->lS3->data4}}">
+						        </div>
+						    </div>
+				    	</div>
+			    	@elseif($data->lS3->strip == true && $data->lS2->koma == false)
+			    		<div class="four wide field">
+				      		<label>Cukup Sesuai Batas Minimal</label>
+				      		<div class="two fields">
+						        <div class="field">
+						        	<input name="lembabS3min1" placeholder="xxx" type="text" value="{{$data->lS3->data1}}">
+						        </div>
+						        <div class="field">
+						        	<input name="lembabS3min2" placeholder="xxx" type="text" value="{{$data->lS3->data2}}">
+						        </div>
+						    </div>
+						    <label>Cukup Sesuai Batas Maksimal</label>
+				      		<div class="two fields">
+						        <div class="field">
+						        	<input name="lembabS3max1" placeholder="xxx" type="text" value="">
+						        </div>
+						        <div class="field">
+						        	<input name="lembabS3max2" placeholder="xxx" type="text" value="">
+						        </div>
+						    </div>
+				    	</div>
+			    	@endif
 			    	
-			    	<div class="four wide field">
-			      		<label>Tidak Sesuai Batas Minimal</label>
-			      		<div class="two fields">
-					        <div class="field">
-					        	<input name="lembabNmin1" placeholder="xxx" type="text" value="">
-					        </div>
-					        <div class="field">
-					        	<input name="lembabNmin2" placeholder="xxx" type="text" value="">
-					        </div>
-					    </div>
-					    <label>Tidak Sesuai Batas Maksimal</label>
-			      		<div class="two fields">
-					        <div class="field">
-					        	<input name="lembabNmax1" placeholder="xxx" type="text" value="">
-					        </div>
-					        <div class="field">
-					        	<input name="lembabNmax2" placeholder="xxx" type="text" value="">
-					        </div>
-					    </div>
-			    	</div>
+			    	@if($data->lSN->strip == true && $data->lSN->koma == true)
+			    		<div class="four wide field">
+				      		<label>Tidak Sesuai Batas Minimal</label>
+				      		<div class="two fields">
+						        <div class="field">
+						        	<input name="lembabNmin1" placeholder="xxx" type="text" value="{{$data->lSN->data1}}">
+						        </div>
+						        <div class="field">
+						        	<input name="lembabNmin2" placeholder="xxx" type="text" value="{{$data->lSN->data2}}">
+						        </div>
+						    </div>
+						    <label>Tidak Sesuai Batas Maksimal</label>
+				      		<div class="two fields">
+						        <div class="field">
+						        	<input name="lembabNmax1" placeholder="xxx" type="text" value="{{$data->lSN->data3}}">
+						        </div>
+						        <div class="field">
+						        	<input name="lembabNmax2" placeholder="xxx" type="text" value="{{$data->lSN->data4}}">
+						        </div>
+						    </div>
+				    	</div>
+			    	@elseif($data->lSN->strip == true && $data->lSN->koma == false)
+			    		<div class="four wide field">
+				      		<label>Tidak Sesuai Batas Minimal</label>
+				      		<div class="two fields">
+						        <div class="field">
+						        	<input name="lembabNmin1" placeholder="xxx" type="text" value="{{$data->lSN->data1}}">
+						        </div>
+						        <div class="field">
+						        	<input name="lembabNmin2" placeholder="xxx" type="text" value="{{$data->lSN->data2}}">
+						        </div>
+						    </div>
+						    <label>Tidak Sesuai Batas Maksimal</label>
+				      		<div class="two fields">
+						        <div class="field">
+						        	<input name="lembabNmax1" placeholder="xxx" type="text" value="">
+						        </div>
+						        <div class="field">
+						        	<input name="lembabNmax2" placeholder="xxx" type="text" value="">
+						        </div>
+						    </div>
+				    	</div>
+			    	@elseif($data->lSN->strip == false && $data->lSN->koma == true)
+			    		<div class="four wide field">
+				      		<label>Tidak Sesuai Batas Minimal</label>
+				      		<div class="two fields">
+						        <div class="field">
+						        	<input name="lembabNmin1" placeholder="xxx" type="text" value="{{$data->lSN->data1}}">
+						        </div>
+						        <div class="field">
+						        	<input name="lembabNmin2" placeholder="xxx" type="text" value="">
+						        </div>
+						    </div>
+						    <label>Tidak Sesuai Batas Maksimal</label>
+				      		<div class="two fields">
+						        <div class="field">
+						        	<input name="lembabNmax1" placeholder="xxx" type="text" value="{{$data->lSN->data2}}">
+						        </div>
+						        <div class="field">
+						        	<input name="lembabNmax2" placeholder="xxx" type="text" value="">
+						        </div>
+						    </div>
+				    	</div>
+				    @elseif($data->lSN->strip == false && $data->lSN->koma == false)
+			    		<div class="four wide field">
+				      		<label>Tidak Sesuai Batas Minimal</label>
+				      		<div class="two fields">
+						        <div class="field">
+						        	<input name="lembabNmin1" placeholder="xxx" type="text" value="{{$data->lSN->data}}">
+						        </div>
+						        <div class="field">
+						        	<input name="lembabNmin2" placeholder="xxx" type="text" value="">
+						        </div>
+						    </div>
+						    <label>Tidak Sesuai Batas Maksimal</label>
+				      		<div class="two fields">
+						        <div class="field">
+						        	<input name="lembabNmax1" placeholder="xxx" type="text" value="">
+						        </div>
+						        <div class="field">
+						        	<input name="lembabNmax2" placeholder="xxx" type="text" value="">
+						        </div>
+						    </div>
+				    	</div>
+			    	@endif
 			  	</div>
 			</div>
 
