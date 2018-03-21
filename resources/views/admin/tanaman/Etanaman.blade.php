@@ -351,7 +351,7 @@
 						        </div>
 						    </div>
 				    	</div>
-				    @elseif($data->lS3->strip == false && $data->lS2->koma == false)
+				    @elseif($data->lS3->strip == false && $data->lS3->koma == false)
 			    		<div class="four wide field">
 				      		<label>Cukup Sesuai Batas Minimal</label>
 				      		<div class="two fields">
