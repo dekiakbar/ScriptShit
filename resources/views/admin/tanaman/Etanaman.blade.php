@@ -423,37 +423,98 @@
 		  	<div class="ui secondary segment small form raised">
 			  	<h4 class="ui dividing header">Data PH</h4>
 			  	<div class="fields">
-			    	<div class="four wide field">
-			      		<label>Sangat Sesuai</label>
-					    <div class="two fields">
-					        <div class="field">
-					        	<input name="phS1min" placeholder="xxx" type="text" value="">
-					        </div>
-					        <div class="field">
-					        	<input name="phS1max" placeholder="xxx" type="text" value="">
-					        </div>
+			    	
+			    	@if($data->pS1->strip == true && $data->pS1->koma == true)
+			    		<div class="four wide field">
+				      		<label>Sangat Sesuai</label>
+						    <div class="two fields">
+						        <div class="field">
+						        	<input name="phS1min" placeholder="xxx" type="text" value="{{$data->pS1->data1}}">
+						        </div>
+						        <div class="field">
+						        	<input name="phS1max" placeholder="xxx" type="text" value="{{$data->pS1->data2}}">
+						        </div>
+						    </div>
 					    </div>
-				    </div>
-			    	<div class="four wide field">
-			      		<label>Sesuai Batas Minimal</label>
-			      		<div class="two fields">
-					        <div class="field">
-					        	<input name="phS2min1" placeholder="xxx" type="text" value="">
-					        </div>
-					        <div class="field">
-					        	<input name="phS2min2" placeholder="xxx" type="text" value="">
-					        </div>
+					@elseif($data->pS1->strip == true && $data->pS1->koma == false)
+			    		<div class="four wide field">
+				      		<label>Sangat Sesuai</label>
+						    <div class="two fields">
+						        <div class="field">
+						        	<input name="phS1min" placeholder="xxx" type="text" value="{{$data->pS1->data1}}">
+						        </div>
+						        <div class="field">
+						        	<input name="phS1max" placeholder="xxx" type="text" value="{{$data->pS1->data2}}">
+						        </div>
+						    </div>
 					    </div>
-					    <label>Sesuai Batas Maksimal</label>
-			      		<div class="two fields">
-					        <div class="field">
-					        	<input name="phS2max1" placeholder="xxx" type="text" value="">
-					        </div>
-					        <div class="field">
-					        	<input name="phS2max2" placeholder="xxx" type="text" value="">
-					        </div>
-					    </div>
-			    	</div>
+			    	@endif
+
+			    	@if($data->pS2->strip == true && $data->pS2->koma == true)
+			    		<div class="four wide field">
+				      		<label>Sesuai Batas Minimal</label>
+				      		<div class="two fields">
+						        <div class="field">
+						        	<input name="phS2min1" placeholder="xxx" type="text" value="{{$data->pS2->data1}}">
+						        </div>
+						        <div class="field">
+						        	<input name="phS2min2" placeholder="xxx" type="text" value="{{$data->pS2->data2}}">
+						        </div>
+						    </div>
+						    <label>Sesuai Batas Maksimal</label>
+				      		<div class="two fields">
+						        <div class="field">
+						        	<input name="phS2max1" placeholder="xxx" type="text" value="{{$data->pS2->data3}}">
+						        </div>
+						        <div class="field">
+						        	<input name="phS2max2" placeholder="xxx" type="text" value="{{$data->pS2->data4}}">
+						        </div>
+						    </div>
+				    	</div>
+			    	@elseif($data->pS2->strip == true && $data->pS2->koma == false)
+			    		<div class="four wide field">
+				      		<label>Sesuai Batas Minimal</label>
+				      		<div class="two fields">
+						        <div class="field">
+						        	<input name="phS2min1" placeholder="xxx" type="text" value="">
+						        </div>
+						        <div class="field">
+						        	<input name="phS2min2" placeholder="xxx" type="text" value="">
+						        </div>
+						    </div>
+						    <label>Sesuai Batas Maksimal</label>
+				      		<div class="two fields">
+						        <div class="field">
+						        	<input name="phS2max1" placeholder="xxx" type="text" value="">
+						        </div>
+						        <div class="field">
+						        	<input name="phS2max2" placeholder="xxx" type="text" value="">
+						        </div>
+						    </div>
+				    	</div>
+			    	@elseif($data->pS2->strip == true && $data->pS2->koma == true)
+			    		<div class="four wide field">
+				      		<label>Sesuai Batas Minimal</label>
+				      		<div class="two fields">
+						        <div class="field">
+						        	<input name="phS2min1" placeholder="xxx" type="text" value="">
+						        </div>
+						        <div class="field">
+						        	<input name="phS2min2" placeholder="xxx" type="text" value="">
+						        </div>
+						    </div>
+						    <label>Sesuai Batas Maksimal</label>
+				      		<div class="two fields">
+						        <div class="field">
+						        	<input name="phS2max1" placeholder="xxx" type="text" value="">
+						        </div>
+						        <div class="field">
+						        	<input name="phS2max2" placeholder="xxx" type="text" value="">
+						        </div>
+						    </div>
+				    	</div>
+			    	@endif
+
 			    	<div class="four wide field">
 			      		<label>Cukup Sesuai Batas Minimal</label>
 			      		<div class="two fields">
