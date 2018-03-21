@@ -492,12 +492,12 @@
 						        </div>
 						    </div>
 				    	</div>
-			    	@elseif($data->pS2->strip == true && $data->pS2->koma == true)
+			    	@elseif($data->pS2->strip == false && $data->pS2->koma == true)
 			    		<div class="four wide field">
 				      		<label>Sesuai Batas Minimal</label>
 				      		<div class="two fields">
 						        <div class="field">
-						        	<input name="phS2min1" placeholder="xxx" type="text" value="">
+						        	<input name="phS2min1" placeholder="xxx" type="text" value="{{$data->pS2->data1}}">
 						        </div>
 						        <div class="field">
 						        	<input name="phS2min2" placeholder="xxx" type="text" value="">
@@ -506,7 +506,7 @@
 						    <label>Sesuai Batas Maksimal</label>
 				      		<div class="two fields">
 						        <div class="field">
-						        	<input name="phS2max1" placeholder="xxx" type="text" value="">
+						        	<input name="phS2max1" placeholder="xxx" type="text" value="{{$data->pS2->data2}}">
 						        </div>
 						        <div class="field">
 						        	<input name="phS2max2" placeholder="xxx" type="text" value="">
@@ -515,63 +515,200 @@
 				    	</div>
 			    	@endif
 
-			    	<div class="four wide field">
-			      		<label>Cukup Sesuai Batas Minimal</label>
-			      		<div class="two fields">
-					        <div class="field">
-					        	<input name="phS3min1" placeholder="xxx" type="text" value="">
-					        </div>
-					        <div class="field">
-					        	<input name="phS3min2" placeholder="xxx" type="text" value="">
-					        </div>
-					    </div>
-					    <label>Cukup Sesuai Batas Maksimal</label>
-			      		<div class="two fields">
-					        <div class="field">
-					        	<input name="phS3max1" placeholder="xxx" type="text" value="">
-					        </div>
-					        <div class="field">
-					        	<input name="phS3max2" placeholder="xxx" type="text" value="">
-					        </div>
-					    </div>
-			    	</div>
-			    	<div class="four wide field">
-			      		<label>Tidak Sesuai Batas Minimal</label>
-			      		<div class="two fields">
-					        <div class="field">
-					        	<input name="phNmin1" placeholder="xxx" type="text" value="">
-					        </div>
-					        <div class="field">
-					        	<input name="phNmin2" placeholder="xxx" type="text" value="">
-					        </div>
-					    </div>
-					    <label>Tidak Sesuai Batas Maksimal</label>
-			      		<div class="two fields">
-					        <div class="field">
-					        	<input name="phNmax1" placeholder="xxx" type="text" value="">
-					        </div>
-					        <div class="field">
-					        	<input name="phNmax2" placeholder="xxx" type="text" value="">
-					        </div>
-					    </div>
-			    	</div>
+			    	@if($data->pS3->strip == true && $data->pS3->koma == true)
+			    		<div class="four wide field">
+				      		<label>Cukup Sesuai Batas Minimal</label>
+				      		<div class="two fields">
+						        <div class="field">
+						        	<input name="phS3min1" placeholder="xxx" type="text" value="{{$data->pS3->data1}}">
+						        </div>
+						        <div class="field">
+						        	<input name="phS3min2" placeholder="xxx" type="text" value="{{$data->pS3->data2}}">
+						        </div>
+						    </div>
+						    <label>Cukup Sesuai Batas Maksimal</label>
+				      		<div class="two fields">
+						        <div class="field">
+						        	<input name="phS3max1" placeholder="xxx" type="text" value="{{$data->pS3->data3}}">
+						        </div>
+						        <div class="field">
+						        	<input name="phS3max2" placeholder="xxx" type="text" value="{{$data->pS3->data4}}">
+						        </div>
+						    </div>
+				    	</div>
+			    	@elseif($data->pS3->strip == true && $data->pS3->koma == false)
+			    		<div class="four wide field">
+				      		<label>Cukup Sesuai Batas Minimal</label>
+				      		<div class="two fields">
+						        <div class="field">
+						        	<input name="phS3min1" placeholder="xxx" type="text" value="{{$data->pS3->data1}}">
+						        </div>
+						        <div class="field">
+						        	<input name="phS3min2" placeholder="xxx" type="text" value="{{$data->pS3->data2}}">
+						        </div>
+						    </div>
+						    <label>Cukup Sesuai Batas Maksimal</label>
+				      		<div class="two fields">
+						        <div class="field">
+						        	<input name="phS3max1" placeholder="xxx" type="text" value="">
+						        </div>
+						        <div class="field">
+						        	<input name="phS3max2" placeholder="xxx" type="text" value="">
+						        </div>
+						    </div>
+				    	</div>
+			    	@elseif($data->pS3->strip == false && $data->pS3->koma == true)
+			    		<div class="four wide field">
+				      		<label>Cukup Sesuai Batas Minimal</label>
+				      		<div class="two fields">
+						        <div class="field">
+						        	<input name="phS3min1" placeholder="xxx" type="text" value="{{$data->pS3->data1}}">
+						        </div>
+						        <div class="field">
+						        	<input name="phS3min2" placeholder="xxx" type="text" value="">
+						        </div>
+						    </div>
+						    <label>Cukup Sesuai Batas Maksimal</label>
+				      		<div class="two fields">
+						        <div class="field">
+						        	<input name="phS3max1" placeholder="xxx" type="text" value="{{$data->pS3->data2}}">
+						        </div>
+						        <div class="field">
+						        	<input name="phS3max2" placeholder="xxx" type="text" value="">
+						        </div>
+						    </div>
+				    	</div>
+				    @elseif($data->pS3->strip == false && $data->pS3->koma == false)
+			    		<div class="four wide field">
+				      		<label>Cukup Sesuai Batas Minimal</label>
+				      		<div class="two fields">
+						        <div class="field">
+						        	<input name="phS3min1" placeholder="xxx" type="text" value="{{$data->pS3->data}}">
+						        </div>
+						        <div class="field">
+						        	<input name="phS3min2" placeholder="xxx" type="text" value="">
+						        </div>
+						    </div>
+						    <label>Cukup Sesuai Batas Maksimal</label>
+				      		<div class="two fields">
+						        <div class="field">
+						        	<input name="phS3max1" placeholder="xxx" type="text" value="">
+						        </div>
+						        <div class="field">
+						        	<input name="phS3max2" placeholder="xxx" type="text" value="">
+						        </div>
+						    </div>
+				    	</div>
+			    	@endif
+
+			    	@if($data->pSN->strip == true && $data->pSN->koma == true)
+			    		<div class="four wide field">
+				      		<label>Tidak Sesuai Batas Minimal</label>
+				      		<div class="two fields">
+						        <div class="field">
+						        	<input name="phNmin1" placeholder="xxx" type="text" value="{{$data->pSN->data1}}">
+						        </div>
+						        <div class="field">
+						        	<input name="phNmin2" placeholder="xxx" type="text" value="{{$data->pSN->data2}}">
+						        </div>
+						    </div>
+						    <label>Tidak Sesuai Batas Maksimal</label>
+				      		<div class="two fields">
+						        <div class="field">
+						        	<input name="phNmax1" placeholder="xxx" type="text" value="{{$data->pSN->data3}}">
+						        </div>
+						        <div class="field">
+						        	<input name="phNmax2" placeholder="xxx" type="text" value="{{$data->pSN->data4}}">
+						        </div>
+						    </div>
+				    	</div>
+			    	@elseif($data->pSN->strip == true && $data->pSN->koma == false)
+			    		<div class="four wide field">
+				      		<label>Tidak Sesuai Batas Minimal</label>
+				      		<div class="two fields">
+						        <div class="field">
+						        	<input name="phNmin1" placeholder="xxx" type="text" value="{{$data->pSN->data1}}">
+						        </div>
+						        <div class="field">
+						        	<input name="phNmin2" placeholder="xxx" type="text" value="{{$data->pSN->data2}}">
+						        </div>
+						    </div>
+						    <label>Tidak Sesuai Batas Maksimal</label>
+				      		<div class="two fields">
+						        <div class="field">
+						        	<input name="phNmax1" placeholder="xxx" type="text" value="">
+						        </div>
+						        <div class="field">
+						        	<input name="phNmax2" placeholder="xxx" type="text" value="">
+						        </div>
+						    </div>
+				    	</div>
+			    	@elseif($data->pSN->strip == false && $data->pSN->koma == true)
+			    		<div class="four wide field">
+				      		<label>Tidak Sesuai Batas Minimal</label>
+				      		<div class="two fields">
+						        <div class="field">
+						        	<input name="phNmin1" placeholder="xxx" type="text" value="{{$data->pSN->data1}}">
+						        </div>
+						        <div class="field">
+						        	<input name="phNmin2" placeholder="xxx" type="text" value="">
+						        </div>
+						    </div>
+						    <label>Tidak Sesuai Batas Maksimal</label>
+				      		<div class="two fields">
+						        <div class="field">
+						        	<input name="phNmax1" placeholder="xxx" type="text" value="{{$data->pSN->data2}}">
+						        </div>
+						        <div class="field">
+						        	<input name="phNmax2" placeholder="xxx" type="text" value="">
+						        </div>
+						    </div>
+				    	</div>
+				    @elseif($data->pSN->strip == false && $data->pSN->koma == false)
+			    		<div class="four wide field">
+				      		<label>Tidak Sesuai Batas Minimal</label>
+				      		<div class="two fields">
+						        <div class="field">
+						        	<input name="phNmin1" placeholder="xxx" type="text" value="{{$data->pSN->data}}">
+						        </div>
+						        <div class="field">
+						        	<input name="phNmin2" placeholder="xxx" type="text" value="">
+						        </div>
+						    </div>
+						    <label>Tidak Sesuai Batas Maksimal</label>
+				      		<div class="two fields">
+						        <div class="field">
+						        	<input name="phNmax1" placeholder="xxx" type="text" value="">
+						        </div>
+						        <div class="field">
+						        	<input name="phNmax2" placeholder="xxx" type="text" value="">
+						        </div>
+						    </div>
+				    	</div>
+			    	@endif
 			  	</div>
 			</div>
 
 			<div class="ui secondary segment small form raised">
 			  	<h4 class="ui dividing header">Data Curah Hujan</h4>
 			  	<div class="fields">
-			    	<div class="four wide field">
-			      		<label>Sangat Sesuai</label>
-					    <div class="two fields">
-					        <div class="field">
-					        	<input name="curahS1min" placeholder="xxx" type="text" value="">
-					        </div>
-					        <div class="field">
-					        	<input name="curahS1max" placeholder="xxx" type="text" value="">
-					        </div>
+			    	
+			    	@if()
+			    		<div class="four wide field">
+				      		<label>Sangat Sesuai</label>
+						    <div class="two fields">
+						        <div class="field">
+						        	<input name="curahS1min" placeholder="xxx" type="text" value="">
+						        </div>
+						        <div class="field">
+						        	<input name="curahS1max" placeholder="xxx" type="text" value="">
+						        </div>
+						    </div>
 					    </div>
-				    </div>
+			    	@elseif()
+			    	@elseif()
+			    	@endif
+
 			    	<div class="four wide field">
 			      		<label>Sesuai Batas Minimal</label>
 			      		<div class="two fields">
