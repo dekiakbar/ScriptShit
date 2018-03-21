@@ -719,46 +719,136 @@
 					    </div>
 			    	@endif
 
-			    	<div class="four wide field">
-			      		<label>Sesuai Batas Minimal</label>
-			      		<div class="two fields">
-					        <div class="field">
-					        	<input name="curahS2min1" placeholder="xxx" type="text" value="">
-					        </div>
-					        <div class="field">
-					        	<input name="curahS2min2" placeholder="xxx" type="text" value="">
-					        </div>
-					    </div>
-					    <label>Sesuai Batas Maksimal</label>
-			      		<div class="two fields">
-					        <div class="field">
-					        	<input name="curahS2max1" placeholder="xxx" type="text" value="">
-					        </div>
-					        <div class="field">
-					        	<input name="curahS2max2" placeholder="xxx" type="text" value="">
-					        </div>
-					    </div>
-			    	</div>
-			    	<div class="four wide field">
-			      		<label>Cukup Sesuai Batas Minimal</label>
-			      		<div class="two fields">
-					        <div class="field">
-					        	<input name="curahS3min1" placeholder="xxx" type="text" value="">
-					        </div>
-					        <div class="field">
-					        	<input name="curahS3min2" placeholder="xxx" type="text" value="">
-					        </div>
-					    </div>
-					    <label>Cukup Sesuai Batas Maksimal</label>
-			      		<div class="two fields">
-					        <div class="field">
-					        	<input name="curahS3max1" placeholder="xxx" type="text" value="">
-					        </div>
-					        <div class="field">
-					        	<input name="curahS3max2" placeholder="xxx" type="text" value="">
-					        </div>
-					    </div>
-			    	</div>
+			    	@if($data->cS2->strip == true && $data->cS2->koma == true)
+			    		<div class="four wide field">
+				      		<label>Sesuai Batas Minimal</label>
+				      		<div class="two fields">
+						        <div class="field">
+						        	<input name="curahS2min1" placeholder="xxx" type="text" value="{{$data->cS2->data1}}">
+						        </div>
+						        <div class="field">
+						        	<input name="curahS2min2" placeholder="xxx" type="text" value="{{$data->cS2->data2}}">
+						        </div>
+						    </div>
+						    <label>Sesuai Batas Maksimal</label>
+				      		<div class="two fields">
+						        <div class="field">
+						        	<input name="curahS2max1" placeholder="xxx" type="text" value="{{$data->cS2->data3}}">
+						        </div>
+						        <div class="field">
+						        	<input name="curahS2max2" placeholder="xxx" type="text" value="{{$data->cS2->data4}}">
+						        </div>
+						    </div>
+				    	</div>
+			    	@elseif($data->cS2->strip == true && $data->cS2->koma == false)
+			    		<div class="four wide field">
+				      		<label>Sesuai Batas Minimal</label>
+				      		<div class="two fields">
+						        <div class="field">
+						        	<input name="curahS2min1" placeholder="xxx" type="text" value="{{$data->cS2->data1}}">
+						        </div>
+						        <div class="field">
+						        	<input name="curahS2min2" placeholder="xxx" type="text" value="{{$data->cS2->data2}}">
+						        </div>
+						    </div>
+						    <label>Sesuai Batas Maksimal</label>
+				      		<div class="two fields">
+						        <div class="field">
+						        	<input name="curahS2max1" placeholder="xxx" type="text" value="">
+						        </div>
+						        <div class="field">
+						        	<input name="curahS2max2" placeholder="xxx" type="text" value="">
+						        </div>
+						    </div>
+				    	</div>
+			    	@elseif($data->cS2->strip == false && $data->cS2->koma == true)
+			    		<div class="four wide field">
+				      		<label>Sesuai Batas Minimal</label>
+				      		<div class="two fields">
+						        <div class="field">
+						        	<input name="curahS2min1" placeholder="xxx" type="text" value="{{$data->cS2->data1}}">
+						        </div>
+						        <div class="field">
+						        	<input name="curahS2min2" placeholder="xxx" type="text" value="">
+						        </div>
+						    </div>
+						    <label>Sesuai Batas Maksimal</label>
+				      		<div class="two fields">
+						        <div class="field">
+						        	<input name="curahS2max1" placeholder="xxx" type="text" value="{{$data->cS2->data2}}">
+						        </div>
+						        <div class="field">
+						        	<input name="curahS2max2" placeholder="xxx" type="text" value="">
+						        </div>
+						    </div>
+				    	</div>
+			    	@endif
+
+			    	@if($data->cS3->strip == true && $data->cS3->koma == true)
+			    		<div class="four wide field">
+				      		<label>Cukup Sesuai Batas Minimal</label>
+				      		<div class="two fields">
+						        <div class="field">
+						        	<input name="curahS3min1" placeholder="xxx" type="text" value="{{$data->cS3->data1}}">
+						        </div>
+						        <div class="field">
+						        	<input name="curahS3min2" placeholder="xxx" type="text" value="{{$data->cS3->data2}}">
+						        </div>
+						    </div>
+						    <label>Cukup Sesuai Batas Maksimal</label>
+				      		<div class="two fields">
+						        <div class="field">
+						        	<input name="curahS3max1" placeholder="xxx" type="text" value="{{$data->cS3->data3}}">
+						        </div>
+						        <div class="field">
+						        	<input name="curahS3max2" placeholder="xxx" type="text" value="{{$data->cS3->data4}}">
+						        </div>
+						    </div>
+				    	</div>
+			    	@elseif($data->cS3->strip == true && $data->cS3->koma == false)
+			    		<div class="four wide field">
+				      		<label>Cukup Sesuai Batas Minimal</label>
+				      		<div class="two fields">
+						        <div class="field">
+						        	<input name="curahS3min1" placeholder="xxx" type="text" value="{{$data->cS3->data1}}">
+						        </div>
+						        <div class="field">
+						        	<input name="curahS3min2" placeholder="xxx" type="text" value="{{$data->cS3->data2}}">
+						        </div>
+						    </div>
+						    <label>Cukup Sesuai Batas Maksimal</label>
+				      		<div class="two fields">
+						        <div class="field">
+						        	<input name="curahS3max1" placeholder="xxx" type="text" value="">
+						        </div>
+						        <div class="field">
+						        	<input name="curahS3max2" placeholder="xxx" type="text" value="">
+						        </div>
+						    </div>
+				    	</div>
+			    	@elseif($data->cS3->strip == false && $data->cS3->koma == true)
+			    		<div class="four wide field">
+				      		<label>Cukup Sesuai Batas Minimal</label>
+				      		<div class="two fields">
+						        <div class="field">
+						        	<input name="curahS3min1" placeholder="xxx" type="text" value="{{$data->cS3->data1}}">
+						        </div>
+						        <div class="field">
+						        	<input name="curahS3min2" placeholder="xxx" type="text" value="">
+						        </div>
+						    </div>
+						    <label>Cukup Sesuai Batas Maksimal</label>
+				      		<div class="two fields">
+						        <div class="field">
+						        	<input name="curahS3max1" placeholder="xxx" type="text" value="{{$data->cS3->data2}}">
+						        </div>
+						        <div class="field">
+						        	<input name="curahS3max2" placeholder="xxx" type="text" value="">
+						        </div>
+						    </div>
+				    	</div>
+			    	@endif
+
 			    	<div class="four wide field">
 			      		<label>Tidak Sesuai Batas Minimal</label>
 			      		<div class="two fields">
