@@ -101,7 +101,7 @@
 
 	<script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
 	<script type="text/javascript" src="{{ asset('js/manual.js') }}"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWjO5SevIcwYGgnch9sRr9RYAU_704tUs&libraries=places&callback=initMap" async defer>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZ8rloezEy9IpHLmbWmWA20Gh1nuMcyeY&libraries=places&callback=initMap" async defer>
     </script>
 </body>
 </html>

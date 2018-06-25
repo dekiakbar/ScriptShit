@@ -14,7 +14,7 @@
 Route::domain('skripsi.com')->group(function(){
 
 	Route::get('/', function () {
-	    return view('admin.auth.daftar');
+	    return view('index');
 	});
 
 	/*
