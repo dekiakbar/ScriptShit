@@ -7,6 +7,7 @@
     "require": {
         "php": ">=7.0.0",
         "alexpechkarev/google-maps": "1.0.8",
+        "bartlett/umlwriter": "^1.2",
         "cornford/googlmapper": "2.*",
         "fideloper/proxy": "~3.3",
         "geocoder-php/google-maps-provider": "^4.1",
